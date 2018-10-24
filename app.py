@@ -5,7 +5,7 @@ import string
 import cherrypy
 
 cherrypy.config.update({'server.socket_port': 8080})
-""akgfjiaeg""
+"""agaegag"""
 
 class StringGenerator(object):
     @cherrypy.expose
