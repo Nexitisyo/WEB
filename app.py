@@ -4,6 +4,8 @@ import string
 
 import cherrypy
 
+cherrypy.config.update({'server.socket_port': 8080})
+
 
 class StringGenerator(object):
     @cherrypy.expose
@@ -27,7 +29,7 @@ class StringGenerator(object):
         return some_string
 
     @cherrypy.expose
-    def display(self)
+    def display(self):
         return cherrypy.session['mystring']
 
 
