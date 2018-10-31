@@ -1,0 +1,92 @@
+{
+  "1000001": {
+    "forename": "Max",
+    "surname": "Mustermann",
+    "session": "1",
+    "department": "3"
+  },
+  "1000002": {
+    "forename": "Lara",
+    "surname": "Mustermann",
+    "session": "5",
+    "department": "1"
+  },
+  "1000003": {
+    "forename": "Michael",
+    "surname": "Mustermann",
+    "session": "8",
+    "department": "7"
+  },
+  "1000004": {
+    "forename": "Christian",
+    "surname": "Mustermann",
+    "session": "1",
+    "department": "12"
+  },
+  "1000005": {
+    "forename": "Victoria",
+    "surname": "Mustermann",
+    "session": "1",
+    "department": "6"
+  },
+  "1000006": {
+    "forename": "Sofie",
+    "surname": "Mustermann",
+    "session": "1",
+    "department": "3"
+  },
+  "1000007": {
+    "forename": "Alex",
+    "surname": "Mustermann",
+    "session": "2",
+    "department": "1"
+  },
+  "1000008": {
+    "forename": "Anna",
+    "surname": "Mustermann",
+    "session": "4",
+    "department": "7"
+  },
+  "1000009": {
+    "forename": "Maurice",
+    "surname": "Mustermann",
+    "session": "4",
+    "department": "12"
+  },
+  "1000010": {
+    "forename": "Georg",
+    "surname": "Mustermann",
+    "session": "2",
+    "department": "6"
+  },
+  "1000011": {
+    "forename": "Alina",
+    "surname": "Mustermann",
+    "session": "4",
+    "department": "9"
+  },
+  "1000012": {
+    "forename": "Tobias",
+    "surname": "Mustermann",
+    "session": "2",
+    "department": "10"
+  },
+  "1000013": {
+    "forename": "Daniel",
+    "surname": "Mustermann",
+    "session": "3",
+    "department": "11"
+  },
+  "1000014": {
+    "forename": "Nadja",
+    "surname": "Mustermann",
+    "session": "3",
+    "department": "3"
+  },
+  "1000015": {
+    "forename": "Nina",
+    "surname": "Mustermann",
+    "session": "3",
+    "department": "2"
+  }
+}

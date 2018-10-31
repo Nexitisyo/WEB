@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web-Teams</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form id="edit_form" action="save" method="post">
+            <div>
+                <label for="${matriculation}">Matrikelnummer</label>
+                <input type="text" value="${matriculation}" id="${matriculation}" name="${matriculation}" required />
+            </div>
+            <div>
+                <label for="${forename}">Vorname</label>
+                <input type="text" value="${forename}" id="${forename}" name="${forename}" required />
+            </div>
+            <div>
+                <label for="${surname}">Nachname</label>
+                <input type="text" value="${surname}" id="${surname}" name="${surname}" required />
+            </div>
+            <div>
+                <label for="${session}">Session</label>
+                <input type="text" value="${session}" id="${session}" name="${session}" required />
+            </div>
+            <div>
+                <label for="${department}">Department</label>
+                <input type="text" value="${department}" id="${department}" name="${department}" required />
+            </div>
+            <div>
+                <input type="submit" value="Speichern" />&nbsp;
+                <a href="/">abbrechen</a>
+            </div>
+        </form>
+    </body>
+</html>

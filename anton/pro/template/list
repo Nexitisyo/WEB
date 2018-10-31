@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web-Teams</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <table id="idList">
+            <tr>
+                <th>Matriculation Number</th>
+                <th>Forename</th>
+                <th>Surname</th>
+                <th>Session</th>
+                <th>Department</th>
+            </tr>
+            % for key in data:
+            <tr>
+                <form id="form_${key}" action="edit" method="post">
+                    <td name="id">${key}</td>
+                    <td>${data[key]['forename']}</td>
+                    <td>${data[key]['surname']}</td>
+                    <td>${data[key]['session']}</td>
+                    <td>${data[key]['department']}</td>
+                    <td>
+                        <a href="/edit">bearbeiten</a>&nbsp;
+                        <a href="/delete" class="clDelete">l&ouml;schen</a>
+                    </td>
+                </form>
+            </tr>
+            % endfor
+        </table>
+        <div>
+            <a href="add">erfassen</a>
+        </div>
+    </body>
+</html>
