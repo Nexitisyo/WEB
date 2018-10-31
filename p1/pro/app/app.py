@@ -13,7 +13,7 @@ edit = Template(filename='C:/WEB/p1/pro/template/edit.tpl')
 delete = Template(filename='C:/WEB/p1/pro/template/delete.tpl')
 
 """
-• Verwaltung der Kundendaten
+• Verwaltung der Kundendaten 
 	◦ Anlegen, Ändern und Löschen von Kundendaten
 	◦ Kundendaten sind z.B.
 		▪ eindeutige Id
@@ -27,15 +27,18 @@ class main(object):
 	@cherrypy.expose
 	def index(self):
 		return index.render()
-
+	
+	@cherrypy.expose
 	def create(self):
-		return create.render()
-
+		return ''.join(create.render())
+	
+	@cherrypy.expose
 	def edit(self):
 		return edit.render()
 
+	@cherrypy.expose
 	def delete(self):
 		return delete.render()
 
 
-cherrypy.quickstart(main())
+cherrypy.quickstart(main()) 
