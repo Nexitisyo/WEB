@@ -1,17 +1,9 @@
-## coding: utf-8
-<table id="idList">
-	<tr>
-		<th>Name</th>
-		<th>Typ</th>
-	</tr>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../content/style.css" />
 
-	## man verwendet hier Zugriff auf das Dictionary "data_o"
+</head>
+<body>
+I am alive!!!
 
-	% for key_s in data_o:
-	<tr id="r${key_s}">
-		<td>${data_o[key_s]['name']}</td>
-		<td>${data_o[key_s]['typ']}</td>
-	</tr>
-	% endfor
-</table>
-## Mako-Kommentare verwenden zwei #-Zeichen
+</body>
