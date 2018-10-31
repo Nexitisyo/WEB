@@ -7,7 +7,11 @@ import cherrypy
 #return in der Cherrypy Methode returned Werte oder einen Inhalt von etwas.
 #In diesem Fall den Inhalt von Template welcher "I am alive" ist
 #Dort kann auch eine Zieldatei angegeben werden mit
-mytemplate = Template(filename='C:/WEB/p1/pro/template/liste.tpl')
+index = Template(filename='C:/WEB/p1/pro/template/startseite.tpl')
+create = Template(filename='C:/WEB/p1/pro/template/create.tpl')
+edit = Template(filename='C:/WEB/p1/pro/template/edit.tpl')
+delete = Template(filename='C:/WEB/p1/pro/template/delete.tpl')
+
 """
 • Verwaltung der Kundendaten
 	◦ Anlegen, Ändern und Löschen von Kundendaten
@@ -22,7 +26,16 @@ mytemplate = Template(filename='C:/WEB/p1/pro/template/liste.tpl')
 class main(object):
 	@cherrypy.expose
 	def index(self):
-		return mytemplate.render()
+		return index.render()
+
+	def create(self):
+		return create.render()
+
+	def edit(self):
+		return edit.render()
+
+	def delete(self):
+		return delete.render()
 
 
 cherrypy.quickstart(main())
