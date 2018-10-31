@@ -8,9 +8,8 @@ import cherrypy
 #return in der Cherrypy Methode returned Werte oder einen Inhalt von etwas.
 #In diesem Fall den Inhalt von Template welcher "I am alive" ist
 #Dort kann auch eine Zieldatei angegeben werden mit
-mytemplate = Template("I am alive")
- #(filename='./template/liste.tpl')
-#rausfinden wie man in das übergeordnete Verzeichnis kommt
+mytemplate = Template(filename='C:/WEB/p1/pro/template/liste.tpl')
+#mytemplate = Template("I am alive")
 
 """
 • Verwaltung der Kundendaten
