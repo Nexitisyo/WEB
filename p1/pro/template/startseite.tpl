@@ -4,7 +4,7 @@
 
 </head>
 <body>
-<form method="get" action="create">
+<form method="get" action="create ">
     <button type="submit">Eintrag erstellen</button>
 </form>
 <form method="get" action="edit">

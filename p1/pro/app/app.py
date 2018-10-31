@@ -26,6 +26,7 @@ delete = Template(filename='C:/WEB/p1/pro/template/delete.tpl')
 class main(object):
 	@cherrypy.expose
 	def index(self):
+		
 		return index.render()
 	
 	@cherrypy.expose
@@ -41,4 +42,13 @@ class main(object):
 		return delete.render()
 
 
-cherrypy.quickstart(main()) 
+if __name__ == '__main__':
+    cherrypy.quickstart(main(), '/',
+        {
+            '/favicon.ico':
+            {
+                'tools.staticfile.on': True,
+                'tools.staticfile.filename': 'favicon.ico'
+            }
+        }
+    )
