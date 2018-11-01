@@ -5,26 +5,34 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <form id="edit_form" action="save" method="post">
+
+        <form id="edit_form" action="/save" method="post">
             <div>
-                <label for="${matriculation}">Matrikelnummer</label>
-                <input type="text" value="${matriculation}" id="${matriculation}" name="${matriculation}" required />
+                % if keys != []:
+                    <label for="matriculation">Matrikelnummer</label>
+                    <input readonly pattern=".{0}|.{7,8}" list="matriculation numbers" type="number" value="${data["matriculation"]}" id="matriculation" name="matriculation" required  title="Either 0 chars for automatically generated or 7 to 8 chars" maxlength="8"/>
+                    <datalist id="matriculation numbers">
+                    % for key in keys:
+                        <option value="${key}">
+                    % endfor
+                    </datalist>
+                % endif
             </div>
             <div>
-                <label for="${forename}">Vorname</label>
-                <input type="text" value="${forename}" id="${forename}" name="${forename}" required />
+                <label for="first_name">Vorname</label>
+                <input type="text" value="${data["first_name"]}" id="first_name" name="first_name" required />
             </div>
             <div>
-                <label for="${surname}">Nachname</label>
-                <input type="text" value="${surname}" id="${surname}" name="${surname}" required />
+                <label for="last_name">Nachname</label>
+                <input type="text" value="${data["last_name"]}" id="last_name" name="last_name" required />
             </div>
             <div>
-                <label for="${session}">Session</label>
-                <input type="text" value="${session}" id="${session}" name="${session}" required />
+                <label for="session">Session</label>
+                <input type="number" value="${data["session"]}" id="session" name="session" required min="1" max="99"/>
             </div>
             <div>
-                <label for="${department}">Department</label>
-                <input type="text" value="${department}" id="${department}" name="${department}" required />
+                <label for="department">Department</label>
+                <input type="number" value="${data["department"]}" id="department" name="department" required min="1" max="12"/>
             </div>
             <div>
                 <input type="submit" value="Speichern" />&nbsp;

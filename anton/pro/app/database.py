@@ -45,11 +45,11 @@ class CDatabase(object):
         write_mode = 'w'; file_encoding = 'utf-8'
         json_file = 'students.json'
 
+
         with codecs.open(os.path.join(self.data_dir, json_file), write_mode, file_encoding) as file:
             json.dump(self.data, file, indent=3)
 
     def get_max_id(self):
-        '''Calculates Max-ID Tupel'''
         key_index = 0
         for key in self.data:
             if int(key) > key_index:
@@ -57,7 +57,6 @@ class CDatabase(object):
         self.last_id = key_index
 
     def create(self, json_data):
-        #TODO überprüfen der Daten muss ergänzt werden
 
         self.last_id += 1
         id = str(self.last_id)
@@ -66,14 +65,10 @@ class CDatabase(object):
 
         return id
 
-    def update(self, id, json_data):
-        status = False
+    def update(self, id, data):
         if id in self.data:
-            del self.data[id]
+            self.data[id] = data
             self.save_data()
-            status = True
-
-        return status
 
     def delete(self, id):
         status = False

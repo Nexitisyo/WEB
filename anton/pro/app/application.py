@@ -7,21 +7,27 @@ class CApplication(object):
     def __init__(self, project_dir):
         self.db = CDatabase(project_dir)
         self.view = CView(project_dir)
+        self.data = self.db.read()
+        print(self.data)
 
     def create_list(self):
-        data = self.db.read()
-
-        return self.view.create_list(data)
+        return self.view.create_list(self.data)
 
     def create_form(self, id = None):
         data = None
         if id != None:
             data = self.db.read(id)
+            keys = self.get_keys()
+            return self.view.create_form(id, data, keys)
+        else:
+            return self.view.create_form(None, {}, [])
 
-        print("ID: ", id)
-        print("DATA: ", data)
 
-        return self.view.create_form(data)
+    def get_keys(self):
+        keys = list()
+        for key in self.data:
+            keys.append(key)
+        return keys
 
 #web application methods
     @cherrypy.expose
@@ -40,12 +46,14 @@ class CApplication(object):
     def save(self, **data_args):
         #data_args: dictionary with key-value-pairs
         #TODO check if data is correct
-        id = data_args["matriculation"]
-        data = [data_args["forename"], data_args["surname"], data_args["session"], data_args["department"]]
-
+        id = None
+        if "matriculation" in data_args:
+            id = data_args.pop("matriculation")
+        data = data_args
         status = False
 
-        if id != "None":
+        keys = self.get_keys()
+        if id in keys:
             status = self.db.update(id, data)
         else:
             status = True
