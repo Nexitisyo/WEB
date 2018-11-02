@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/../style.css">
     <title>Kunden</title>
 </head><body>
-<table class="collapse">
+<table>
     <tr>
         <th>ID</th>
         <th>Kundennummer</th>
