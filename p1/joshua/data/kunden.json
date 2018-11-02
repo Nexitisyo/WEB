@@ -1,9 +1,37 @@
 [
-   {
-      "kundennummer": "test1",
-      "bezeichnung": "test1",
-      "ansprechpartner": "test1vcfb",
-      "ort": "t3este",
-      "id": 8
-   }
+    {
+        "kundennummer": "123",
+        "bezeichnung": "afe",
+        "ansprechpartner": "aefa",
+        "ort": "aef",
+        "id": 1
+    },
+    {
+        "kundennummer": "123",
+        "bezeichnung": "afe",
+        "ansprechpartner": "aefa",
+        "ort": "aef",
+        "id": 2
+    },
+    {
+        "kundennummer": "123",
+        "bezeichnung": "afe",
+        "ansprechpartner": "aefa",
+        "ort": "aef",
+        "id": 3
+    },
+    {
+        "kundennummer": "123",
+        "bezeichnung": "afe",
+        "ansprechpartner": "aefa",
+        "ort": "aef",
+        "id": 4
+    },
+    {
+        "kundennummer": "123",
+        "bezeichnung": "afe",
+        "ansprechpartner": "aefa",
+        "ort": "aef",
+        "id": 5
+    }
 ]

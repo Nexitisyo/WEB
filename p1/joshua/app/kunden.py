@@ -1,15 +1,13 @@
 # coding: utf-8
-
 import cherrypy
 from app import view
 from app import database
-
 
 class Kunden(object):
 
     def __init__(self, current_dir):
 
-        self.view = view.View(current_dir)
+        self.view = view.View(current_dir) #Fragen was das genau macht
         pass
 
     @cherrypy.expose()
@@ -19,9 +17,12 @@ class Kunden(object):
             "liste": database.read("kunden.json")
         })
 
+        #return self.view.create("kunden.mako", {"liste": database.read("kunden.json")})
+
+
     @cherrypy.expose()
     def save(self, kundennummer, bezeichnung, ansprechpartner, ort, key=None):
-        if key:
+        if key: #Ist key hier durch key=None initialisiert? Fragen!
             database.writeValuebyId("kunden.json", key, {
                 "kundennummer": kundennummer,
                 "bezeichnung": bezeichnung,
@@ -50,11 +51,6 @@ class Kunden(object):
         return self.index()
 
     @cherrypy.expose()
-    def default(self, *arglist, **kwargs):
-        msg_s = "no match: " + str(arglist) + ' ' + str(kwargs)
-        raise cherrypy.HTTPError(404, msg_s)
-
-    @cherrypy.expose()
     def edit(self, key):
         try:
             kunden = database.readValuebyId("kunden.json", key)
@@ -65,3 +61,10 @@ class Kunden(object):
             "kunden": kunden,
             "action": "edit"
         })
+
+    @cherrypy.expose()
+    def default(self, *arglist, **kwargs):
+        msg_s = "no match: " + str(arglist) + ' ' + str(kwargs)
+        raise cherrypy.HTTPError(404, msg_s)
+
+

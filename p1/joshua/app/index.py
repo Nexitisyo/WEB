@@ -6,13 +6,14 @@ from app import view
 
 class Index(object):
 
-    def __init__(self, current_dir): # init sorgt dafür, dass Python '.py' - Dateien als Module erkennt.
-        #KONSTRUKTOR - Init
+    def __init__(self, current_dir): # __init__.py sorgt dafür, dass Python '.py' - Dateien als Module erkennt.
+        #def __init__ = Konstruktor
         #self = erlaubt Zugriff auf Attribute und Methoden der class
-        self.view = view.View(current_dir)
-        pass
 
-    @cherrypy.expose()
+        self.view = view.View(current_dir)
+        pass #Placeholder damit der Server nicht abschmiert
+
+    @cherrypy.expose() #Macht Methoden für den Benutzer sichtbar/zugreifbar
     def index(self):
         return self.view.create("index.mako")
 
