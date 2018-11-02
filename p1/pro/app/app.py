@@ -1,6 +1,7 @@
 import os
 from mako.template import Template
 from mako.lookup import TemplateLookup
+from app import view
 
 import cherrypy
 
@@ -26,8 +27,7 @@ delete = Template(filename='C:/WEB/p1/pro/template/delete.tpl')
 class main(object):
 	@cherrypy.expose
 	def index(self):
-		
-		return index.render()
+		return self.view.create("index.mako")
 	
 	@cherrypy.expose
 	def create(self):
