@@ -6,8 +6,9 @@ from app import view
 
 class Index(object):
 
-    def __init__(self, current_dir):
-
+    def __init__(self, current_dir): # init sorgt dafür, dass Python '.py' - Dateien als Module erkennt.
+        #KONSTRUKTOR - Init
+        #self = erlaubt Zugriff auf Attribute und Methoden der class
         self.view = view.View(current_dir)
         pass
 

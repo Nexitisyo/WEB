@@ -1,1 +1,9 @@
-[]
+[
+   {
+      "kundennummer": "test1",
+      "bezeichnung": "test1",
+      "ansprechpartner": "test1vcfb",
+      "ort": "t3este",
+      "id": 8
+   }
+]
