@@ -1,1 +1,24 @@
-[]
+[
+    {
+        "projektnummer": "12312",
+        "bezeichnung": "aefa",
+        "beschreibung": "efaef",
+        "bearbeitungszeitraum": "aef",
+        "budget": "aefae",
+        "kundenverweis": "faefa",
+        "mitarbeiterverweis": "afef",
+        "aufwand": "ae",
+        "id": 11
+    },
+    {
+        "projektnummer": "faefa",
+        "bezeichnung": "aefaef",
+        "beschreibung": "aefaef",
+        "bearbeitungszeitraum": "aefaef",
+        "budget": "aefae",
+        "kundenverweis": "aefaef",
+        "mitarbeiterverweis": "aefa",
+        "aufwand": "aefaef",
+        "id": 13
+    }
+]

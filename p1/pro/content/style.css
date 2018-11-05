@@ -1,6 +1,11 @@
 body {
-    margin-left: 20px;
+    background-color: #333333;
+    color: #cecece;
 }
+body h2 {
+    color: #cecece;
+}
+
 table {
     width: 100%;
 }
@@ -16,4 +21,16 @@ th {
 
 table.collapse {
     border-spacing:0;
+}
+
+a:link {
+    color: rgb(51, 101, 212);
+}
+
+a:visited {
+    color: rgb(165, 57, 185);
+}
+
+a:hover {
+    color: rgb(172, 172, 172);
 }

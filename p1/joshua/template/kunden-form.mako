@@ -16,12 +16,14 @@
 <form action="save" method="post">
 
     <label for="kundennummer">Kundennummer:</label>
+    ## if action is not UNDEFINED = Wenn action in form action definiert ist z.B durch einen Aufruf in kunden.py dann setze value auf einen bestimmten Eintrag
     <input type="text"
-        %if action is not UNDEFINED:
+        %if action is not UNDEFINED: 
            value="${kunden['kundennummer']}"
         %else:
            value=""
         %endif
+
            id="kundennummer"
            name="kundennummer"/>
 

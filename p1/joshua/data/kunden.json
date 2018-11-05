@@ -33,5 +33,19 @@
         "ansprechpartner": "aefa",
         "ort": "aef",
         "id": 5
+    },
+    {
+        "kundennummer": "123123",
+        "bezeichnung": "",
+        "ansprechpartner": "",
+        "ort": "",
+        "id": 6
+    },
+    {
+        "kundennummer": "ergt",
+        "bezeichnung": "wgr",
+        "ansprechpartner": "wrg",
+        "ort": "werg",
+        "id": 14
     }
 ]
