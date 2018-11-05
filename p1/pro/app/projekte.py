@@ -4,6 +4,7 @@ import cherrypy
 from app import view
 
 class Projekte(object):
+    
     def __init__(self, current_dir):
         self.view = view.View(current_dir)
         pass
@@ -12,3 +13,7 @@ class Projekte(object):
     def index(self):
         return self.view.create("projektDaten.mako")
 
+    @cherrypy.expose()
+    def default(self, *arglist, **kwargs):
+        msg_s = "no match: " + str(arglist) + ' ' + str(kwargs)
+        raise cherrypy.HTTPError(404, msg_s)

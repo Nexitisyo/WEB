@@ -1,6 +1,6 @@
+#coding utf-8
 import os
 import cherrypy
-
 from app import view
 
 class Index(object):
