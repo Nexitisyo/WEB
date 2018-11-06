@@ -14,7 +14,7 @@
 <body>
 
 
-<form action="save" method="post">
+<form class="collapse" action="save" method="post">
     <label for="name">Name:</label>
     <input type="text"
         %if action is not UNDEFINED:

@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/../style.css">
 </head>
 <body>
-<table>
+<table class="collapse">
     <tr>
         <th>ID</th>
         <th>Name</th>

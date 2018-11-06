@@ -14,6 +14,7 @@
         <p><a href="kunden">Kundendaten verwalten</a></p>
         <p><a href="mitarbeiter">Mitarbeiterdaten verwalten</a></p>
         <p><a href="projekte">Projektdaten verwalten</a></p>
+        <p><a href="auswertung">Auswertung</a></p>
     </body>
 
 </html>

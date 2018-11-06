@@ -16,12 +16,14 @@ class Projekte(object):
     def index(self):
 
         return self.view.create("projekte.mako", {
-            "liste": database.read("projekte.json")
+            "liste": database.read("projekte.json"),
+    	    "liste2": database.read("mitarbeiter.json")
         })
 
     @cherrypy.expose()
     def save(self, projektnummer, bezeichnung, beschreibung, bearbeitungszeitraum, budget, kundenverweis,
              mitarbeiterverweis, aufwand, key=None):
+
         if key:
             database.writeValuebyId("projekte.json", key, {
                 "projektnummer": projektnummer,
@@ -51,7 +53,10 @@ class Projekte(object):
 
     @cherrypy.expose()
     def add(self):
-        return self.view.create("projekte-form.mako")
+        return self.view.create("projekte-form.mako",{
+            "liste": database.read("kunden.json"),
+            "liste2": database.read("mitarbeiter.json")
+        })
 
     @cherrypy.expose()
     def delete(self, key):
@@ -72,5 +77,7 @@ class Projekte(object):
 
         return self.view.create("projekte-form.mako", {
             "projekte": projekt,
+            "liste": database.read("kunden.json"),
+            "liste2": database.read("mitarbeiter.json"),
             "action": "edit"
         })

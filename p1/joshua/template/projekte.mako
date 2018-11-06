@@ -7,7 +7,7 @@
     <title>Projekte</title>
     <link rel="stylesheet" type="text/css" href="/../style.css">
 </head><body>
-<table>
+<table class="collapse">
     <tr>
         <th>ID</th>
         <th>Projektnummer</th>
@@ -20,19 +20,20 @@
         <th>Aufwand</th>
         <th>Aktion</th>
     </tr>
-    % for projekt in liste:
+
+    % for projekte in liste:
         <tr>
-            <td>${projekt['id']}</td>
-            <td>${projekt['projektnummer']}</td>
-            <td>${projekt['bezeichnung']}</td>
-            <td>${projekt['beschreibung']}</td>
-            <td>${projekt['bearbeitungszeitraum']}</td>
-            <td>${projekt['budget']}</td>
-            <td>${projekt['kundenverweis']}</td>
-            <td>${projekt['mitarbeiterverweis']}</td>
-            <td>${projekt['aufwand']}</td>
+            <td>${projekte['id']}</td>
+            <td>${projekte['projektnummer']}</td>
+            <td>${projekte['bezeichnung']}</td>
+            <td>${projekte['beschreibung']}</td>
+            <td>${projekte['bearbeitungszeitraum']}</td>
+            <td>${projekte['budget']}</td>
+            <td>${projekte['kundenverweis']}</td>
+            <td>${projekte['mitarbeiterverweis']}</td>
+            <td>${projekte['aufwand']}</td>
             <td>
-                <a href="edit?key=${projekt['id']}">bearbeiten</a> <a href="delete?key=${projekt['id']}">löschen</a>
+                <a href="edit?key=${projekte['id']}">bearbeiten</a> <a href="delete?key=${projekte['id']}">löschen</a>
             </td>
         </tr>
     % endfor

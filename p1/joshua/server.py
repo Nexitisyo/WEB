@@ -5,13 +5,14 @@ import cherrypy
 from app import index
 from app import mitarbeiter
 from app import kunden
-from app import projekte #import projekte etc. aus dem Ordner app
+from app import projekte
+from app import auswertung #import projekte etc. aus dem Ordner app
 #from var_dump import var_dump
 
 def main():
     # --------------------------------------
     # Get current directory
-    # --------------------------------------
+    # -------------------------------------
     try:
         current_dir = os.path.dirname(os.path.abspath(__file__)) #derzeitiges Verzeichnis von server.py
     except:
@@ -40,6 +41,8 @@ def main():
     cherrypy.tree.mount(mitarbeiter.Mitarbeiter(current_dir), '/mitarbeiter/', config)
     cherrypy.tree.mount(kunden.Kunden(current_dir), '/kunden/', config)
     cherrypy.tree.mount(projekte.Projekte(current_dir), '/projekte/', config)
+    cherrypy.tree.mount(auswertung.Auswertung(current_dir), '/auswertung/', config)
+
 
     # suppress traceback-info
     cherrypy.config.update({'request.show_tracebacks': True}) #Errors nicht anzeigen/anzeigen (404, 500, etc)

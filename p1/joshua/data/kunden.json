@@ -1,23 +1,16 @@
 [
     {
-        "kundennummer": "123",
-        "bezeichnung": "afe",
-        "ansprechpartner": "aefa",
-        "ort": "aef",
-        "id": 1
+        "kundennummer": "4771",
+        "bezeichnung": "Max",
+        "ansprechpartner": "Mark",
+        "ort": "Krefeld",
+        "id": 32
     },
     {
-        "kundennummer": "123",
-        "bezeichnung": "afe",
-        "ansprechpartner": "aefa",
-        "ort": "aef",
-        "id": 2
-    },
-    {
-        "kundennummer": "f",
-        "bezeichnung": "e",
-        "ansprechpartner": "f",
-        "ort": "e",
-        "id": 15
+        "kundennummer": "4772",
+        "bezeichnung": "Justus",
+        "ansprechpartner": "Viktor",
+        "ort": "Krefeld",
+        "id": 33
     }
 ]

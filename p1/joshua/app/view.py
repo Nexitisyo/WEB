@@ -19,17 +19,16 @@ class View(object):
     # ... weitere Methoden
 
     # -------------------------------------------------------
-    def create(self, template_spl, data_opl=None):
+    def create(self, template_spl, data_opl=None, data2=None, data3=None):
         if data_opl == None:
             data_opl = {} # erstelle dictionary ({} = dictionary)
+        if data2 == None:
+            data2 = {}
+        if data3 == None:
+            data3 = {}
 
-        # -------------------------------------------------------
-        # Auswertung mit templates
         template_o = self.lookup_o.get_template(template_spl)
-        # mit der Methode render wird das zuvor 'übersetzte' Template ausgeführt
-        # data_o sind die im Template angegebenen Daten
-        # data_opl die übergebenen Daten
-        markup_s = template_o.render(**data_opl) #Herzstück, was die Templates ausführt. # Fragen how this works
+        markup_s = template_o.render(**data_opl,**data2,**data3)
         return markup_s
 
 # EOF

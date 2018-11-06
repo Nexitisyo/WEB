@@ -1,35 +1,24 @@
 [
     {
-        "projektnummer": "12312",
-        "bezeichnung": "aefa",
-        "beschreibung": "efaef",
-        "bearbeitungszeitraum": "aef",
-        "budget": "aefae",
-        "kundenverweis": "faefa",
-        "mitarbeiterverweis": "afef",
-        "aufwand": "ae",
-        "id": 11
+        "projektnummer": "420",
+        "bezeichnung": "Oregano",
+        "beschreibung": "Dealing",
+        "bearbeitungszeitraum": "Heute",
+        "budget": "420\u20ac",
+        "kundenverweis": "Max",
+        "mitarbeiterverweis": "39",
+        "aufwand": "",
+        "id": 34
     },
     {
-        "projektnummer": "faefa",
-        "bezeichnung": "aefaef",
-        "beschreibung": "aefaef",
-        "bearbeitungszeitraum": "aefaef",
-        "budget": "aefae",
-        "kundenverweis": "aefaef",
-        "mitarbeiterverweis": "aefa",
-        "aufwand": "aefaef",
-        "id": 13
-    },
-    {
-        "projektnummer": "aefafe",
-        "bezeichnung": "aef132312",
-        "beschreibung": "aef31231",
-        "bearbeitungszeitraum": "aef23123",
-        "budget": "aef12312",
-        "kundenverweis": "aef3123",
-        "mitarbeiterverweis": "efefaef",
-        "aufwand": "aeffef",
-        "id": 17
+        "projektnummer": "3133",
+        "bezeichnung": "Cocktail",
+        "beschreibung": "Lecker Gmbh",
+        "bearbeitungszeitraum": "Gestern",
+        "budget": "0.44\u20ac",
+        "kundenverweis": "33",
+        "mitarbeiterverweis": "40",
+        "aufwand": "50",
+        "id": 41
     }
 ]
