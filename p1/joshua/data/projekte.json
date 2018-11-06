@@ -20,5 +20,16 @@
         "mitarbeiterverweis": "aefa",
         "aufwand": "aefaef",
         "id": 13
+    },
+    {
+        "projektnummer": "aefafe",
+        "bezeichnung": "aef132312",
+        "beschreibung": "aef31231",
+        "bearbeitungszeitraum": "aef23123",
+        "budget": "aef12312",
+        "kundenverweis": "aef3123",
+        "mitarbeiterverweis": "efefaef",
+        "aufwand": "aeffef",
+        "id": 17
     }
 ]

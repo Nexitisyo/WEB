@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "funktion": "g",
+        "name": "g",
+        "vorname": "g",
+        "id": 15
+    },
+    {
+        "funktion": "h",
+        "name": "h",
+        "vorname": "t",
+        "id": 16
+    },
+    {
+        "funktion": "h",
+        "name": "h",
+        "vorname": "t",
+        "id": 17
+    }
+]

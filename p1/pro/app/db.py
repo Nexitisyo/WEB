@@ -25,6 +25,14 @@ def addEntry(dbFile, entry, key):
             dbJson[x] = entry    #eitnrag hihnzufpgen
     updateJson(dbFile, dbJson)    #json neu schreiben/updaten
 
+def append(dbFile, values):
+    counter = read("data.json")
+    counter["counter"] += 1 # Set id to lowest possible id
+    values["id"] = counter["counter"]
+    updateJson("data.json", counter)
+    tmp = read(dbFile)
+    tmp.append(values)
+    updateJson(dbFile, tmp)
 
 
 # def readValuebyId(dbfile, key):
@@ -41,11 +49,4 @@ def addEntry(dbFile, entry, key):
 #             del result[index]
 #     write(dbfile, result)
 
-# def append(dbfile, values): #Wofür ist das ?
-#     counter = read("data.json")
-#     counter["counter"] += 1 # Set id to lowest possible id
-#     values["id"] = counter["counter"]
-#     write("data.json", counter)
-#     tmp = read(dbfile)
-#     tmp.append(values)
-#     write(dbfile, tmp)
+

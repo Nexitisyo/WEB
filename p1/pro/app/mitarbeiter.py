@@ -22,8 +22,20 @@ class Mitarbeiter(object):
 
     @cherrypy.expose()
     def addEntry(self,funktion, name, vorname, key=None):
-
-        return 
+        if key:
+            db.updateJson("mitarbeiter.json",{
+                "funktion": funktion,
+                "name": name,
+                "vorname": vorname                
+            })
+            raise cherrypy.HTTPRedirect("../kunden/")
+        else:
+            db.append("mitarbeiter.json",{
+                "funktion": funktion,
+                "name": name,
+                "vorname": vorname
+            })
+            return self.index()
 
 
 

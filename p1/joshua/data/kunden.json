@@ -14,38 +14,10 @@
         "id": 2
     },
     {
-        "kundennummer": "123",
-        "bezeichnung": "afe",
-        "ansprechpartner": "aefa",
-        "ort": "aef",
-        "id": 3
-    },
-    {
-        "kundennummer": "123",
-        "bezeichnung": "afe",
-        "ansprechpartner": "aefa",
-        "ort": "aef",
-        "id": 4
-    },
-    {
-        "kundennummer": "123",
-        "bezeichnung": "afe",
-        "ansprechpartner": "aefa",
-        "ort": "aef",
-        "id": 5
-    },
-    {
-        "kundennummer": "123123",
-        "bezeichnung": "",
-        "ansprechpartner": "",
-        "ort": "",
-        "id": 6
-    },
-    {
-        "kundennummer": "ergt",
-        "bezeichnung": "wgr",
-        "ansprechpartner": "wrg",
-        "ort": "werg",
-        "id": 14
+        "kundennummer": "f",
+        "bezeichnung": "e",
+        "ansprechpartner": "f",
+        "ort": "e",
+        "id": 15
     }
 ]

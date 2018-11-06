@@ -18,7 +18,7 @@
     <label for="projektnummer">Projektnummer:</label>
     <input type="text"
         %if action is not UNDEFINED:
-           value="${projekt['projektnummer']}"
+           value="${projekte['projektnummer']}"
         %else:
            value=""
         %endif
@@ -27,7 +27,7 @@
     <label for="bezeichnung">Bezeichnung:</label>
     <input type="text"
         %if action is not UNDEFINED:
-           value="${projekt['bezeichnung']}"
+           value="${projekte['bezeichnung']}"
         %else:
            value=""
         %endif
@@ -35,7 +35,7 @@
     <label for="beschreibung">Beschreibung:</label>
     <input type="text"
         %if action is not UNDEFINED:
-           value="${projekt['beschreibung']}"
+           value="${projekte['beschreibung']}"
         %else:
            value=""
         %endif
@@ -43,7 +43,7 @@
     <label for="bearbeitungszeitraum">Bearbeitungszeitraum:</label>
     <input type="text"
         %if action is not UNDEFINED:
-           value="${projekt['bearbeitungszeitraum']}"
+           value="${projekte['bearbeitungszeitraum']}"
         %else:
            value=""
         %endif
@@ -51,7 +51,7 @@
     <label for="budget">Budget:</label>
     <input type="text"
         %if action is not UNDEFINED:
-           value="${projekt['budget']}"
+           value="${projekte['budget']}"
         %else:
            value=""
         %endif
@@ -59,7 +59,7 @@
     <label for="kundenverweis">Kundenverweis:</label>
     <input type="text"
         %if action is not UNDEFINED:
-           value="${projekt['kundenverweis']}"
+           value="${projekte['kundenverweis']}"
         %else:
            value=""
         %endif
@@ -67,7 +67,7 @@
     <label for="mitarbeiterverweis">Mitarbeiterverweis:</label>
     <input type="text"
         %if action is not UNDEFINED:
-           value="${projekt['mitarbeiterverweis']}"
+           value="${projekte['mitarbeiterverweis']}"
         %else:
            value=""
         %endif
@@ -75,14 +75,14 @@
     <label for="aufwand">Aufwand:</label>
     <input type="text"
         %if action is not UNDEFINED:
-           value="${projekt['Aufwand']}"
+           value="${projekte['aufwand']}"
         %else:
            value=""
         %endif
            id="aufwand" name="aufwand"/>
     <input type="submit" value="speichern"/>
     %if action is not UNDEFINED:
-        <input type="hidden" value="${projekt['id']}" name="key" />
+        <input type="hidden" value="${projekte['id']}" name="key" />
     %endif
 
 </form>
