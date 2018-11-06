@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/../style.css" />
     <title>Mitarbeiterdaten</title>
-
 </head>
 <body>
     <h2 text-align="center">Mitarbeiterdaten</h2>
@@ -29,10 +28,10 @@
                 <a href="#">bearbeiten</a> <a href="#">l&ouml;schen</a>
             </td>
         </tr>
-    % endfor
+         % endfor
             <td>
-            <a href="#">bearbeiten</a>
-            <a href="#">l&ouml;schen</a>
+            <a href="edit">bearbeiten</a>
+            <a href="delete">l&ouml;schen</a>
         </td>
     </tr>
 

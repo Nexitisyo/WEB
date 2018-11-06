@@ -28,7 +28,7 @@ class View(object):
         # mit der Methode render wird das zuvor 'übersetzte' Template ausgeführt
         # data_o sind die im Template angegebenen Daten
         # data_opl die übergebenen Daten
-        markup_s = template_o.render(data_o = data_opl)
+        markup_s = template_o.render(**data_opl)
         return markup_s
 
     #-------------------------------------------------------

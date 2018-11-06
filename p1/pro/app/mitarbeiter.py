@@ -2,6 +2,7 @@
 import os
 import cherrypy
 from app import view
+from app import db
 
 class Mitarbeiter(object):
 
@@ -11,7 +12,9 @@ class Mitarbeiter(object):
 
     @cherrypy.expose
     def index(self):
-        return self.view.create("mitarbeiterDaten.mako")
+        return self.view.create("mitarbeiterDaten.mako",{
+            "liste": db.read("mitarbeiter.json")
+        })
 
     @cherrypy.expose()
     def create(self):
