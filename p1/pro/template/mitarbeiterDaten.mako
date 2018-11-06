@@ -1,8 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
 <html>
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/../style.css" />
     <title>Mitarbeiterdaten</title>
-    <meta charset="UTF-8">
+
 </head>
 <body>
     <h2 text-align="center">Mitarbeiterdaten</h2>
@@ -16,11 +19,17 @@
             <th>Aktion</th>
         </tr>
         
+        % for mitarbeiter in liste:
         <tr>
-            <td>Jill</td>
-            <td>Smith</td> 
-            <td>50</td>
-            <td>q9jr1</td>
+            <td>${mitarbeiter['id']}</td>
+            <td>${mitarbeiter['name']}</td>
+            <td>${mitarbeiter['vorname']}</td>
+            <td>${mitarbeiter['funktion']}</td>
+            <td>
+                <a href="#">bearbeiten</a> <a href="#">l&ouml;schen</a>
+            </td>
+        </tr>
+    % endfor
             <td>
             <a href="#">bearbeiten</a>
             <a href="#">l&ouml;schen</a>

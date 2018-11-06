@@ -6,9 +6,6 @@ body h2 {
     color: #cecece;
 }
 
-table {
-    width: 100%;
-}
 td {
     border-bottom: 1px solid #ddd;
     text-align: center;
@@ -21,6 +18,7 @@ th {
 
 table.collapse {
     border-spacing:0;
+    width: 100%;
 }
 
 a:link {

@@ -1,4 +1,4 @@
-#coding utf-8
+    #coding utf-8
 import os
 import cherrypy
 from app import view
@@ -16,6 +16,22 @@ class Mitarbeiter(object):
     @cherrypy.expose()
     def create(self):
         return self.view.create("mitarbeiterForm.mako")
+
+    @cherrypy.expose()
+    def addEntry(self,funktion, name, vorname, key=None):
+
+        return 
+
+
+
+
+
+
+
+
+
+
+
 
     @cherrypy.expose()
     def default(self, *arglist, **kwargs):

@@ -14,6 +14,10 @@ class Projekte(object):
         return self.view.create("projektDaten.mako")
 
     @cherrypy.expose()
+    def create(self):
+        return self.view.create("projektForm.mako")
+
+    @cherrypy.expose()
     def default(self, *arglist, **kwargs):
         msg_s = "no match: " + str(arglist) + ' ' + str(kwargs)
         raise cherrypy.HTTPError(404, msg_s)

@@ -5,32 +5,26 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <h2 text-align="center">Mitarbeiterdaten</h2>
-    
-    <table class="collapse">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Vorname</th>
-            <th>Funktion</th>
-            <th>Aktion</th>
-        </tr>
-        
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td> 
-            <td>50</td>
-            <td>q9jr1</td>
-            <td>
-            <a href="#">bearbeiten</a>
-            <a href="#">l&ouml;schen</a>
-        </td>
-    </tr>
+    <h2>Mitarbeiter hinzuf&uuml;gen</h2>
 
+    <form class="entry" action="addEntry" method="post">
+    <ul style="list-style-type:none">
+    <table>
+        <tr>
+        <th><label for="name">Name:</label></th>
+        <th><label for="vorname">Vorname:</label></th>
+        <th><label for="funktion">Funktion:</label></th>
+        <th></th>
+        </tr>
+
+        <tr>
+        <td><input value="" id="name", name="name"></input></td>
+        <td><input value="" id="vorname", name="vorname"></input></td>
+        <td><input value="" id="funktion", name="funktion"></input></td>
+        <td><input type="submit" value="Speichern"/></td>
+        </tr>
     </table>
-    <br>
-    <br>
-    <a href="create">Eintrag hinzuf&uuml;gen</a>
-    <br>
-    <a href="/index">Zur&uuml;ck</a>
+    </ul>
+    </form>
+    <a href="/mitarbeiter">Zur&uuml;ck</a>
 </body>
