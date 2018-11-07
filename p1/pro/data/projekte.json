@@ -8,8 +8,9 @@
         "budget": "0.44\u20ac",
         "kundenverweis": "32",
         "mitarbeiterverweis": [
-            "40",
-            "46"
+            "Kai Mustermann",
+            "Mustermann Joseph",
+            "Kuznecov Viktor"
         ],
         "aufwand": 6,
         "aufwandWeek": 0.8571428571428571,
@@ -23,12 +24,7 @@
         "bearbeitungszeitraumB": "2018-11-09",
         "budget": "382.244,02\u20ac",
         "kundenverweis": "33",
-        "mitarbeiterverweis": [
-            "39",
-            "40",
-            "46",
-            "58"
-        ],
+        "mitarbeiterverweis": "Borgmann Mark",
         "aufwand": 6,
         "aufwandWeek": 0.8571428571428571,
         "id": 59
@@ -41,7 +37,7 @@
         "bearbeitungszeitraumB": "2018-11-29",
         "budget": "20\u20ac",
         "kundenverweis": "32",
-        "mitarbeiterverweis": "40",
+        "mitarbeiterverweis": "Kuznecov Viktor",
         "aufwand": 28,
         "aufwandWeek": 4.0,
         "id": 70
@@ -51,12 +47,16 @@
         "bezeichnung": "G\u00fcnther GmbH & Co. Kg.",
         "beschreibung": "Wei\u00dfer Schnee",
         "bearbeitungszeitraumA": "2019-03-27",
-        "bearbeitungszeitraumB": "2020-03-31",
+        "bearbeitungszeitraumB": "2020-03-01",
         "budget": "5000\u20ac",
         "kundenverweis": "57",
-        "mitarbeiterverweis": "58",
-        "aufwand": 370,
-        "aufwandWeek": 52.857142857142854,
+        "mitarbeiterverweis": [
+            "Kai Mustermann",
+            "Mustermann Joseph",
+            "Kuznecov Viktor"
+        ],
+        "aufwand": 340,
+        "aufwandWeek": 48.57142857142857,
         "id": 71
     }
 ]

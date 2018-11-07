@@ -22,8 +22,6 @@
             <th><label for="ort">Ort:</label></th> 
             <th>Aktion:</th>
         </tr>
-
-
                 ## if action is not UNDEFINED = Wenn action in form action definiert ist z.B durch einen Aufruf in kunden.py dann setze value auf einen bestimmten Eintrag
 ########################################################################################################################                
         <td><input type="text"

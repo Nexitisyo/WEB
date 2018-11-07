@@ -5,7 +5,7 @@ from app import view
 from app import database
 import math
 
-class Projekte(object):
+class Orga(object):
 
     def __init__(self, current_dir):
 
@@ -15,50 +15,29 @@ class Projekte(object):
     @cherrypy.expose()
     def index(self):
 
-        return self.view.create("projekte.mako", {
+        return self.view.create("orga-form.mako", {
             "liste": database.read("projekte.json"),
     	    "liste2": database.read("mitarbeiter.json"),
             "liste3": database.read("orga.json")
+            #hier maybe links zum mitarbeiterverlinken bzw. hier die datenbank für einbinden
         })
 
     @cherrypy.expose()
-    def save(self, projektnummer, bezeichnung, beschreibung, bearbeitungszeitraumA, bearbeitungszeitraumB, budget, kundenverweis,
-             mitarbeiterverweis, key=None):
-        if (bearbeitungszeitraumA == None) or (bearbeitungszeitraumB == None):
-            bearbeitungszeitraumA = "invalid date"
-            bearbeitungszeitraumB = "invalid date"
-        else:
-            differenceInDays = database.calc(bearbeitungszeitraumA, bearbeitungszeitraumB)
-            differenceWeeks = differenceInDays / 7
-        
+    def save(self, projektnummer, bezeichnung, mitarbeiter, key=None):        
         if key:
             database.writeValuebyId("projekte.json", key, {
                 "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
-                "beschreibung": beschreibung,
-                "bearbeitungszeitraumA": bearbeitungszeitraumA,
-                "bearbeitungszeitraumB": bearbeitungszeitraumB,
-                "budget": budget,
-                "kundenverweis": kundenverweis,
-                "mitarbeiterverweis": mitarbeiterverweis,
-                "aufwand": differenceInDays,
-                "aufwandWeek": differenceWeeks
+                "mitarbeiterverweis": mitarbeiter,
             })
 
-            raise cherrypy.HTTPRedirect("../projekte/")
+            raise cherrypy.HTTPRedirect("../orga/")
         else:
 
             database.append("projekte.json", {
                 "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
-                "beschreibung": beschreibung,
-                "bearbeitungszeitraumA": bearbeitungszeitraumA,
-                "bearbeitungszeitraumB": bearbeitungszeitraumB,
-                "budget": budget,
-                "kundenverweis": kundenverweis,
-                "mitarbeiterverweis": mitarbeiterverweis,
-                "aufwand": differenceInDays,
-                "aufwandWeek": differenceWeeks
+                "mitarbeiterverweis": mitarbeiter,
             })
             return self.index()
 
@@ -71,7 +50,7 @@ class Projekte(object):
 
     @cherrypy.expose()
     def delete(self, key):
-        database.deleteValueById("projekte.json", key)
+        database.deleteValueById("orga.json", key)
         return self.index()
 
     @cherrypy.expose()

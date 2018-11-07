@@ -1,0 +1,22 @@
+[
+    {
+        "projektnummer": "3133",
+        "bezeichnung": "Cocktail",    
+        "mitarbeiter": [
+            "Kai Mustermann",
+            "Mustermann Joseph"
+        ],
+        "aufwand": 6,
+        "id": 41
+    },
+    {
+        "projektnummer": "3133",
+        "bezeichnung": "Cocktail",    
+        "mitarbeiter": [
+            "Kai Mustermann",
+            "Mustermann Joseph"
+        ],
+        "aufwand": 6,
+        "id": 44
+    }
+]

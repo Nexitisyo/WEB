@@ -27,15 +27,18 @@
             <td>${projekte['projektnummer']}</td>
             <td>${projekte['bezeichnung']}</td>
             <td>${projekte['beschreibung']}</td>
-            <td>vom ${projekte['bearbeitungszeitraumA']} bis ${projekte['bearbeitungszeitraumB']}</td>
+            <td>${projekte['bearbeitungszeitraumA']} bis ${projekte['bearbeitungszeitraumB']}</td>
             <td>${projekte['budget']}</td>
             <td>${projekte['kundenverweis']}</td>
             <td>${projekte['mitarbeiterverweis']}</td>
             <td>${projekte['aufwand']}</td>
             <td>
                 <ul class="buttons">
-                    <li><a href="edit?key=${projekte['id']}">bearbeiten</a></li>
-                    <li><a href="delete?key=${projekte['id']}">löschen</a></li>
+                    <li><a href="edit?key=${projekte['id']}">Bearbeiten</a></li>
+                    <li><a href="delete?key=${projekte['id']}">Löschen</a></li>
+                    % for orga in liste3:
+                        <li><a href="/orga/edit?key=${orga['id']}">${orga['bezeichnung']}</a></li>
+                    % endfor
                 </ul>
             </td>
         </tr>

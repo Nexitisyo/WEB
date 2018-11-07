@@ -22,9 +22,6 @@
             <th><label for="kundenverweis">Kundenverweis:</label></th>
             <th><label for="mitarbeiterverweis">Mitarbeiterverweis:</label></th>
             <th><label for="aufwand">Aufwand:</label></th>
-
-
-
             <th><label for="bearbeitungszeitraum">Bearbeitungszeitraum:</label></th>
             <th>Aktion:</th>
         </tr>
@@ -100,7 +97,7 @@
                          
                         ##     <option selected value="${mitarbeiter['id']}">${mitarbeiter['name']}</option>
                         ## % else:
-                            <option value="${mitarbeiter['id']}">${mitarbeiter['name']}</option>
+                            <option value="${mitarbeiter['name']} ${mitarbeiter['vorname']}">${mitarbeiter['vorname']} ${mitarbeiter['name']}</option>
 
                        ## %endif
                     % endfor

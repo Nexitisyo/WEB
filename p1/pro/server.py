@@ -6,7 +6,8 @@ from app import index
 from app import mitarbeiter
 from app import kunden
 from app import projekte
-from app import auswertung #import projekte etc. aus dem Ordner app
+from app import auswertung 
+from app import orga#import projekte etc. aus dem Ordner app
 #from var_dump import var_dump
 
 def main():
@@ -42,6 +43,8 @@ def main():
     cherrypy.tree.mount(kunden.Kunden(current_dir), '/kunden/', config)
     cherrypy.tree.mount(projekte.Projekte(current_dir), '/projekte/', config)
     cherrypy.tree.mount(auswertung.Auswertung(current_dir), '/auswertung/', config)
+    cherrypy.tree.mount(orga.Orga(current_dir), '/orga/', config)
+
 
 
     # suppress traceback-info
