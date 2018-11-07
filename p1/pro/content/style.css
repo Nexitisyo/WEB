@@ -1,17 +1,31 @@
+html.index, body.index {
+    height: 100%;
+}
+
+html.index {
+    display: table;
+    margin: auto;
+}
+
 body {
     background-color: #333333;
     color: #cecece;
 }
-body h2 {
+body.index {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #333333;
     color: #cecece;
 }
 
 td {
     border-bottom: 1px solid #ddd;
     text-align: center;
+    padding-top:5px;
+    padding-bottom:5px;
 }
 th {
-    border-bottom: 1.2px solid #b64848;
+    border-bottom: 1.5px solid #b32626;
     text-align: center;
     
 }
@@ -21,14 +35,47 @@ table.collapse {
     width: 100%;
 }
 
-a:link {
-    color: rgb(51, 101, 212);
+a:link,a:visited,a:hover {
+    
+    color: rgb(206, 206, 206);
 }
 
-a:visited {
-    color: rgb(165, 57, 185);
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+ul.buttons {
+  display: flex;
+  justify-content: center;
+
 }
 
-a:hover {
-    color: rgb(172, 172, 172);
+ul.buttons li {
+  padding: 0px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #b32626;
+}
+
+a {
+    display: block;
+    padding: 5px 5px 5px 5px;
+    background-color: #3e3e3e;
 }

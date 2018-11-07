@@ -23,12 +23,16 @@
             <td>${mitarbeiter['vorname']}</td>
             <td>${mitarbeiter['funktion']}</td>
             <td>
-                <a href="edit?key=${mitarbeiter['id']}">bearbeiten</a> <a href="delete?key=${mitarbeiter['id']}">löschen</a>
+                <ul class="buttons">
+                <li><a href="edit?key=${mitarbeiter['id']}">bearbeiten</a></li>
+                <li><a href="delete?key=${mitarbeiter['id']}">löschen</a><li>
+                </ul>
             </td>
         </tr>
     % endfor
 </table>
-<p>Neuen Mitarbeiter <a href="add">hinzufügen</a></p>
-<p>Zurück zur <a href="/../">Startseite</a></p>
+<ul>
+<li><a href="add">Neuen Mitarbeiter hinzufügen</a></li>
+<li><a href="/../">Zurück zur Startseite</a></li>
 </body>
 </html>

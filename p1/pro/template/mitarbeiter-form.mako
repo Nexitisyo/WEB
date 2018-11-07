@@ -14,34 +14,50 @@
 <body>
 
 
-<form class="collapse" action="save" method="post">
-    <label for="name">Name:</label>
-    <input type="text"
-        %if action is not UNDEFINED:
-           value="${mitarbeiter['name']}"
-        %else:
-           value=""
-        %endif
-           id="name"
-           name="name"/>
-    <label for="vorname">Vorname:</label>
-    <input type="text"
-        %if action is not UNDEFINED:
-           value="${mitarbeiter['vorname']}"
-        %else:
-           value=""
-        %endif
-           id="vorname" name="vorname"/>
-    <label for="funktion">Funktion:</label>
-    <input type="text"
-        %if action is not UNDEFINED:
-           value="${mitarbeiter['funktion']}"
-        %else:
-           value=""
-        %endif
-           id="funktion" name="funktion"/>
-
-    <input type="submit" value="speichern"/>
+<form action="save" method="post">
+    <table class="collapse">
+       <tr>
+            <th><label for="name">Name:</label></th>
+            <th><label for="vorname">Vorname:</label></th>
+            <th><label for="funktion">Funktion:</label></th>
+            <th>Aktion:</th>
+        </tr>
+##################################################################################################################
+            <td><input type="text"
+                %if action is not UNDEFINED:
+                    value="${mitarbeiter['name']}"
+                %else:
+                    value=""
+                %endif
+                    id="name"
+                    name="name"/>
+            </td>
+##################################################################################################################
+            <td>
+                <input type="text"
+                    %if action is not UNDEFINED:
+                        value="${mitarbeiter['vorname']}"
+                    %else:
+                        value=""
+                    %endif
+                        id="vorname" name="vorname"/>
+            </td>
+##################################################################################################################
+            <td>
+                <input type="text"
+                    %if action is not UNDEFINED:
+                        value="${mitarbeiter['funktion']}"
+                    %else:
+                        value=""
+                    %endif
+                        id="funktion" name="funktion"/>
+            </td>
+            <td>
+                <input type="submit" value="Speichern"/>
+                <form action="/mitarbeiter">
+                    <input type="submit" value="Abbrechen"/>
+                </form> 
+           </td>
     %if action is not UNDEFINED:
         <input type="hidden" value="${mitarbeiter['id']}" name="key" />
     %endif

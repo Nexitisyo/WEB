@@ -13,48 +13,62 @@
 </head>
 <body>
 
-<form class="collapse" action="save" method="post">
+<form action="save" method="post">
+    <table class="collapse">
+        <tr>
+            <th><label for="kundennummer">Kundennummer:</label></th>
+            <th><label for="bezeichnung">Bezeichnung:</label></th>
+            <th><label for="ansprechpartner">Ansprechpartner:</label></th>
+            <th><label for="ort">Ort:</label></th> 
+            <th>Aktion:</th>
+        </tr>
 
-    <label for="kundennummer">Kundennummer:</label>
-    ## if action is not UNDEFINED = Wenn action in form action definiert ist z.B durch einen Aufruf in kunden.py dann setze value auf einen bestimmten Eintrag
-    <input type="text"
-        %if action is not UNDEFINED: 
-           value="${kunden['kundennummer']}"
-        %else:
-           value=""
-        %endif
 
-           id="kundennummer"
-           name="kundennummer"/>
+                ## if action is not UNDEFINED = Wenn action in form action definiert ist z.B durch einen Aufruf in kunden.py dann setze value auf einen bestimmten Eintrag
+########################################################################################################################                
+        <td><input type="text"
+                %if action is not UNDEFINED: 
+                    value="${kunden['kundennummer']}"
+                %else:
+                    value=""
+                %endif
+                    id="kundennummer"
+                    name="kundennummer"/>
+        </th>
+########################################################################################################################                
+        <td><input type="text"
+                %if action is not UNDEFINED:
+                    value="${kunden['bezeichnung']}"
+                %else:
+                    value=""
+                %endif
+                    id="bezeichnung" name="bezeichnung"/>
+        </td>
+########################################################################################################################                
+        <td><input type="text"
+                %if action is not UNDEFINED:
+                    value="${kunden['ansprechpartner']}"
+                %else:
+                    value=""
+                %endif
+                    id="ansprechpartner" name="ansprechpartner"/>
+        </td>
+########################################################################################################################                
+        <td><input type="text"
+                %if action is not UNDEFINED:
+                    value="${kunden['ort']}"
+                %else:
+                    value=""
+                %endif
+                    id="ort" name="ort"/>
+        </td>
 
-    <label for="bezeichnung">Bezeichnung:</label>
-    <input type="text"
-        %if action is not UNDEFINED:
-           value="${kunden['bezeichnung']}"
-        %else:
-           value=""
-        %endif
-           id="bezeichnung" name="bezeichnung"/>
-
-    <label for="ansprechpartner">Ansprechpartner:</label>
-    <input type="text"
-        %if action is not UNDEFINED:
-           value="${kunden['ansprechpartner']}"
-        %else:
-           value=""
-        %endif
-           id="ansprechpartner" name="ansprechpartner"/>
-
-    <label for="ort">Ort:</label>
-    <input type="text"
-        %if action is not UNDEFINED:
-           value="${kunden['ort']}"
-        %else:
-           value=""
-        %endif
-           id="ort" name="ort"/>
-
-    <input type="submit" value="speichern"/>
+        <td>
+            <input type="submit" value="Speichern"/>
+            <form action="/mitarbeiter">
+                <input type="submit" value="Abbrechen"/>
+            </form> 
+        </td>
     %if action is not UNDEFINED:
         <input type="hidden" value="${kunden['id']}" name="key"/>
     %endif

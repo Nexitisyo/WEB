@@ -10,5 +10,11 @@
         "name": "Mustermann",
         "vorname": "Joseph",
         "id": 40
+    },
+    {
+        "funktion": "Chef im Gesch\u00e4ft",
+        "name": "Kuznecov",
+        "vorname": "Viktor",
+        "id": 46
     }
 ]
