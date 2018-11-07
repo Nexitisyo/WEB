@@ -16,5 +16,11 @@
         "name": "Kuznecov",
         "vorname": "Viktor",
         "id": 46
+    },
+    {
+        "funktion": "Chef im Gesch\u00e4ft",
+        "name": "Borgmann",
+        "vorname": "Mark",
+        "id": 74
     }
 ]

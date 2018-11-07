@@ -12,5 +12,12 @@
         "ansprechpartner": "Viktor",
         "ort": "Krefeld",
         "id": 33
+    },
+    {
+        "kundennummer": "3124123",
+        "bezeichnung": "Google",
+        "ansprechpartner": "Steffen",
+        "ort": "Essen",
+        "id": 73
     }
 ]
