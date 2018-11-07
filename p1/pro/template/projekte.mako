@@ -27,7 +27,7 @@
             <td>${projekte['projektnummer']}</td>
             <td>${projekte['bezeichnung']}</td>
             <td>${projekte['beschreibung']}</td>
-            <td>${projekte['bearbeitungszeitraum']}</td>
+            <td>vom ${projekte['bearbeitungszeitraumA']} bis ${projekte['bearbeitungszeitraumB']}</td>
             <td>${projekte['budget']}</td>
             <td>${projekte['kundenverweis']}</td>
             <td>${projekte['mitarbeiterverweis']}</td>

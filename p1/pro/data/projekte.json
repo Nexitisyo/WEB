@@ -1,24 +1,62 @@
 [
     {
-        "projektnummer": "420",
-        "bezeichnung": "Oregano",
-        "beschreibung": "Dealing",
-        "bearbeitungszeitraum": "Heute",
-        "budget": "420\u20ac",
-        "kundenverweis": "Max",
-        "mitarbeiterverweis": "",
-        "aufwand": "",
-        "id": 34
-    },
-    {
         "projektnummer": "3133",
         "bezeichnung": "Cocktail",
         "beschreibung": "Lecker Gmbh",
-        "bearbeitungszeitraum": "Gestern",
+        "bearbeitungszeitraumA": "2018-11-03",
+        "bearbeitungszeitraumB": "2018-11-09",
         "budget": "0.44\u20ac",
-        "kundenverweis": "33",
-        "mitarbeiterverweis": "40",
-        "aufwand": "50",
+        "kundenverweis": "32",
+        "mitarbeiterverweis": [
+            "40",
+            "46"
+        ],
+        "aufwand": 6,
+        "aufwandWeek": 0.8571428571428571,
         "id": 41
+    },
+    {
+        "projektnummer": "1231",
+        "bezeichnung": "Statue",
+        "beschreibung": "Bitte nich so teuer",
+        "bearbeitungszeitraumA": "2018-11-03",
+        "bearbeitungszeitraumB": "2018-11-09",
+        "budget": "382.244,02\u20ac",
+        "kundenverweis": "33",
+        "mitarbeiterverweis": [
+            "39",
+            "40",
+            "46",
+            "58"
+        ],
+        "aufwand": 6,
+        "aufwandWeek": 0.8571428571428571,
+        "id": 59
+    },
+    {
+        "projektnummer": "3124",
+        "bezeichnung": "Baum",
+        "beschreibung": "Blatt",
+        "bearbeitungszeitraumA": "2018-11-01",
+        "bearbeitungszeitraumB": "2018-11-29",
+        "budget": "20\u20ac",
+        "kundenverweis": "32",
+        "mitarbeiterverweis": "40",
+        "aufwand": 28,
+        "aufwandWeek": 4.0,
+        "id": 70
+    },
+    {
+        "projektnummer": "3153",
+        "bezeichnung": "G\u00fcnther GmbH & Co. Kg.",
+        "beschreibung": "Wei\u00dfer Schnee",
+        "bearbeitungszeitraumA": "2019-03-27",
+        "bearbeitungszeitraumB": "2020-03-31",
+        "budget": "5000\u20ac",
+        "kundenverweis": "57",
+        "mitarbeiterverweis": "58",
+        "aufwand": 370,
+        "aufwandWeek": 52.857142857142854,
+        "id": 71
     }
 ]

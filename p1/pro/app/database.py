@@ -1,7 +1,7 @@
 # coding: utf-8
 import os
 import json
-
+import datetime
 
 def read(dbfile):
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -10,6 +10,26 @@ def read(dbfile):
     jsonobject.close()
     return result
 
+##TOdo
+def calc(start, end, key=None):
+
+    splitStart = start.split("-")
+    splitEnd = end.split("-")
+
+    ss1 = int(splitStart[0])
+    ss2 = int(splitStart[1])
+    ss3 = int(splitStart[2])
+
+    se1 = int(splitEnd[0])
+    se2 = int(splitEnd[1])
+    se3 = int(splitEnd[2])
+
+    startDate = datetime.date(ss1,ss2,ss3)
+    endDate = datetime.date(se1,se2,se3)
+
+    differenceInDays = (endDate - startDate).days
+    return differenceInDays
+  
 
 def readValuebyId(dbfile, key):
     result = read(dbfile)

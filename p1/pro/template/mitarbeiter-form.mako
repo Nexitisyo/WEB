@@ -54,9 +54,7 @@
             </td>
             <td>
                 <input type="submit" value="Speichern"/>
-                <form action="/mitarbeiter">
-                    <input type="submit" value="Abbrechen"/>
-                </form> 
+                <input type="button" value="Abbrechen" onclick="location.href='/mitarbeiter/';"/>
            </td>
     %if action is not UNDEFINED:
         <input type="hidden" value="${mitarbeiter['id']}" name="key" />

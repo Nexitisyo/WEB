@@ -21,7 +21,7 @@
         <tr>
             <td>${projekte['bezeichnung']}</td>
             <td>${projekte['mitarbeiterverweis']}</td>
-            <td>${projekte['aufwand']}</td>
+            <td>${projekte['aufwandWeek']}</td>
         </tr>
     % endfor
 

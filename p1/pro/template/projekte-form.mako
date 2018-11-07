@@ -22,6 +22,9 @@
             <th><label for="kundenverweis">Kundenverweis:</label></th>
             <th><label for="mitarbeiterverweis">Mitarbeiterverweis:</label></th>
             <th><label for="aufwand">Aufwand:</label></th>
+
+
+
             <th><label for="bearbeitungszeitraum">Bearbeitungszeitraum:</label></th>
             <th>Aktion:</th>
         </tr>
@@ -54,15 +57,7 @@
                 %endif
                     id="beschreibung" name="beschreibung"/>
             </td>
-#######################################################################################################################################
-            <td><input type="text"
-                %if action is not UNDEFINED:
-                    value="${projekte['bearbeitungszeitraum']}"
-                %else:
-                    value=""
-                %endif
-                    id="bearbeitungszeitraum" name="bearbeitungszeitraum"/>
-            </td>
+
 #######################################################################################################################################
             <td>
                 <input type="text"
@@ -89,7 +84,7 @@
                 </datalist> 
             </td>
     #######################################################################################################################################
-            <td><input list="mitarbeiter" 
+            <td><select multiple
                     %if action is not UNDEFINED:
                         value="${projekte['mitarbeiterverweis']}"
                     %else:
@@ -97,14 +92,25 @@
                     %endif
                         id="mitarbeiterverweis" name="mitarbeiterverweis">
                         
-                <datalist id="mitarbeiter">
+                ##<datalist id="mitarbeiter">
+                
                     % for mitarbeiter in liste2:
-                        <option value="${mitarbeiter['id']}">${mitarbeiter['name']}</option>
+                        ##ist mitarbeiter in mitarbeiterverweis?
+                        ## % if mitarbeiter['id'] in  projekte['mitarbeiterverweis']:
+                         
+                        ##     <option selected value="${mitarbeiter['id']}">${mitarbeiter['name']}</option>
+                        ## % else:
+                            <option value="${mitarbeiter['id']}">${mitarbeiter['name']}</option>
+
+                       ## %endif
                     % endfor
-                </datalist>
+
+                    
+                </select>
+                ##</datalist>
             </td> 
-    #######################################################################################################################################          
-            <td><input type="text"
+#######################################################################################################################################          
+            <td><input type="text " disabled
                     %if action is not UNDEFINED:
                         value="${projekte['aufwand']}"
                     %else:
@@ -112,12 +118,23 @@
                     %endif
                         id="aufwand" name="aufwand"/>
             </td>
+#######################################################################################################################################
+            <td><input type="date"
+                %if action is not UNDEFINED:
+                    value="${projekte['bearbeitungszeitraumA']}"
+                %endif
+                    id="bearbeitungszeitraumA" name="bearbeitungszeitraumA"/>
 
+                <input type="date"
+                %if action is not UNDEFINED:
+                    value="${projekte['bearbeitungszeitraumB']}"
+                %endif
+                    id="bearbeitungszeitraumB" name="bearbeitungszeitraumB"/>
+            </td>
+#######################################################################################################################################
             <td>
                 <input type="submit" value="Speichern"/>
-                <form action="/projekte">
-                    <input type="submit" value="Abbrechen"/>
-                </form> 
+                <input type="button" value="Abbrechen" onclick="location.href='/projekte/';"/>
             </td>
         </tr>
     </table>

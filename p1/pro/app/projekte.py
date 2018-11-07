@@ -3,7 +3,7 @@
 import cherrypy
 from app import view
 from app import database
-
+import math
 
 class Projekte(object):
 
@@ -21,19 +21,29 @@ class Projekte(object):
         })
 
     @cherrypy.expose()
-    def save(self, projektnummer, bezeichnung, beschreibung, bearbeitungszeitraum, budget, kundenverweis,
-             mitarbeiterverweis, aufwand, key=None):
-
+    def save(self, projektnummer, bezeichnung, beschreibung, bearbeitungszeitraumA, bearbeitungszeitraumB, budget, kundenverweis,
+             mitarbeiterverweis, key=None):
+        
+        if (bearbeitungszeitraumA == None) or (bearbeitungszeitraumB == None):
+            bearbeitungszeitraumA = "invalid date"
+            bearbeitungszeitraumB = "invalid date"
+        else:
+            differenceInDays = database.calc(bearbeitungszeitraumA, bearbeitungszeitraumB)
+            differenceWeeks = database.calc(bearbeitungszeitraumA,bearbeitungszeitraumB) / 7
+            differenceWeeks.__round__()
+        
         if key:
             database.writeValuebyId("projekte.json", key, {
                 "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
                 "beschreibung": beschreibung,
-                "bearbeitungszeitraum": bearbeitungszeitraum,
+                "bearbeitungszeitraumA": bearbeitungszeitraumA,
+                "bearbeitungszeitraumB": bearbeitungszeitraumB,
                 "budget": budget,
                 "kundenverweis": kundenverweis,
                 "mitarbeiterverweis": mitarbeiterverweis,
-                "aufwand": aufwand
+                "aufwand": differenceInDays,
+                "aufwandWeek": differenceWeeks
             })
 
             raise cherrypy.HTTPRedirect("../projekte/")
@@ -43,11 +53,13 @@ class Projekte(object):
                 "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
                 "beschreibung": beschreibung,
-                "bearbeitungszeitraum": bearbeitungszeitraum,
+                "bearbeitungszeitraumA": bearbeitungszeitraumA,
+                "bearbeitungszeitraumB": bearbeitungszeitraumB,
                 "budget": budget,
                 "kundenverweis": kundenverweis,
                 "mitarbeiterverweis": mitarbeiterverweis,
-                "aufwand": aufwand
+                "aufwand": differenceInDays,
+                "aufwandWeek": differenceWeeks
             })
             return self.index()
 
