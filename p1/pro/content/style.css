@@ -1,6 +1,5 @@
-html.index, body.index {
-    height: 100%;
-}
+@font-face { font-family: 'loves'; src: url('LOVES.TTF'); } 
+@font-face { font-family: 'capsuula'; src: url('Capsuula.ttf'); } 
 
 html.index {
     display: table;
@@ -8,6 +7,8 @@ html.index {
 }
 
 body {
+    font-family:'capsuula';
+    font-size:1.4em;
     background-color: #333333;
     color: #cecece;
 }
