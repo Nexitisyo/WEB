@@ -10,7 +10,7 @@
 <body>
 
 <table class="collapse">
-<tr>    ##Nach projektbezeichnung sortiert
+<tr>
         <th>Projektbezeichnung</th>
         ##Name,Vorname lexikographisch sortiert
         <th>Projektmitarbeiter</th> 
@@ -26,6 +26,8 @@
     % endfor
 
 </table>
-<p>Zurück zur <a href="/../">Startseite</a></p>
+<ul>
+    <li><a href="/../">Zurück zur Startseite</a></li>
+</ul>
 </body>
 </html>

@@ -24,12 +24,17 @@
             <td>${kunden['ansprechpartner']}</td>
             <td>${kunden['ort']}</td>
             <td>
-                <a href="edit?key=${kunden['id']}">bearbeiten</a> <a href="delete?key=${kunden['id']}">löschen</a>
+                <ul class="buttons">
+                    <li><a href="edit?key=${kunden['id']}">bearbeiten</a></li>
+                    <li><a href="delete?key=${kunden['id']}">löschen</a></li>
+                </ul>
             </td>
         </tr>
     % endfor
 </table>
-<p>Neuen Kunden <a href="add">hinzufügen</a></p>
-<p>Zurück zur <a href="/../">Startseite</a></p>
+    <ul>
+        <li><a href="add">Kunden hinzufügen</a></li>
+        <li><a href="/../">Zurück zur Startseite</a></li>
+    </ul>
 </body>
 </html>

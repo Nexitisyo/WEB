@@ -33,12 +33,17 @@
             <td>${projekte['mitarbeiterverweis']}</td>
             <td>${projekte['aufwand']}</td>
             <td>
-                <a href="edit?key=${projekte['id']}">bearbeiten</a> <a href="delete?key=${projekte['id']}">löschen</a>
+                <ul class="buttons">
+                    <li><a href="edit?key=${projekte['id']}">bearbeiten</a></li>
+                    <li><a href="delete?key=${projekte['id']}">löschen</a></li>
+                </ul>
             </td>
         </tr>
     % endfor
 </table>
-<p>Neues Projekt <a href="add">hinzufügen</a></p>
-<p>Zurück zur <a href="/../">Startseite</a></p>
+    <ul class="buttons">
+        <li><a href="add">Projekt hinzufügen</a></li>
+        <li><a href="/../">Zurück zur Startseite</a></p></li>
+    </ul>
 </body>
 </html>
