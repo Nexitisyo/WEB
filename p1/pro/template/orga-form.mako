@@ -43,9 +43,12 @@
             %if type(orga['mitarbeiter']) is list:
                 %for mitarbeiter in orga['mitarbeiter']:
                 <p><input type="number"
+                    %if type(orga['aufwand']) is list:
+                        value="${orga['aufwand'][0]}"
+                    %endif
                      id="aufwand"
                      name="aufwand"
-                     min="1" size="40" max="${orga['aufwand']}"></p>
+                     min="1" size="40" value="" max="${orga['aufwand']}"></p>
                 %endfor
 
             %else:

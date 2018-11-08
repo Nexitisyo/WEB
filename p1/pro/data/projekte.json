@@ -7,7 +7,9 @@
         "bearbeitungszeitraumB": "2018-11-09",
         "budget": "0.44\u20ac",
         "kundenverweis": "32",
-        "mitarbeiterverweis": "Kuznecov Viktor",
+        "mitarbeiterverweis": [
+            "Mustermann Joseph"
+        ],
         "aufwand": 6,
         "aufwandWeek": 0.8571428571428571,
         "id": 41
@@ -21,7 +23,6 @@
         "budget": "382.244,02\u20ac",
         "kundenverweis": "33",
         "mitarbeiterverweis": [
-            "Mustermann Joseph",
             "Kuznecov Viktor",
             "Borgmann Mark"
         ],
@@ -37,7 +38,9 @@
         "bearbeitungszeitraumB": "2018-11-29",
         "budget": "20\u20ac",
         "kundenverweis": "32",
-        "mitarbeiterverweis": "Mustermann Joseph",
+        "mitarbeiterverweis": [
+            "Kuznecov Viktor"
+        ],
         "aufwand": 28,
         "aufwandWeek": 4.0,
         "id": 70

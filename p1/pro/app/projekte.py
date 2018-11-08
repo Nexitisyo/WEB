@@ -24,6 +24,10 @@ class Projekte(object):
     @cherrypy.expose()
     def save(self, projektnummer, bezeichnung, beschreibung, bearbeitungszeitraumA, bearbeitungszeitraumB, budget, kundenverweis,
              mitarbeiterverweis:list, key=None):
+        
+        mliste = mitarbeiterverweis
+        if type(mitarbeiterverweis) is str:
+            mliste = [mitarbeiterverweis]
 
         if (bearbeitungszeitraumA == None) or (bearbeitungszeitraumB == None):
             bearbeitungszeitraumA = "invalid date"
@@ -41,7 +45,7 @@ class Projekte(object):
                 "bearbeitungszeitraumB": bearbeitungszeitraumB,
                 "budget": budget,
                 "kundenverweis": kundenverweis,
-                "mitarbeiterverweis": mitarbeiterverweis,
+                "mitarbeiterverweis": mliste,
                 "aufwand": differenceInDays,
                 "aufwandWeek": differenceWeeks
             })
@@ -63,7 +67,7 @@ class Projekte(object):
                 "bearbeitungszeitraumB": bearbeitungszeitraumB,
                 "budget": budget,
                 "kundenverweis": kundenverweis,
-                "mitarbeiterverweis": mitarbeiterverweis,
+                "mitarbeiterverweis": mliste,
                 "aufwand": differenceInDays,
                 "aufwandWeek": differenceWeeks
             })
@@ -71,7 +75,7 @@ class Projekte(object):
             database.append("orga.json", {
                 "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
-                "mitarbeiter": mitarbeiterverweis,
+                "mitarbeiter": mliste,
                 "aufwand": differenceInDays
             })
 
