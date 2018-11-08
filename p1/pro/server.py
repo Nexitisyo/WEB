@@ -45,8 +45,6 @@ def main():
     cherrypy.tree.mount(auswertung.Auswertung(current_dir), '/auswertung/', config)
     cherrypy.tree.mount(orga.Orga(current_dir), '/orga/', config)
 
-
-
     # suppress traceback-info
     cherrypy.config.update({'request.show_tracebacks': True}) #Errors nicht anzeigen/anzeigen (404, 500, etc)
     cherrypy.config.update({'server.socket_port': 8080})

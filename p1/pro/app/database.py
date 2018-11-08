@@ -64,11 +64,19 @@ def deleteValueById(dbfile, key):
     write(dbfile, result)
 
 
-def append(dbfile, values): #Wofür ist das ?
-    counter = read("data.json")
-    counter["counter"] += 1 # Set id to lowest possible id
-    values["id"] = counter["counter"]
-    write("data.json", counter)
-    tmp = read(dbfile)
-    tmp.append(values)
-    write(dbfile, tmp)
+def append(dbfile, values): 
+    if dbfile == "orga.json":
+        counter = read("data.json")
+        values["id"] = counter["counter"]
+        write("data.json", counter)
+        tmp = read(dbfile)
+        tmp.append(values)
+        write(dbfile, tmp)
+    else:
+        counter = read("data.json")
+        counter["counter"] += 1 # Set id to lowest possible id
+        values["id"] = counter["counter"]
+        write("data.json", counter)
+        tmp = read(dbfile)
+        tmp.append(values)
+        write(dbfile, tmp)

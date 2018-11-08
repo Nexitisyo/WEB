@@ -7,11 +7,7 @@
         "bearbeitungszeitraumB": "2018-11-09",
         "budget": "0.44\u20ac",
         "kundenverweis": "32",
-        "mitarbeiterverweis": [
-            "Kai Mustermann",
-            "Mustermann Joseph",
-            "Kuznecov Viktor"
-        ],
+        "mitarbeiterverweis": "Kai Mustermann",
         "aufwand": 6,
         "aufwandWeek": 0.8571428571428571,
         "id": 41
@@ -21,12 +17,15 @@
         "bezeichnung": "Statue",
         "beschreibung": "Bitte nich so teuer",
         "bearbeitungszeitraumA": "2018-11-03",
-        "bearbeitungszeitraumB": "2018-11-09",
+        "bearbeitungszeitraumB": "2018-11-11",
         "budget": "382.244,02\u20ac",
         "kundenverweis": "33",
-        "mitarbeiterverweis": "Borgmann Mark",
-        "aufwand": 6,
-        "aufwandWeek": 0.8571428571428571,
+        "mitarbeiterverweis": [
+            "Mustermann Joseph",
+            "Kuznecov Viktor"
+        ],
+        "aufwand": 8,
+        "aufwandWeek": 1.1428571428571428,
         "id": 59
     },
     {
@@ -37,7 +36,7 @@
         "bearbeitungszeitraumB": "2018-11-29",
         "budget": "20\u20ac",
         "kundenverweis": "32",
-        "mitarbeiterverweis": "Kuznecov Viktor",
+        "mitarbeiterverweis": "Mustermann Joseph",
         "aufwand": 28,
         "aufwandWeek": 4.0,
         "id": 70
@@ -50,11 +49,7 @@
         "bearbeitungszeitraumB": "2020-03-01",
         "budget": "5000\u20ac",
         "kundenverweis": "57",
-        "mitarbeiterverweis": [
-            "Kai Mustermann",
-            "Mustermann Joseph",
-            "Kuznecov Viktor"
-        ],
+        "mitarbeiterverweis": "Mustermann Joseph",
         "aufwand": 340,
         "aufwandWeek": 48.57142857142857,
         "id": 71

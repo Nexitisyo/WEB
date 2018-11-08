@@ -45,9 +45,15 @@ class Projekte(object):
                 "aufwandWeek": differenceWeeks
             })
 
+            database.writeValuebyId("orga.json", key, {
+                "projektnummer": projektnummer,
+                "bezeichnung": bezeichnung,
+                "mitarbeiter": mitarbeiterverweis,
+                "aufwand": differenceInDays
+            })
+
             raise cherrypy.HTTPRedirect("../projekte/")
         else:
-
             database.append("projekte.json", {
                 "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
@@ -60,6 +66,14 @@ class Projekte(object):
                 "aufwand": differenceInDays,
                 "aufwandWeek": differenceWeeks
             })
+
+            database.append("orga.json", {
+                "projektnummer": projektnummer,
+                "bezeichnung": bezeichnung,
+                "mitarbeiter": mitarbeiterverweis,
+                "aufwand": differenceInDays
+            })
+
             return self.index()
 
     @cherrypy.expose()
@@ -72,6 +86,7 @@ class Projekte(object):
     @cherrypy.expose()
     def delete(self, key):
         database.deleteValueById("projekte.json", key)
+        database.deleteValueById("orga.json", key)
         return self.index()
 
     @cherrypy.expose()

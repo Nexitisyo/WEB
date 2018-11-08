@@ -1,22 +1,33 @@
 [
     {
         "projektnummer": "3133",
-        "bezeichnung": "Cocktail",    
-        "mitarbeiter": [
-            "Kai Mustermann",
-            "Mustermann Joseph"
-        ],
+        "bezeichnung": "Cocktail",
+        "mitarbeiterverweis": "Kai Mustermann",
         "aufwand": 6,
         "id": 41
     },
     {
-        "projektnummer": "3133",
-        "bezeichnung": "Cocktail",    
-        "mitarbeiter": [
-            "Kai Mustermann",
-            "Mustermann Joseph"
+        "projektnummer": "1231",
+        "bezeichnung": "Statue",
+        "mitarbeiterverweis": [
+            "Mustermann Joseph",
+            "Kuznecov Viktor"
         ],
-        "aufwand": 6,
-        "id": 44
+        "aufwand": 8,
+        "id": 59
+    },
+    {
+        "projektnummer": "3124",
+        "bezeichnung": "Baum",
+        "mitarbeiterverweis": "Mustermann Joseph",
+        "aufwand": 28,
+        "id": 70
+    },
+    {
+        "projektnummer": "3153",
+        "bezeichnung": "G\u00fcnther GmbH & Co. Kg.",
+        "mitarbeiter": "Mustermann Joseph",
+        "aufwand": 340,
+        "id": 71
     }
 ]

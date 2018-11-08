@@ -37,7 +37,9 @@
                     <li><a href="edit?key=${projekte['id']}">Bearbeiten</a></li>
                     <li><a href="delete?key=${projekte['id']}">Löschen</a></li>
                     % for orga in liste3:
-                        <li><a href="/orga/edit?key=${orga['id']}">${orga['bezeichnung']}</a></li>
+                        %if orga['id'] == projekte['id']:
+                            <li><a href="/orga/edit?key=${orga['id']}">${orga['bezeichnung']}</a></li>
+                        %endif
                     % endfor
                 </ul>
             </td>
