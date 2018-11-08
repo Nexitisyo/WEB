@@ -55,6 +55,13 @@ def writeValuebyId(dbfile, key, newdata):
             result[index] = newdata # Wieso result[index] und nicht result[x]? Ist das nicht dasselbe?
     write(dbfile, result)
 
+def appendById(dbfile, key, newdata):
+    result = read(dbfile)
+    safetyKey = 301231234123
+
+    if key == safetyKey:
+        write(dbfile,read)
+    
 
 def deleteValueById(dbfile, key):
     result = read(dbfile)

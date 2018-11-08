@@ -27,11 +27,20 @@
     {
         "projektnummer": "3153",
         "bezeichnung": "G\u00fcnther GmbH & Co. Kg.",
-        "mitarbeiter": [
-            "Mustermann Joseph",
-            "Kuznecov Viktor"
-        ],
-        "aufwand": 340,
+        "mitarbeiter": "['Kuznecov Viktor', 'Borgmann Mark']",
+        "action": "edit",
+        "aufwand": 30,
         "id": 71
+    },
+    {
+        "aufwand": [
+            "6",
+            "8",
+            "8",
+            "8",
+            "28",
+            "20"
+        ],
+        "id": 1337
     }
 ]
