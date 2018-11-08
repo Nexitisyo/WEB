@@ -23,7 +23,8 @@ class Projekte(object):
 
     @cherrypy.expose()
     def save(self, projektnummer, bezeichnung, beschreibung, bearbeitungszeitraumA, bearbeitungszeitraumB, budget, kundenverweis,
-             mitarbeiterverweis, key=None):
+             mitarbeiterverweis:list, key=None):
+
         if (bearbeitungszeitraumA == None) or (bearbeitungszeitraumB == None):
             bearbeitungszeitraumA = "invalid date"
             bearbeitungszeitraumB = "invalid date"

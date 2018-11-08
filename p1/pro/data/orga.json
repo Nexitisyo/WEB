@@ -2,16 +2,17 @@
     {
         "projektnummer": "3133",
         "bezeichnung": "Cocktail",
-        "mitarbeiterverweis": "Kai Mustermann",
+        "mitarbeiter": "Kuznecov Viktor",
         "aufwand": 6,
         "id": 41
     },
     {
         "projektnummer": "1231",
         "bezeichnung": "Statue",
-        "mitarbeiterverweis": [
+        "mitarbeiter": [
             "Mustermann Joseph",
-            "Kuznecov Viktor"
+            "Kuznecov Viktor",
+            "Borgmann Mark"
         ],
         "aufwand": 8,
         "id": 59
@@ -19,14 +20,17 @@
     {
         "projektnummer": "3124",
         "bezeichnung": "Baum",
-        "mitarbeiterverweis": "Mustermann Joseph",
+        "mitarbeiter": "Mustermann Joseph",
         "aufwand": 28,
         "id": 70
     },
     {
         "projektnummer": "3153",
         "bezeichnung": "G\u00fcnther GmbH & Co. Kg.",
-        "mitarbeiter": "Mustermann Joseph",
+        "mitarbeiter": [
+            "Mustermann Joseph",
+            "Kuznecov Viktor"
+        ],
         "aufwand": 340,
         "id": 71
     }

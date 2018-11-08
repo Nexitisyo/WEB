@@ -65,7 +65,7 @@
                     %endif
                         id="budget" name="budget"/>
             </td>
-    #######################################################################################################################################
+#######################################################################################################################################
             <td><input list="kunden" 
                     %if action is not UNDEFINED:
                         value="${projekte['kundenverweis']}"
@@ -80,7 +80,7 @@
                     % endfor
                 </datalist> 
             </td>
-    #######################################################################################################################################
+#######################################################################################################################################
             <td><select multiple
                     %if action is not UNDEFINED:
                         value="${projekte['mitarbeiterverweis']}"
@@ -88,18 +88,9 @@
                         value=""
                     %endif
                         id="mitarbeiterverweis" name="mitarbeiterverweis">
-                        
-                ##<datalist id="mitarbeiter">
-                
+                                        
                     % for mitarbeiter in liste2:
-                        ##ist mitarbeiter in mitarbeiterverweis?
-                        ## % if mitarbeiter['id'] in  projekte['mitarbeiterverweis']:
-                         
-                        ##     <option selected value="${mitarbeiter['id']}">${mitarbeiter['name']}</option>
-                        ## % else:
-                            <option value="${mitarbeiter['name']} ${mitarbeiter['vorname']}">${mitarbeiter['vorname']} ${mitarbeiter['name']}</option>
-
-                       ## %endif
+                        <option value="${mitarbeiter['name']} ${mitarbeiter['vorname']}">${mitarbeiter['vorname']} ${mitarbeiter['name']}</option>
                     % endfor
 
                     
@@ -107,7 +98,7 @@
                 ##</datalist>
             </td> 
 #######################################################################################################################################          
-            <td><input type="text " disabled
+            <td><input type="text"
                     %if action is not UNDEFINED:
                         value="${projekte['aufwand']}"
                     %else:

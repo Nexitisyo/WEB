@@ -36,11 +36,10 @@
                 <ul class="buttons">
                     <li><a href="edit?key=${projekte['id']}">Bearbeiten</a></li>
                     <li><a href="delete?key=${projekte['id']}">Löschen</a></li>
-                    % for orga in liste3:
-                        %if orga['id'] == projekte['id']:
-                            <li><a href="/orga/edit?key=${orga['id']}">${orga['bezeichnung']}</a></li>
-                        %endif
-                    % endfor
+                    ## % for orga in liste3:
+                    ##     %if orga['id'] == projekte['id']:
+                    ##     %endif
+                    ## % endfor
                 </ul>
             </td>
         </tr>
@@ -49,6 +48,8 @@
     <ul class="buttons">
         <li><a href="add">Projekt hinzufügen</a></li>
         <li><a href="/../">Zurück zur Startseite</a></p></li>
+        <li><a href="/orga/">Organisieren</a></li>
+
     </ul>
 </body>
 </html>

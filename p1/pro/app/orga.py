@@ -23,12 +23,13 @@ class Orga(object):
         })
 
     @cherrypy.expose()
-    def save(self, projektnummer, bezeichnung, mitarbeiter, key=None):        
+    def save(self, projektnummer, bezeichnung, mitarbeiter, aufwand, key=None):        
         if key:
             database.writeValuebyId("projekte.json", key, {
                 "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
                 "mitarbeiterverweis": mitarbeiter,
+                "aufwand":aufwand
             })
 
             raise cherrypy.HTTPRedirect("../orga/")
@@ -38,6 +39,7 @@ class Orga(object):
                 "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
                 "mitarbeiterverweis": mitarbeiter,
+                "aufwand":aufwand
             })
             return self.index()
 
@@ -61,11 +63,11 @@ class Orga(object):
     @cherrypy.expose()
     def edit(self, key):
         try:
-            projekt = database.readValuebyId("projekte.json", key)
+            projekt = database.readValuebyId("orga.json", key)
         except Exception:
             return self.default()
 
-        return self.view.create("projekte-form.mako", {
+        return self.view.create("orga-form.mako", {
             "projekte": projekt,
             "liste": database.read("kunden.json"),
             "liste2": database.read("mitarbeiter.json"),
