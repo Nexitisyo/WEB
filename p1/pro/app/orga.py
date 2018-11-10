@@ -22,17 +22,17 @@ class Orga(object):
         })
 
     @cherrypy.expose()
-    def save(self, aufwand, key=None):        
+    def save(self, aufwandGeteilt, key=None):        
         if key:
             database.writeValuebyId("orga.json", key, {
-                "aufwand":aufwand
+                "aufwandGeteilt":aufwandGeteilt
             })
 
             raise cherrypy.HTTPRedirect("../orga/")
         else:
 
             database.append("orga.json", {
-                "aufwand":aufwand
+                "aufwandGeteilt":aufwandGeteilt
             })
             return self.index()
 

@@ -1,47 +1,67 @@
 [
     {
+        "aufwandGeteilt": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "id": 1337
+    },
+    {
         "projektnummer": "3133",
         "bezeichnung": "Cocktail",
-        "mitarbeiter": "Mustermann Joseph",
-        "aufwand": 6,
+        "mitarbeiter": [
+            "Kai Mustermann"
+        ],
+        "aufwandMax": [
+            6
+        ],
         "id": 41
     },
     {
         "projektnummer": "1231",
         "bezeichnung": "Statue",
         "mitarbeiter": [
-            "Kuznecov Viktor",
-            "Borgmann Mark"
+            "Kai Mustermann",
+            "Mustermann Joseph"
         ],
-        "aufwand": 8,
+        "aufwandMax": [
+            8
+        ],
         "id": 59
     },
     {
         "projektnummer": "3124",
         "bezeichnung": "Baum",
-        "mitarbeiter": "Kuznecov Viktor",
-        "aufwand": 28,
+        "mitarbeiter": [
+            "Kai Mustermann",
+            "Mustermann Joseph",
+            "Kuznecov Viktor"
+        ],
+        "aufwandMax": [
+            28
+        ],
         "id": 70
     },
     {
         "projektnummer": "3153",
         "bezeichnung": "G\u00fcnther GmbH & Co. Kg.",
         "mitarbeiter": [
+            "Kai Mustermann",
+            "Mustermann Joseph",
             "Kuznecov Viktor",
             "Borgmann Mark"
         ],
-        "action": "edit",
-        "aufwand": 30,
-        "id": 71
-    },
-    {
-        "aufwand": [
-            "4",
-            "4",
-            "4",
-            "4",
-            "4"
+        "aufwandMax": [
+            340
         ],
-        "id": 1337
+        "id": 71
     }
 ]

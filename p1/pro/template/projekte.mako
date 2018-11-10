@@ -31,7 +31,7 @@
             <td>${projekte['budget']}</td>
             <td>${projekte['kundenverweis']}</td>
             <td>${projekte['mitarbeiterverweis']}</td>
-            <td>${projekte['aufwand']}</td>
+            <td>${projekte['aufwandMax']}</td>
             <td>
                 <ul class="buttons">
                     <li><a href="edit?key=${projekte['id']}">Bearbeiten</a></li>

@@ -35,6 +35,7 @@ class Projekte(object):
         else:
             differenceInDays = database.calc(bearbeitungszeitraumA, bearbeitungszeitraumB)
             differenceWeeks = differenceInDays / 7
+            differenceInDays = [differenceInDays]
         
         if key:
             database.writeValuebyId("projekte.json", key, {
@@ -46,15 +47,15 @@ class Projekte(object):
                 "budget": budget,
                 "kundenverweis": kundenverweis,
                 "mitarbeiterverweis": mliste,
-                "aufwand": differenceInDays,
+                "aufwandMax": differenceInDays,
                 "aufwandWeek": differenceWeeks
             })
 
             database.writeValuebyId("orga.json", key, {
                 "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
-                "mitarbeiter": mitarbeiterverweis,
-                "aufwand": differenceInDays
+                "mitarbeiter": mliste,
+                "aufwandMax": differenceInDays
             })
 
             raise cherrypy.HTTPRedirect("../projekte/")
@@ -68,7 +69,7 @@ class Projekte(object):
                 "budget": budget,
                 "kundenverweis": kundenverweis,
                 "mitarbeiterverweis": mliste,
-                "aufwand": differenceInDays,
+                "aufwandMax": differenceInDays,
                 "aufwandWeek": differenceWeeks
             })
 
@@ -76,7 +77,7 @@ class Projekte(object):
                 "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
                 "mitarbeiter": mliste,
-                "aufwand": differenceInDays
+                "aufwandMax": differenceInDays
             })
 
             return self.index()

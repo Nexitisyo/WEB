@@ -8,9 +8,11 @@
         "budget": "0.44\u20ac",
         "kundenverweis": "32",
         "mitarbeiterverweis": [
-            "Mustermann Joseph"
+            "Kai Mustermann"
         ],
-        "aufwand": 6,
+        "aufwandMax": [
+            6
+        ],
         "aufwandWeek": 0.8571428571428571,
         "id": 41
     },
@@ -23,10 +25,12 @@
         "budget": "382.244,02\u20ac",
         "kundenverweis": "33",
         "mitarbeiterverweis": [
-            "Kuznecov Viktor",
-            "Borgmann Mark"
+            "Kai Mustermann",
+            "Mustermann Joseph"
         ],
-        "aufwand": 8,
+        "aufwandMax": [
+            8
+        ],
         "aufwandWeek": 1.1428571428571428,
         "id": 59
     },
@@ -39,9 +43,13 @@
         "budget": "20\u20ac",
         "kundenverweis": "32",
         "mitarbeiterverweis": [
+            "Kai Mustermann",
+            "Mustermann Joseph",
             "Kuznecov Viktor"
         ],
-        "aufwand": 28,
+        "aufwandMax": [
+            28
+        ],
         "aufwandWeek": 4.0,
         "id": 70
     },
@@ -54,10 +62,14 @@
         "budget": "5000\u20ac",
         "kundenverweis": "57",
         "mitarbeiterverweis": [
+            "Kai Mustermann",
+            "Mustermann Joseph",
             "Kuznecov Viktor",
             "Borgmann Mark"
         ],
-        "aufwand": 340,
+        "aufwandMax": [
+            340
+        ],
         "aufwandWeek": 48.57142857142857,
         "id": 71
     }

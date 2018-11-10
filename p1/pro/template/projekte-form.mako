@@ -100,11 +100,11 @@
 #######################################################################################################################################          
             <td><input type="text" disabled
                     %if action is not UNDEFINED:
-                        value="${projekte['aufwand']}"
+                        value="${projekte['aufwandMax']}"
                     %else:
                         value=""
                     %endif
-                        id="aufwand" name="aufwand"/>
+                        id="aufwandMax" name="aufwandMax"/>
             </td>
 #######################################################################################################################################
             <td><input type="date"
