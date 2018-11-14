@@ -17,7 +17,7 @@
         <th>Budget</th>
         <th>Kundenverweis</th>
         <th>Mitarbeiterverweis</th>
-        <th>Aufwand</th>
+        <th>Aufwand insgesammt</th>
         <th>Aktion</th>
     </tr>
 
@@ -27,7 +27,7 @@
             <td>${projekte['projektnummer']}</td>
             <td>${projekte['bezeichnung']}</td>
             <td>${projekte['beschreibung']}</td>
-            <td>${projekte['bearbeitungszeitraumA']} bis ${projekte['bearbeitungszeitraumB']}</td>
+            <td>${projekte['bearbeitungszeitraumA']} - <br>${projekte['bearbeitungszeitraumB']}</td>
             <td>${projekte['budget']}</td>
             <td>${projekte['kundenverweis']}</td>
             <td>${projekte['mitarbeiterverweis']}</td>
@@ -36,10 +36,6 @@
                 <ul class="buttons">
                     <li><a href="edit?key=${projekte['id']}">Bearbeiten</a></li>
                     <li><a href="delete?key=${projekte['id']}">Löschen</a></li>
-                    ## % for orga in liste3:
-                    ##     %if orga['id'] == projekte['id']:
-                    ##     %endif
-                    ## % endfor
                 </ul>
             </td>
         </tr>

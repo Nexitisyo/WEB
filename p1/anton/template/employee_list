@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Table Content</title>
+        <meta charset="UTF-8" />
+        <link href="/list.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <table id="idList">
+            <tr>
+                <th>ID</th>
+                <th>Vorname</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Support</th>
+                <th>Aktion</th>
+            </tr>
+            % for key in data['employee']:
+                <tr>
+                    <td>${key}</td>
+                    <td>${data['employee'][key]['first_name']}</td>
+                    <td>${data['employee'][key]['last_name']}</td>
+                    <td>${data['employee'][key]['position']}</td>
+                    <td>
+                        % if data['employee'][key]['support'] == True:
+                            Yes
+                        % else:
+                            No
+                        % endif
+                    </td>
+                    <td>
+                        <a href="/employee_form/${key}">bearbeiten</a>&nbsp;
+                        <a href="/employee_del/${key}">l&ouml;schen</a>
+                    </td>
+                </tr>
+            % endfor
+        </table>
+        <div>
+            <a href="/employee_add">Neuen Datensatz hinzuf&uuml;gen</a>
+            <a href="/">Zur&uuml;ck</a>
+        </div>
+    </body>
+</html>

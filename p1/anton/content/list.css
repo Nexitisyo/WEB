@@ -1,0 +1,39 @@
+#idList {
+	border: 1px grey solid;
+	border-spacing: 0;
+}
+
+#idList tr {
+	background-color: #338EFF;
+	color: white;
+	text-align: left;
+}
+
+#idList td, th {
+    padding: 5px 20px 5px 20px;
+}
+
+#idList tr:hover td {
+	background-color:white;
+	color: #338EFF;
+}
+
+#idList tr:hover td a:link {
+    color: #338EFF;
+}
+
+td a:visited {
+    color: #AAA;
+}
+
+td a:link {
+    color: white;
+}
+
+td a:hover {
+    color: blue;
+}
+
+input {
+    width: 100%
+}

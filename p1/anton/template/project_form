@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project Formular</title>
+        <meta charset="UTF-8">
+        <link href="/project_form.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <form id="edit_form" action="/project_save" method="post">
+            <input type="hidden" value="${data['project_form']['key']}" name="key"/>
+            <p>
+                <label for="label">Name: </label>
+                <input type="text" value="${data['project_form']['label']}" id="label" name="label" required />
+            </p>
+            <p>
+                <label for="description">Beschreibung: </label>
+                <input type="text" value="${data['project_form']['description']}" id=description" name="description" required />
+            </p>
+            <p>
+                <label for="duration">Bearbeitungsdauer(Wochen): </label>
+                <input type="number" value="${data['project_form']['duration']}" name="duration" min="4"/>
+            </p>
+            <p>
+                <label for="budget">Budget: </label>
+                <input type="number" value="${data['project_form']['budget']}" id="budget" name="budget" required/>
+            </p>
+            <p>
+                <label for="customer">Kunde: </label>
+                <select name="id_customer" id="customer">
+                    % for key in data['customer']:
+                        % if key == data['project_form']['id_customer']:
+                            <option value="${key}" selected>${data['customer'][key]['label']}</option>
+                        % else:
+                            <option value="${key}">${data['customer'][key]['label']}</option>
+                        % endif
+                    % endfor
+                </select>
+            </p>
+            <input type="submit" value="Speichern" />&nbsp;
+            <a href="/project_list/">abbrechen</a>
+        </form>
+    </body>
+</html>

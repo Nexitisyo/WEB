@@ -1,0 +1,36 @@
+{
+   "1": {
+      "label": "Panasonic Projekt",
+      "description": "AAA Super Projekt Whatever",
+      "duration": "4",
+      "budget": "15000",
+      "id_customer": "10000002",
+      "id_hours": [],
+      "key": "1"
+   },
+   "2": {
+      "label": "BBB",
+      "description": "BBB Desc",
+      "duration": "4",
+      "budget": "12000",
+      "id_customer": "10000014",
+      "id_hours": [],
+      "key": "2"
+   },
+   "3": {
+      "label": "XXX",
+      "description": "XXX",
+      "duration": "4",
+      "budget": "20000",
+      "id_customer": "10000004",
+      "id_hours": []
+   },
+   "5": {
+      "label": "YYYY",
+      "description": "YYYY",
+      "duration": "4",
+      "budget": "30000",
+      "id_customer": "10000003",
+      "id_hours": []
+   }
+}

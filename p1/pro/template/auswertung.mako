@@ -14,14 +14,14 @@
         <th>Projektbezeichnung</th>
         ##Name,Vorname lexikographisch sortiert
         <th>Projektmitarbeiter</th> 
-        <th>Aufwand pro Woche</th> 
+        <th>Aufwand insgesammt</th> 
     </tr>
 
     % for projekte in liste:
         <tr>
             <td>${projekte['bezeichnung']}</td>
             <td>${projekte['mitarbeiterverweis']}</td>
-            <td>${projekte['aufwandWeek']}</td>
+            <td>${projekte['aufwandMax']}</td>
         </tr>
     % endfor
 
