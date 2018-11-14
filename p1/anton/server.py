@@ -18,6 +18,7 @@ def main():
             }
         }
     root = cherrypy.tree.mount(Application(project_dir), '/', static_config)
+    cherrypy.config.update({'server.socket_port': 8081})
 
     cherrypy.config.update({'request.show_tracebacks': False})
 # Start server

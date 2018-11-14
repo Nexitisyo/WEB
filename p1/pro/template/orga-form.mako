@@ -37,12 +37,8 @@
                                     name="aufwandGeteilt"
                                     min="1" 
                                     size="40" 
-                                    value="
-                                    
-                                    
-                                    
-                                    "
-                                    max="${orga['aufwandMax']}">
+                                    value="${projekte['aufwandMax'][0]}"
+                                    max="${orga['aufwandMax'][0]}">
                             </p>
                         %endfor    
         
@@ -54,9 +50,6 @@
     % endfor
    </table>
 
-    ## <input type="hidden" value="${orga['projektnummer']}" name="projektnummer" />
-    ## <input type="hidden" value="${orga['bezeichnung']}" name="bezeichnung" />
-    ## <input type="hidden" value="${orga['mitarbeiter']}" name="mitarbeiter" />
     <input type="hidden" value="1337" name="key" />
     <ul class="buttons">
         <input type="submit" value="Speichern" />
