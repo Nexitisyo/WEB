@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "aufwandGeteilt": [
             "6",
             "8",
@@ -16,6 +17,8 @@
     },
     {
         "projektnummer": "3133",
+=======
+>>>>>>> 367b5187891e4af449608c7fc9bd2ce128f40b15
         "bezeichnung": "Cocktail",
         "mitarbeiter": [
             "Kai Mustermann"
@@ -23,10 +26,10 @@
         "aufwandMax": [
             6
         ],
+        "aufwandGeteilt": 0,
         "id": 41
     },
     {
-        "projektnummer": "1231",
         "bezeichnung": "Statue",
         "mitarbeiter": [
             "Kai Mustermann",
@@ -35,10 +38,10 @@
         "aufwandMax": [
             8
         ],
+        "aufwandGeteilt": 0,
         "id": 59
     },
     {
-        "projektnummer": "3124",
         "bezeichnung": "Baum",
         "mitarbeiter": [
             "Kai Mustermann",
@@ -48,10 +51,10 @@
         "aufwandMax": [
             28
         ],
+        "aufwandGeteilt": [],
         "id": 70
     },
     {
-        "projektnummer": "3153",
         "bezeichnung": "G\u00fcnther GmbH & Co. Kg.",
         "mitarbeiter": [
             "Kai Mustermann",
@@ -61,6 +64,12 @@
         ],
         "aufwandMax": [
             340
+        ],
+        "aufwandGeteilt": [
+            3,
+            4,
+            5,
+            6
         ],
         "id": 71
     }
