@@ -12,56 +12,52 @@
 <form action="save" method="post">
 <table class="collapse">
     <tr>
-        <th>Projekt</th>
+        <th>Projektbezeichnung</th>
         <th>Mitarbeiter</th>
         <th>Aufwand einteilen</th>
+        <th>Aktion</th>
     </tr>
+    
+    <tr>
+            <td><p>${projekte['bezeichnung']}</p>
+            </td>
 
-    % for projekte in liste:
-        <tr>
-            %for orga in liste3:
-                %if orga['id'] == projekte['id']:
-                    <td>ID: ${orga['id']}<br>${orga['bezeichnung']}  </td>
-                    <td>
-                        %for mitarbeiter in orga['mitarbeiter']:
-                            <p>${mitarbeiter}</p>
-                        %endfor
-                    </td>
+            <td>
+                %for mitarbeiter in orga['mitarbeiter']:
+                    <p>${mitarbeiter}</p>
+                 %endfor
+            </td>
 
-                    <td>
-                        %for mitarbeiter in orga['mitarbeiter']:
-                            <p>
-                            <ul>
-                                <input type="number"
-                                    id="aufwandGeteilt"
-                                    name="aufwandGeteilt"
-                                    min="1" 
-                                    size="40" 
-                                    value="
-                                    
-                                    
-                                    
-                                    "
-                                    max="${orga['aufwandMax']}">
+             <td>
+                %for aufwandGeteilt in orga['aufwandGeteilt']:
+                    <p><input type="text"
+                        %if action is not UNDEFINED:
+                            value="${aufwandGeteilt}"
+                        %else:
+                            value=""
+                        %endif
+                            id="bezeichnung"
+                            name="bezeichnung"/>
                             </p>
-                        %endfor    
-        
-                        von ${orga['aufwandMax']}
-                    </td>
-                % endif
-            % endfor
-        </tr>
-    % endfor
-   </table>
+                %endfor
+            </td>
 
-    ## <input type="hidden" value="${orga['projektnummer']}" name="projektnummer" />
-    ## <input type="hidden" value="${orga['bezeichnung']}" name="bezeichnung" />
-    ## <input type="hidden" value="${orga['mitarbeiter']}" name="mitarbeiter" />
-    <input type="hidden" value="1337" name="key" />
+
+    <td>
     <ul class="buttons">
         <input type="submit" value="Speichern" />
         <input type="button" value="Abbrechen" onclick="location.href='/projekte/';"/>
     </ul>
+    </td>   
+    </tr>
+
+       </table>
+
+
+##        <input type="hidden" value="${orga['projektnummer']}" name="projektnummer" />
+##    <input type="hidden" value="${orga['bezeichnung']}" name="bezeichnung" />
+##    <input type="hidden" value="${orga['mitarbeiter']}" name="mitarbeiter" />
+##    <input type="hidden" value="${orga['id']}" name="key" />
 </form>
 </body>
 </html>

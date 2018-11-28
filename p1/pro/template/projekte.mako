@@ -36,6 +36,8 @@
                 <ul class="buttons">
                     <li><a href="edit?key=${projekte['id']}">Bearbeiten</a></li>
                     <li><a href="delete?key=${projekte['id']}">Löschen</a></li>
+                    <li><a href="/orga/edit?key=${projekte['id']}">Organisieren</a></li>
+
                 </ul>
             </td>
         </tr>
