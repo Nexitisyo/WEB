@@ -9,14 +9,14 @@ html.index {
 body {
     font-family:'capsuula';
     font-size:1.4em;
-    background-color: #ececec;
-    color: #444141;
+    background-color: #333333;
+    color: #cecece;
 }
 body.index {
     display: table-cell;
     vertical-align: middle;
-    background-color: #ececec;
-    color: #444141;
+    background-color: #333333;
+    color: #cecece;
 }
 
 td {
@@ -46,6 +46,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #333;
 }
 ul.buttons {
   display: flex;

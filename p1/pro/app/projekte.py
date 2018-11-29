@@ -26,7 +26,6 @@ class Projekte(object):
              mitarbeiterverweis:list, key=None):
         
         mliste = mitarbeiterverweis
-        aufwandGeteilt = 0
         if type(mitarbeiterverweis) is str:
             mliste = [mitarbeiterverweis]
 
@@ -53,10 +52,10 @@ class Projekte(object):
             })
 
             database.writeValuebyId("orga.json", key, {
+                "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
                 "mitarbeiter": mliste,
-                "aufwandMax": differenceInDays,
-                "aufwandGeteilt": aufwandGeteilt
+                "aufwandMax": differenceInDays
             })
 
             raise cherrypy.HTTPRedirect("../projekte/")
@@ -75,11 +74,10 @@ class Projekte(object):
             })
 
             database.append("orga.json", {
+                "projektnummer": projektnummer,
                 "bezeichnung": bezeichnung,
                 "mitarbeiter": mliste,
-                "aufwandMax": differenceInDays,
-                "aufwandGeteilt": aufwandGeteilt
-
+                "aufwandMax": differenceInDays
             })
 
             return self.index()
@@ -113,6 +111,5 @@ class Projekte(object):
             "projekte": projekt,
             "liste": database.read("kunden.json"),
             "liste2": database.read("mitarbeiter.json"),
-            "liste3": database.read("orga.json"),
             "action": "edit"
         })
