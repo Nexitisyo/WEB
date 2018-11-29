@@ -7,10 +7,7 @@
         "aufwandMax": [
             6
         ],
-        "aufwandGeteilt": [
-            1,
-            0
-        ],
+        "aufwandGeteilt": 0,
         "id": 41
     },
     {
@@ -22,10 +19,7 @@
         "aufwandMax": [
             8
         ],
-        "aufwandGeteilt": [
-            0,
-            0
-        ],
+        "aufwandGeteilt": 0,
         "id": 59
     },
     {
@@ -38,11 +32,7 @@
         "aufwandMax": [
             28
         ],
-        "aufwandGeteilt": [
-            0,
-            0,
-            0
-        ],
+        "aufwandGeteilt": [],
         "id": 70
     },
     {
@@ -57,25 +47,11 @@
             340
         ],
         "aufwandGeteilt": [
-            0,
-            0,
-            0,
-            0
+            3,
+            4,
+            5,
+            6
         ],
         "id": 71
-    },
-    {
-        "bezeichnung": "4",
-        "mitarbeiter": [
-            "Kai Mustermann"
-        ],
-        "aufwandMax": [
-            365
-        ],
-        "aufwandGeteilt": [
-            1,
-            0
-        ],
-        "id": 115
     }
 ]

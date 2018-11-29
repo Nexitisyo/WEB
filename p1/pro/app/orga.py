@@ -21,24 +21,25 @@ class Orga(object):
         })
 
     @cherrypy.expose()
-    def save(self, aufwandGeteilt, bezeichnung, mitarbeiter, key=None):     
-        mliste = []
-        if type(mitarbeiter) is str:
-            mliste.append(mitarbeiter)
-            
-        if type(aufwandGeteilt) is not int:
-            aufwandGeteilt = int(aufwandGeteilt)
-            aufwandGeteilt = [aufwandGeteilt]
-
+    def save(self, aufwandGeteilt, bezeichnung, projektnummer, mitarbeiter, key=None):        
         if key:
             database.writeValuebyId("orga.json", key, {
-                
+                "aufwandGeteilt":aufwandGeteilt,
                 "bezeichnung": bezeichnung,
-                "mitarbeiter": mitarbeiter,
-                "aufwandGeteilt":aufwandGeteilt
+                "projektnummer": projektnummer,
+                "mitarbeiter": mitarbeiter
             })
 
             raise cherrypy.HTTPRedirect("../orga/")
+        else:
+
+            database.append("orga.json", {
+                "aufwandGeteilt":aufwandGeteilt,
+                "bezeichnung": bezeichnung,
+                "projektnummer": projektnummer,
+                "mitarbeiter": mitarbeiter
+            })
+            return self.index()
    
     @cherrypy.expose()
     def edit(self, key):
