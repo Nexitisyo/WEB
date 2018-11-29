@@ -7,7 +7,7 @@ from app import mitarbeiter
 from app import kunden
 from app import projekte
 from app import auswertung 
-from app import orga#import projekte etc. aus dem Ordner app
+from app import orga
 #from var_dump import var_dump
 
 def main():

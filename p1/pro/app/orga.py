@@ -1,5 +1,4 @@
 # coding: utf-8
-
 import cherrypy
 from app import view
 from app import database
@@ -22,19 +21,41 @@ class Orga(object):
         })
 
     @cherrypy.expose()
-    def save(self, aufwandGeteilt, key=None):        
+    def save(self, aufwandGeteilt, bezeichnung, mitarbeiter, key=None):     
+        mliste = []
+        if type(mitarbeiter) is str:
+            mliste.append(mitarbeiter)
+            
+        if type(aufwandGeteilt) is not int:
+            aufwandGeteilt = int(aufwandGeteilt)
+            aufwandGeteilt = [aufwandGeteilt]
+
         if key:
             database.writeValuebyId("orga.json", key, {
+                
+                "bezeichnung": bezeichnung,
+                "mitarbeiter": mitarbeiter,
                 "aufwandGeteilt":aufwandGeteilt
             })
 
             raise cherrypy.HTTPRedirect("../orga/")
-        else:
+   
+    @cherrypy.expose()
+    def edit(self, key):
+        try:
+            projekt = database.readValuebyId("projekte.json", key)
+            orga = database.readValuebyId("orga.json", key)
+        except Exception:
+            return self.default()
 
-            database.append("orga.json", {
-                "aufwandGeteilt":aufwandGeteilt
-            })
-            return self.index()
+        return self.view.create("orga-form.mako", {
+            "projekte": projekt,
+            "orga": orga,
+            "liste": database.read("kunden.json"),
+            "liste2": database.read("mitarbeiter.json"),
+            "liste3": database.read("orga.json"),
+            "action": "edit"
+        })
 
     @cherrypy.expose()
     def default(self, *arglist, **kwargs):
