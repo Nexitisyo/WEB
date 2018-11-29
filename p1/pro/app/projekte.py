@@ -26,9 +26,14 @@ class Projekte(object):
              mitarbeiterverweis:list, key=None):
         
         mliste = mitarbeiterverweis
-        aufwandGeteilt = 0
         if type(mitarbeiterverweis) is str:
             mliste = [mitarbeiterverweis]
+
+        aufwandGeteilt = [len(mliste)]
+        for x in mliste:
+            aufwandGeteilt.append(0)
+
+        
 
         if (bearbeitungszeitraumA == None) or (bearbeitungszeitraumB == None):
             bearbeitungszeitraumA = "invalid date"
