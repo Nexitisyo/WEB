@@ -1,13 +1,10 @@
-console.log("Hello World")
-
-var collapseMarker = document.getElementsByClassName("collapse");
 function selectionMarker(id) {
-    document.getElementById(id).style.backgroundColor = "#b32626";
-    document.getElementById(id).style.color = "#ececec";
-
+    document.getElementById(id).style.backgroundColor = "#b3262667";
+    //document.getElementById(id).style.color = "#cecece";
 }
+
 function deselectionMarker(id) {
-    document.getElementById(id).style.backgroundColor = "#ececec";
-    document.getElementById(id).style.color = "#444141";
+    document.getElementById(id).style.backgroundColor = "#333333";
+    //document.getElementById(id).style.color = "#cecece";
 
 }

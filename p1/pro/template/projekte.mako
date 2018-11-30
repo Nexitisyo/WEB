@@ -23,6 +23,7 @@
     </tr>
     ##test
     % for projekte in liste:
+    ##testetetetst
         <tr class="selected" id="${projekte['id']}" onmouseenter="selectionMarker(${projekte['id']})"" onmouseleave="deselectionMarker(${projekte['id']})">
 
             <td>${projekte['id']}</td>

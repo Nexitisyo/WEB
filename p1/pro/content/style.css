@@ -9,14 +9,14 @@ html.index {
 body {
     font-family:'capsuula';
     font-size:1.4em;
-    background-color: #ececec;
-    color: #444141;
+    background-color: #333333;
+    color: #cecece;
 }
 body.index {
     display: table-cell;
     vertical-align: middle;
-    background-color: #ececec;
-    color: #444141;
+    background-color: #333333;
+    color: #cecece;
 }
 
 
@@ -25,8 +25,8 @@ td.selected {
     text-align: center;
     padding-top:5px;
     padding-bottom:5px;
-    background-color:none;
-    color:none;
+    background-color:#cecece;
+    text-align: center;
 }
 th {
     border-bottom: 1.5px solid #b32626;
@@ -37,6 +37,7 @@ th {
 table.collapse {
     border-spacing:0;
     width: 100%;
+    text-align: center;
 }
 
 a:link,a:visited,a:hover {
@@ -69,7 +70,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: cecece;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -78,14 +79,14 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #b32626;
-    color: white;
+    color: #cecece;
 
 }
 
 a {
     display: block;
     padding: 5px 5px 5px 5px;
-    background-color: #a5a3a3;
-    color: #444141;
+    background-color: #575757;
+    color: #cecece;
 
 }
