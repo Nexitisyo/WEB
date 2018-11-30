@@ -81,16 +81,15 @@
                 </datalist> 
             </td>
 #######################################################################################################################################
-            <td><select multiple
-                    %if action is not UNDEFINED:
-                        value="${projekte['mitarbeiterverweis']}"
-                    %else:
-                        value=""
-                    %endif
-                        id="mitarbeiterverweis" name="mitarbeiterverweis">
-                                        
+            <td><select multiple id="mitarbeiterverweis" name="mitarbeiterverweis">
+                    ## % for mitarbeiterverweis in projekte['mitarbeiterverweis']:
+                    ##     <option selected value="${mitarbeiterverweis}">${mitarbeiterverweis}</option>
+                    ## % endfor
                     % for mitarbeiter in liste2:
+                        ##%if mitarbeiterverweis in projekte['mitarbeiterverweis']:
+                        
                         <option value="${mitarbeiter['name']} ${mitarbeiter['vorname']}">${mitarbeiter['vorname']} ${mitarbeiter['name']}</option>
+                        
                     % endfor
 
                     

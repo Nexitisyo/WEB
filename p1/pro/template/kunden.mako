@@ -4,11 +4,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="/../script.js"></script>
     <link rel="stylesheet" type="text/css" href="/../style.css">
     <title>Kunden</title>
 </head><body>
 <table class="collapse">
-    <tr>
+        <tr>
         <th>ID</th>
         <th>Kundennummer</th>
         <th>Bezeichnung</th>
@@ -17,7 +18,8 @@
         <th>Aktion</th>
     </tr>
     % for kunden in liste:
-        <tr>
+   <tr class="selected" id="${kunden['id']}" onclick="editPy(id)" onmouseenter="selectionMarker(${kunden['id']})"" onmouseleave="deselectionMarker(${kunden['id']})">
+
             <td>${kunden['id']}</td>
             <td>${kunden['kundennummer']}</td>
             <td>${kunden['bezeichnung']}</td>
@@ -25,7 +27,6 @@
             <td>${kunden['ort']}</td>
             <td>
                 <ul class="buttons">
-                    <li><a href="edit?key=${kunden['id']}">bearbeiten</a></li>
                     <li><a href="delete?key=${kunden['id']}">löschen</a></li>
                 </ul>
             </td>

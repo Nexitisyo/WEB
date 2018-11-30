@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mitarbeiter</title>
+    <script type="text/javascript" src="/../script.js"></script>
     <link rel="stylesheet" type="text/css" href="/../style.css">
 </head>
 <body>
@@ -17,14 +18,14 @@
         <th>Aktion</th>
     </tr>
     % for mitarbeiter in liste:
-        <tr>
+        <tr class="selected" id="${mitarbeiter['id']}" onclick="editPy(id)" onmouseenter="selectionMarker(${mitarbeiter['id']})"" onmouseleave="deselectionMarker(${mitarbeiter['id']})">
+
             <td>${mitarbeiter['id']}</td>
             <td>${mitarbeiter['name']}</td>
             <td>${mitarbeiter['vorname']}</td>
             <td>${mitarbeiter['funktion']}</td>
             <td>
                 <ul class="buttons">
-                <li><a href="edit?key=${mitarbeiter['id']}">bearbeiten</a></li>
                 <li><a href="delete?key=${mitarbeiter['id']}">löschen</a><li>
                 </ul>
             </td>

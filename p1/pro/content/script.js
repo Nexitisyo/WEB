@@ -8,3 +8,7 @@ function deselectionMarker(id) {
     //document.getElementById(id).style.color = "#cecece";
 
 }
+
+function editPy(id) {
+    window.location.href = 'edit?key=' + id;
+}

@@ -24,7 +24,7 @@
     ##test
     % for projekte in liste:
     ##testetetetst
-        <tr class="selected" id="${projekte['id']}" onmouseenter="selectionMarker(${projekte['id']})"" onmouseleave="deselectionMarker(${projekte['id']})">
+        <tr class="selected" id="${projekte['id']}" onclick="editPy(id)" onmouseenter="selectionMarker(${projekte['id']})"" onmouseleave="deselectionMarker(${projekte['id']})">
 
             <td>${projekte['id']}</td>
             <td>${projekte['projektnummer']}</td>
@@ -33,11 +33,14 @@
             <td>${projekte['bearbeitungszeitraumA']} - <br>${projekte['bearbeitungszeitraumB']}</td>
             <td>${projekte['budget']}</td>
             <td>${projekte['kundenverweis']}</td>
-            <td>${projekte['mitarbeiterverweis']}</td>
+            <td>                
+                %for mitarbeiterverweis in projekte['mitarbeiterverweis']:
+                    <p>${mitarbeiterverweis}</p>
+                %endfor
+            </td>
             <td>${projekte['aufwandMax']}</td>
             <td>
                 <ul class="buttons">
-                    <li><a href="edit?key=${projekte['id']}">Bearbeiten</a></li>
                     <li><a href="delete?key=${projekte['id']}">Löschen</a></li>
                     <li><a href="/orga/edit?key=${projekte['id']}">Organisieren</a></li>
 
