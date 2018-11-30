@@ -21,7 +21,7 @@
         <th>Aufwand insgesammt</th>
         <th>Aktion</th>
     </tr>
-
+    ##test
     % for projekte in liste:
         <tr class="selected" id="${projekte['id']}" onmouseenter="selectionMarker(${projekte['id']})"" onmouseleave="deselectionMarker(${projekte['id']})">
 
