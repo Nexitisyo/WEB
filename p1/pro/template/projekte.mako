@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>Projekte</title>
     <link rel="stylesheet" type="text/css" href="/../style.css">
+    <script type="text/javascript" src="/../script.js"></script>
 </head><body>
 <table class="collapse">
     <tr>
@@ -20,9 +21,10 @@
         <th>Aufwand insgesammt</th>
         <th>Aktion</th>
     </tr>
-
+    ##test
     % for projekte in liste:
-        <tr>
+        <tr class="selected" id="${projekte['id']}" onmouseenter="selectionMarker(${projekte['id']})"" onmouseleave="deselectionMarker(${projekte['id']})">
+
             <td>${projekte['id']}</td>
             <td>${projekte['projektnummer']}</td>
             <td>${projekte['bezeichnung']}</td>
@@ -42,12 +44,11 @@
             </td>
         </tr>
     % endfor
+
 </table>
     <ul class="buttons">
         <li><a href="add">Projekt hinzufügen</a></li>
         <li><a href="/../">Zurück zur Startseite</a></p></li>
-        <li><a href="/orga/">Organisieren</a></li>
-
     </ul>
 </body>
 </html>

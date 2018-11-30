@@ -20,6 +20,8 @@
             <td><p>${projekte['bezeichnung']}</p></td>
             <td>
                 %for mitarbeiter in orga['mitarbeiter']:
+                    <input type="hidden" value="${mitarbeiter}" name="mitarbeiter" id="mitarbeiter" />
+
                     <p>${mitarbeiter}</p>
                     %endfor
             </td>
@@ -43,7 +45,6 @@
 
 
     <input type="hidden" value="${orga['bezeichnung']}" name="bezeichnung" id="bezeichnung" />
-    <input type="hidden" value="${orga['mitarbeiter']}" name="mitarbeiter" id="mitarbeiter" />
     <input type="hidden" value="${orga['id']}" name="key" id="key" />
 
 </form>

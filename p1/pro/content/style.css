@@ -19,11 +19,14 @@ body.index {
     color: #444141;
 }
 
-td {
+
+td.selected {
     border-bottom: 1px solid #ddd;
     text-align: center;
     padding-top:5px;
     padding-bottom:5px;
+    background-color:none;
+    color:none;
 }
 th {
     border-bottom: 1.5px solid #b32626;
@@ -52,6 +55,7 @@ ul {
 ul.buttons {
   display: flex;
   justify-content: center;
+  border:2px;
 
 }
 

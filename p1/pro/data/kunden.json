@@ -19,5 +19,12 @@
         "ansprechpartner": "Steffen",
         "ort": "Essen",
         "id": 73
+    },
+    {
+        "kundennummer": "4",
+        "bezeichnung": "4",
+        "ansprechpartner": "4",
+        "ort": "4",
+        "id": 116
     }
 ]
