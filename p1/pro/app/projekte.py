@@ -21,7 +21,7 @@ class Projekte(object):
             "liste3": database.read("orga.json")
         })
 
-    @cherrypy.expose()
+    @cherrypy.expose()  
     def save(self, projektnummer, bezeichnung, beschreibung, bearbeitungszeitraumA, bearbeitungszeitraumB, budget, kundenverweis,
              mitarbeiterverweis:list, key=None):
         
@@ -29,11 +29,9 @@ class Projekte(object):
         if type(mitarbeiterverweis) is str:
             mliste = [mitarbeiterverweis]
 
-        aufwandGeteilt = [len(mliste)]
+        aufwandGeteilt = []
         for x in mliste:
             aufwandGeteilt.append(0)
-
-        
 
         if (bearbeitungszeitraumA == None) or (bearbeitungszeitraumB == None):
             bearbeitungszeitraumA = "invalid date"
@@ -60,7 +58,6 @@ class Projekte(object):
             database.writeValuebyId("orga.json", key, {
                 "bezeichnung": bezeichnung,
                 "mitarbeiter": mliste,
-                "aufwandMax": differenceInDays,
                 "aufwandGeteilt": aufwandGeteilt
             })
 
@@ -82,9 +79,7 @@ class Projekte(object):
             database.append("orga.json", {
                 "bezeichnung": bezeichnung,
                 "mitarbeiter": mliste,
-                "aufwandMax": differenceInDays,
                 "aufwandGeteilt": aufwandGeteilt
-
             })
 
             return self.index()
