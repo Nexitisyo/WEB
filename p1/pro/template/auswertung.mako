@@ -20,7 +20,11 @@
     % for projekte in liste:
         <tr>
             <td>${projekte['bezeichnung']}</td>
-            <td>${projekte['mitarbeiterverweis']}</td>
+            <td>
+                %for mitarbeiterverweis in projekte['mitarbeiterverweis']:
+                    <p>${mitarbeiterverweis}</p>
+                %endfor
+            </td>
             <td>${projekte['aufwandMax']}</td>
         </tr>
     % endfor
