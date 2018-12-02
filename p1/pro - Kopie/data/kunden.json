@@ -1,0 +1,23 @@
+[
+    {
+        "kundennummer": "4771",
+        "bezeichnung": "Max",
+        "ansprechpartner": "Mark",
+        "ort": "Krefeld",
+        "id": 32
+    },
+    {
+        "kundennummer": "4772",
+        "bezeichnung": "Justus",
+        "ansprechpartner": "Viktor",
+        "ort": "Krefeld",
+        "id": 33
+    },
+    {
+        "kundennummer": "3124123",
+        "bezeichnung": "Google",
+        "ansprechpartner": "Steffen",
+        "ort": "Essen",
+        "id": 73
+    }
+]

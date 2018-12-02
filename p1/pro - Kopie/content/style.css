@@ -1,0 +1,89 @@
+@font-face { font-family: 'loves'; src: url('LOVES.TTF'); } 
+@font-face { font-family: 'capsuula'; src: url('Capsuula.ttf'); } 
+
+html.index {
+    display: table;
+    margin: auto;
+}
+
+body {
+    font-family:'capsuula';
+    font-size:1.4em;
+    background-color: #333333;
+    color: #cecece;
+}
+body.index {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #333333;
+    color: #cecece;
+}
+
+
+td {
+    border-bottom: 1px solid rgba(134, 134, 134, 0.493);
+    text-align: center;
+    padding-top:5px;
+    padding-bottom:5px;
+    text-align: center;
+}
+th {
+    border-bottom: 1.5px solid #b32626;
+    text-align: center;
+    
+}
+
+table.collapse {
+    border-spacing:0;
+    width: 100%;
+    text-align: center;
+}
+
+a:link,a:visited,a:hover {
+    color: #cecece;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+ul.buttons {
+  display: flex;
+  justify-content: center;
+  border:2px;
+
+}
+
+ul.buttons li {
+  padding: 0px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: cecece;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #b32626;
+    color: #cecece;
+
+}
+
+a {
+    display: block;
+    padding: 5px 5px 5px 5px;
+    background-color: #575757;
+    color: #cecece;
+
+}
