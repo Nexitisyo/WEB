@@ -61,7 +61,7 @@
            </tr>
         %if action is not UNDEFINED:
             <input type="hidden" value="${mitarbeiter['id']}" name="key" />
-    %endif
+        %endif
 </table>
 </form>
 </body>
