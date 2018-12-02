@@ -10,8 +10,7 @@ def read(dbfile):
     jsonobject.close()
     return result
 
-##TOdo
-def calc(start, end, key=None):
+def calc(start, end):
 
     splitStart = start.split("-")
     splitEnd = end.split("-")
@@ -49,10 +48,10 @@ def write(dbfile, newdata): #Update json file
 def writeValuebyId(dbfile, key, newdata):
     result = read(dbfile)
     # enum macht aus liste eine key value map
-    for index, x in enumerate(result): # Fragen wie diese for loop in Python funktioniert && Mappen wir index UND x mit einem Eintrag aus 'result'?
+    for index, x in enumerate(result): 
         if x["id"] == int(key):
             newdata["id"] = int(key)
-            result[index] = newdata # Wieso result[index] und nicht result[x]? Ist das nicht dasselbe?
+            result[index] = newdata
     write(dbfile, result)
 
 def deleteValueById(dbfile, key):
