@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="/../script.js"></script>
+    <script type="text/javascript" src="/../script.js"></script>
     <link rel="stylesheet" type="text/css" href="/../style.css">
     <title>Kunden</title>
 </head><body>
@@ -18,7 +18,7 @@
         <th>Aktion</th>
     </tr>
     % for kunden in liste:
-   <tr class="selected" id="${kunden['id']}" onclick="editPy(id)" onmouseenter="selectionMarker(${kunden['id']})" onmouseleave="deselectionMarker(${kunden['id']})">
+   <tr class="selected" id="${kunden['id']}" onclick="editPy(id)" onmouseenter="selectionMarker(${kunden['id']})"" onmouseleave="deselectionMarker(${kunden['id']})">
             <td>${kunden['id']}</td>
             <td>${kunden['kundennummer']}</td>
             <td>${kunden['bezeichnung']}</td>

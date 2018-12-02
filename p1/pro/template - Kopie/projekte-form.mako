@@ -15,14 +15,14 @@
 <form action="save" method="post">
     <table class ="collapse">
         <tr>
-            <th>Projektnummer:</th>
-            <th>Bezeichnung:</th>
-            <th>Beschreibung:</th>
-            <th>Budget:</th>
-            <th>Kundenverweis</th>
-            <th>>Mitarbeiterverweis:</th>
-            <th>Aufwand:</th>
-            <th>Bearbeitungszeitraum:</th>
+            <th><label for="projektnummer">Projektnummer:</label></th>
+            <th><label for="bezeichnung">Bezeichnung:</label></th>
+            <th><label for="beschreibung">Beschreibung:</label></th>
+            <th><label for="budget">Budget:</label></th>
+            <th><label for="kundenverweis">Kundenverweis:</label></th>
+            <th><label for="mitarbeiterverweis">Mitarbeiterverweis:</label></th>
+            <th><label for="aufwand">Aufwand:</label></th>
+            <th><label for="bearbeitungszeitraum">Bearbeitungszeitraum:</label></th>
             <th>Aktion:</th>
         </tr>
 #######################################################################################################################################

@@ -1,4 +1,5 @@
 ## coding: utf-8
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,10 +22,9 @@
             <th><label for="ort">Ort:</label></th> 
             <th>Aktion:</th>
         </tr>
+                ## if action is not UNDEFINED = Wenn action in form action definiert ist z.B durch einen Aufruf in kunden.py dann setze value auf einen bestimmten Eintrag
 ########################################################################################################################                
-        <tr>
-        <td>
-        <input type="text"
+        <td><input type="text"
                 %if action is not UNDEFINED: 
                     value="${kunden['kundennummer']}"
                 %else:
@@ -32,10 +32,9 @@
                 %endif
                     id="kundennummer"
                     name="kundennummer"/>
-        </td>
+        </th>
 ########################################################################################################################                
-        <td>
-        <input type="text"
+        <td><input type="text"
                 %if action is not UNDEFINED:
                     value="${kunden['bezeichnung']}"
                 %else:
@@ -44,8 +43,7 @@
                     id="bezeichnung" name="bezeichnung"/>
         </td>
 ########################################################################################################################                
-        <td>
-        <input type="text"
+        <td><input type="text"
                 %if action is not UNDEFINED:
                     value="${kunden['ansprechpartner']}"
                 %else:
@@ -54,8 +52,7 @@
                     id="ansprechpartner" name="ansprechpartner"/>
         </td>
 ########################################################################################################################                
-        <td>
-        <input type="text"
+        <td><input type="text"
                 %if action is not UNDEFINED:
                     value="${kunden['ort']}"
                 %else:
@@ -68,13 +65,11 @@
             <input type="submit" value="Speichern"/>
             <input type="button" value="Abbrechen" onclick="location.href='/kunden/';"/>
         </td>
-        </tr>
-        </table>
-
     %if action is not UNDEFINED:
         <input type="hidden" value="${kunden['id']}" name="key"/>
     %endif
-    </form>
+
+</form>
 
 
 </body>

@@ -20,7 +20,7 @@
             <td><p>${projekte['bezeichnung']}</p></td>
             <td>
                 %for mitarbeiter in orga['mitarbeiter']:
-                    <input type="hidden" value="${mitarbeiter}" name="mitarbeiter"/>
+                    <input type="hidden" value="${mitarbeiter}" name="mitarbeiter" id="mitarbeiter" />
 
                     <p>${mitarbeiter}</p>
                     %endfor
@@ -29,13 +29,16 @@
                 %for aufwandGeteilt in orga['aufwandGeteilt']:
                     <p><input type="text"
                             value="${aufwandGeteilt}"
+                            id="aufwandGeteilt"
                             name="aufwandGeteilt"/>
                     </p>
                 %endfor
             </td>
             <td>
+                <ul class="buttons">
                     <input type="submit" value="Speichern" />
                     <input type="button" value="Abbrechen" onclick="location.href='/projekte/'"/>
+                </ul>
             </td>   
         </tr>
     </table>

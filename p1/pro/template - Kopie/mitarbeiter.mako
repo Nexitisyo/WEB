@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mitarbeiter</title>
-    <script src="/../script.js"></script>
+    <script type="text/javascript" src="/../script.js"></script>
     <link rel="stylesheet" type="text/css" href="/../style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
         <th>Aktion</th>
     </tr>
     % for mitarbeiter in liste:
-        <tr class="selected" id="${mitarbeiter['id']}" onclick="editPy(id)" onmouseenter="selectionMarker(${mitarbeiter['id']})" onmouseleave="deselectionMarker(${mitarbeiter['id']})">
+        <tr class="selected" id="${mitarbeiter['id']}" onclick="editPy(id)" onmouseenter="selectionMarker(${mitarbeiter['id']})"" onmouseleave="deselectionMarker(${mitarbeiter['id']})">
 
             <td>${mitarbeiter['id']}</td>
             <td>${mitarbeiter['name']}</td>
@@ -32,9 +32,8 @@
         </tr>
     % endfor
 </table>
-    <ul>
-        <li><a href="add">Neuen Mitarbeiter hinzufügen</a></li>
-        <li><a href="/../">Zurück zur Startseite</a></li>
-    </ul>
+<ul>
+<li><a href="add">Neuen Mitarbeiter hinzufügen</a></li>
+<li><a href="/../">Zurück zur Startseite</a></li>
 </body>
 </html>

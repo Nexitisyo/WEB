@@ -23,7 +23,6 @@
             <th>Aktion:</th>
         </tr>
 ##################################################################################################################
-            <tr>
             <td><input type="text"
                 %if action is not UNDEFINED:
                     value="${mitarbeiter['name']}"
@@ -57,11 +56,12 @@
                 <input type="submit" value="Speichern"/>
                 <input type="button" value="Abbrechen" onclick="location.href='/mitarbeiter/';"/>
            </td>
-           </tr>
-        %if action is not UNDEFINED:
-            <input type="hidden" value="${mitarbeiter['id']}" name="key" />
+    %if action is not UNDEFINED:
+        <input type="hidden" value="${mitarbeiter['id']}" name="key" />
     %endif
-</table>
+
 </form>
+
+
 </body>
 </html>

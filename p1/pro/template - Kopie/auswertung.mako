@@ -1,4 +1,5 @@
 ## coding: utf-8
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,7 @@
 <table class="collapse">
 <tr>
         <th>Projektbezeichnung</th>
+        ##Name,Vorname lexikographisch sortiert
         <th>Projektmitarbeiter</th> 
         <th>Aufwand insgesammt</th> 
     </tr>

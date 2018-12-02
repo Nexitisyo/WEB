@@ -1,11 +1,12 @@
 ## coding: utf-8
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Projekte</title>
     <link rel="stylesheet" type="text/css" href="/../style.css">
-    <script src="/../script.js"></script>
+    <script type="text/javascript" src="/../script.js"></script>
 </head><body>
 <table class="collapse">
     <tr>
@@ -20,9 +21,10 @@
         <th>Aufwand insgesammt</th>
         <th>Aktion</th>
     </tr>
+    ##test
     % for projekte in liste:
-
-        <tr class="selected" id="${projekte['id']}" onclick="editPy(id)" onmouseenter="selectionMarker(${projekte['id']})" onmouseleave="deselectionMarker(${projekte['id']})">
+    ##testetetetst
+        <tr class="selected" id="${projekte['id']}" onclick="editPy(id)" onmouseenter="selectionMarker(${projekte['id']})"" onmouseleave="deselectionMarker(${projekte['id']})">
 
             <td>${projekte['id']}</td>
             <td>${projekte['projektnummer']}</td>
@@ -50,7 +52,7 @@
 </table>
     <ul class="buttons">
         <li><a href="add">Projekt hinzufügen</a></li>
-        <li><a href="/../">Zurück zur Startseite</a></li>
+        <li><a href="/../">Zurück zur Startseite</a></p></li>
     </ul>
 </body>
 </html>
