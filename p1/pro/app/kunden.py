@@ -47,9 +47,10 @@ class Kunden(object):
 
     @cherrypy.expose()
     def delete(self, key):
-        database.deleteValueById("kunden.json", key)
+        splitID = key.split(",")
+        database.deleteValueById("kunden.json", splitID)
         return self.index()
-
+        
     @cherrypy.expose()
     def edit(self, key):
         try:

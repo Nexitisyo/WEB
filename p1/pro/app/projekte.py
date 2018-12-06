@@ -93,8 +93,9 @@ class Projekte(object):
 
     @cherrypy.expose()
     def delete(self, key):
-        database.deleteValueById("projekte.json", key)
-        database.deleteValueById("orga.json", key)
+        splitID = key.split(",")
+        database.deleteValueById("projekte.json", splitID)
+        database.deleteValueById("orga.json", splitID)
         return self.index()
 
     @cherrypy.expose()

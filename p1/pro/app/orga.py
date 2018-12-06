@@ -33,7 +33,6 @@ class Orga(object):
             ###################################
             if type(aufwandGeteilt) is list: 
                 for item,index in enumerate(aufwandGeteilt):
-                    print(item,index)
                     tmp = aufwandGeteilt[item]
                     tmp = int(tmp)
                     tmpGeteilt.append(tmp)

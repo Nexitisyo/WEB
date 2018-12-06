@@ -10,18 +10,6 @@
         "id": 41
     },
     {
-        "bezeichnung": "Statue",
-        "mitarbeiter": [
-            "Kai Mustermann",
-            "Mustermann Joseph"
-        ],
-        "aufwandGeteilt": [
-            3,
-            3
-        ],
-        "id": 59
-    },
-    {
         "bezeichnung": "Baum",
         "mitarbeiter": [
             "Kai Mustermann",

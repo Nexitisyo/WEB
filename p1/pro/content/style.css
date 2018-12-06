@@ -7,6 +7,7 @@ html.index {
 }
 
 body {
+    margin-top: 5%;
     font-family:'capsuula';
     font-size:1.4em;
     background-color: #333333;
@@ -51,14 +52,21 @@ ul {
     
 }
 ul.buttons {
-  display: flex;
-  justify-content: center;
-  border:2px;
-
+    position: fixed;
+    top: 20px;
+    left: 0;
+    margin-left:1%;    
 }
 
 ul.buttons li {
   padding: 0px;
+}
+
+ul.editButtons {
+    position:fixed;
+    top: 20px;
+    right: 0;
+    margin-right:1%;
 }
 
 li {

@@ -223,17 +223,31 @@ Zusammenwirken: database.py
 </code></pre></li></ul><p> /content:</p><ul>
 <li><p>script.js:<br>   Enthaelt Funktionen fuer Mouse-Events</p>
 <pre><code data-origin="<pre><code> selectionMarker(id)
-       aendert Hintergrund eines Elements mit entsprechender ID auf rot
- deselectionMarker(id)
-       aendert Hintergrund eines Elements mit entsprechender ID auf grau
- editPy(id)
+       markiert ein Element und fuegt deren ID zu einer Liste hinzu
+       falls nicht markiert -> 
+            selektier das Element und füge ID zur Liste hinzu
+            zeige button zum bearbeiten an falls nur 1 Element markiert
+            zeige button zum löschen an.
+       falls markiert -> 
+            deselektiert das Element und löscht deren ID aus der Liste
+            falls 1 oder mehr noch markiert -> zeige button zum löschen an
+                  sonst nicht
+            verstecke button zum bearbeiten
+       
+      colorToHex(color)
+      konvertiert RGB(A) zu Hex-Farbschema
+      
+      editHref()
        Weiterleitung zur Bearbeitungsform
-</code></pre>"> selectionMarker(id)
-       aendert Hintergrund eines Elements mit entsprechender ID auf rot
- deselectionMarker(id)
-       aendert Hintergrund eines Elements mit entsprechender ID auf grau
- editPy(id)
-       Weiterleitung zur Bearbeitungsform
+</code></pre>">selectionMarker(id)
+      selektiert/deselektioert ein Element und fuegt/loescht deren ID in einer ID-Liste
+      versteckt/zeigt buttons an
+
+colorToHex(color)
+      konvertiert RGB(A) zu Hex-Farbschema
+
+editHref()
+      Weiterleitung zur Bearbeitungsform
 </code></pre></li></ul><ul>
 <li><p>style.css:</p>
 <pre><code data-origin="<pre><code>Legt massgebliche Regeln zum Erscheinungsbild der Webseite fest

@@ -44,7 +44,8 @@ class Mitarbeiter(object):
 
     @cherrypy.expose()
     def delete(self, key):
-        database.deleteValueById("mitarbeiter.json", key)
+        splitID = key.split(",")
+        database.deleteValueById("mitarbeiter.json", splitID)
         return self.index()
 
     @cherrypy.expose()

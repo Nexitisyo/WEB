@@ -1,56 +1,53 @@
 ## coding: utf-8
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Projekte</title>
-    <link rel="stylesheet" type="text/css" href="/../style.css">
-    <script src="/../script.js"></script>
-</head><body>
-<table class="collapse">
-    <tr>
-        <th>ID</th>
-        <th>Projektnummer</th>
-        <th>Bezeichnung</th>
-        <th>Beschreibung</th>
-        <th>Bearbeitungszeitraum</th>
-        <th>Budget</th>
-        <th>Kundenverweis</th>
-        <th>Mitarbeiterverweis</th>
-        <th>Aufwand insgesammt</th>
-        <th>Aktion</th>
-    </tr>
-    % for projekte in liste:
-
-        <tr class="selected" id="${projekte['id']}" onclick="editPy(id)" onmouseenter="selectionMarker(${projekte['id']})" onmouseleave="deselectionMarker(${projekte['id']})">
-
-            <td>${projekte['id']}</td>
-            <td>${projekte['projektnummer']}</td>
-            <td>${projekte['bezeichnung']}</td>
-            <td>${projekte['beschreibung']}</td>
-            <td>${projekte['bearbeitungszeitraumA']} - <br>${projekte['bearbeitungszeitraumB']}</td>
-            <td>${projekte['budget']}</td>
-            <td>${projekte['kundenverweis']}</td>
-            <td>                
-                %for mitarbeiterverweis in projekte['mitarbeiterverweis']:
-                    <p>${mitarbeiterverweis}</p>
-                %endfor
-            </td>
-            <td>${projekte['aufwandMax']}</td>
-            <td>
-                <ul class="buttons">
-                    <li><a href="delete?key=${projekte['id']}">Löschen</a></li>
-                    <li><a href="/orga/edit?key=${projekte['id']}">Organisieren</a></li>
-
-                </ul>
-            </td>
-        </tr>
-    % endfor
-
-</table>
-    <ul class="buttons">
-        <li><a href="add">Projekt hinzufügen</a></li>
-        <li><a href="/../">Zurück zur Startseite</a></li>
-    </ul>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Projekte</title>
+        <link rel="stylesheet" type="text/css" href="/../style.css">
+        <script src="/../script.js"></script>
+    </head>
+    <body>
+        <form method="post" action="delete">
+            <table class="collapse">
+                <tr>
+                    <th>ID</th>
+                    <th>Projektnummer</th>
+                    <th>Bezeichnung</th>
+                    <th>Beschreibung</th>
+                    <th>Bearbeitungszeitraum</th>
+                    <th>Budget</th>
+                    <th>Kundenverweis</th>
+                    <th>Mitarbeiterverweis</th>
+                    <th>Aufwand insgesammt</th>
+                </tr>
+                % for projekte in liste:
+                <tr class="" id="${projekte['id']}" ondblclick="selectionMarker(${projekte['id']})" style="background-color: #333333">
+                    <td>${projekte['id']}</td>
+                    <td>${projekte['projektnummer']}</td>
+                    <td>${projekte['bezeichnung']}</td>
+                    <td>${projekte['beschreibung']}</td>
+                    <td>${projekte['bearbeitungszeitraumA']} - <br>${projekte['bearbeitungszeitraumB']}</td>
+                    <td>${projekte['budget']}</td>
+                    <td>${projekte['kundenverweis']}</td>
+                    <td>                
+                        %for mitarbeiterverweis in projekte['mitarbeiterverweis']:
+                            <p>${mitarbeiterverweis}</p>
+                        %endfor
+                    </td>
+                    <td>${projekte['aufwandMax']}</td>
+                </tr>
+                % endfor
+            </table>
+            <input type="hidden" id="inputID" name="key" value=""/>
+            <ul class="buttons">
+                <li><button type="button" onclick="window.location.href='add'"></button>Projekt hinzufügen</li>
+                <li><button type="button" onclick="window.location.href='/../'"></button>Zurück zur Startseite</li>
+            </ul>
+            <ul class="editButtons">
+                <li><button type="submit" id="delBut" style="display: none" value="delete"></button>Löschen</li>
+                <li><button type="button" id="edtBut" style="display: none" onclick="editHref()"></button>Bearbeiten</li>
+            </ul>
+        </form>
+    </body>
 </html>

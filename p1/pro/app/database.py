@@ -47,7 +47,6 @@ def write(dbfile, newdata): #Update json file
 
 def writeValuebyId(dbfile, key, newdata):
     result = read(dbfile)
-    # enum macht aus liste eine key value map
     for index, x in enumerate(result): 
         if x["id"] == int(key):
             newdata["id"] = int(key)
@@ -55,11 +54,19 @@ def writeValuebyId(dbfile, key, newdata):
     write(dbfile, result)
 
 def deleteValueById(dbfile, key):
+    #Erweitern sodass keyLists auch gelöscht werden können
     result = read(dbfile)
-    for index, x in enumerate(result):
-        if x['id'] == int(key):
-            del result[index]
-    write(dbfile, result)
+    if len(key) <= 1:
+        for index, x in enumerate(result):
+            if x['id'] == int(key[0]):
+                del result[index]
+        write(dbfile, result)
+    else:
+        for index, x in enumerate(key):
+            for index2, y in enumerate(result):
+                if y['id'] == int(key[index]):
+                    del result[index2]
+        write(dbfile, result)           
 
 
 def append(dbfile, values): 

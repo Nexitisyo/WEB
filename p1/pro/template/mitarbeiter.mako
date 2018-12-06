@@ -2,39 +2,39 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Mitarbeiter</title>
-    <script src="/../script.js"></script>
-    <link rel="stylesheet" type="text/css" href="/../style.css">
-</head>
-<body>
-<table class="collapse">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Vorname</th>
-        <th>Funktion</th>
-        <th>Aktion</th>
-    </tr>
-    % for mitarbeiter in liste:
-        <tr class="selected" id="${mitarbeiter['id']}" onclick="editPy(id)" onmouseenter="selectionMarker(${mitarbeiter['id']})" onmouseleave="deselectionMarker(${mitarbeiter['id']})">
-
-            <td>${mitarbeiter['id']}</td>
-            <td>${mitarbeiter['name']}</td>
-            <td>${mitarbeiter['vorname']}</td>
-            <td>${mitarbeiter['funktion']}</td>
-            <td>
-                <ul class="buttons">
-                <li><a href="delete?key=${mitarbeiter['id']}">löschen</a><li>
-                </ul>
-            </td>
-        </tr>
-    % endfor
-</table>
-    <ul>
-        <li><a href="add">Neuen Mitarbeiter hinzufügen</a></li>
-        <li><a href="/../">Zurück zur Startseite</a></li>
-    </ul>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mitarbeiter</title>
+        <script src="/../script.js"></script>
+        <link rel="stylesheet" type="text/css" href="/../style.css">
+    </head>
+    <body>
+        <form method="post" action="delete">
+            <table class="collapse">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Vorname</th>
+                    <th>Funktion</th>
+                </tr>
+                % for mitarbeiter in liste:
+                <tr class="" id="${mitarbeiter['id']}" ondblclick="selectionMarker(${mitarbeiter['id']})" style="background-color: #333333">
+                        <td>${mitarbeiter['id']}</td>
+                        <td>${mitarbeiter['name']}</td>
+                        <td>${mitarbeiter['vorname']}</td>
+                        <td>${mitarbeiter['funktion']}</td>
+                </tr>
+                % endfor
+            </table>
+            <input type="hidden" id="inputID" name="key" value=""/>
+            <ul class="buttons">
+                <li><button type="button" onclick="window.location.href='add'"></button>Mitarbeiter hinzufügen</li>
+                <li><button type="button" onclick="window.location.href='/../'"></button>Zurück zur Startseite</li>
+            </ul>
+            <ul class="editButtons">
+                <li><button type="submit" id="delBut" style="display: none" value="delete"></button>Löschen</li>
+                <li><button type="button" id="edtBut" style="display: none" onclick="editHref()"></button>Bearbeiten</li>
+            </ul>
+        </form>
+    </body>
 </html>
