@@ -46,7 +46,7 @@ function selectionMarker(id) {
         if(selNum == 0){
             document.getElementById("delBut").style.display = "none";
         }
-        else if(selNum == 1) {
+        if(selNum == 1) {
             document.getElementById("edtBut").style.display ="";
         }
         else {

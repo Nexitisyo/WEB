@@ -14,31 +14,10 @@
         "id": 73
     },
     {
-        "kundennummer": "3",
-        "bezeichnung": "3",
-        "ansprechpartner": "3",
-        "ort": "3",
-        "id": 201
-    },
-    {
-        "kundennummer": "4",
-        "bezeichnung": "4",
-        "ansprechpartner": "4",
-        "ort": "4",
-        "id": 203
-    },
-    {
-        "kundennummer": "4",
-        "bezeichnung": "4",
-        "ansprechpartner": "4",
-        "ort": "4",
-        "id": 205
-    },
-    {
-        "kundennummer": "4",
-        "bezeichnung": "4",
-        "ansprechpartner": "4",
-        "ort": "4",
-        "id": 207
+        "kundennummer": "314",
+        "bezeichnung": "Something",
+        "ansprechpartner": "Somebody",
+        "ort": "Someplace",
+        "id": 33
     }
 ]

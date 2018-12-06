@@ -11,7 +11,6 @@
         <link rel="stylesheet" type="text/css" href="/../style.css">
     </head>
     <body>
-
         <form action="save" method="post">
             <table class="collapse">
                 <tr>

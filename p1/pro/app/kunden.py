@@ -63,7 +63,7 @@ class Kunden(object):
             "action": "edit"
         })
 
-    @cherrypy.expose()
+    @che    rrypy.expose()
     def default(self, *arglist, **kwargs):
         msg_s = "no match: " + str(arglist) + ' ' + str(kwargs)
         raise cherrypy.HTTPError(404, msg_s)
