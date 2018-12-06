@@ -41,9 +41,7 @@ class Orga(object):
                 tmp = int(aufwandGeteilt)
                 aufwandGeteilt = []
                 aufwandGeteilt.append(tmp)
-            
-        aufwandGeteilt = tmpGeteilt
-
+                
         if key:
             database.writeValuebyId("orga.json", key, {
                 

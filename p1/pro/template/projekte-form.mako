@@ -19,8 +19,8 @@
                     <th>Beschreibung:</th>
                     <th>Budget:</th>
                     <th>Kundenverweis</th>
-                    <th>>Mitarbeiterverweis:</th>
-                    <th>Aufwand:</th>
+                    <th>Mitarbeiterverweis:</th>
+                    <th>Max. Aufwand in Tagen:</th>
                     <th>Bearbeitungszeitraum:</th>
                     <th>Aktion:</th>
                 </tr>

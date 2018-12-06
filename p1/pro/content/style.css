@@ -11,13 +11,13 @@ body {
     font-family:'capsuula';
     font-size:1.4em;
     background-color: #333333;
-    color: #cecece;
+    color: #e4e4e4;
 }
 body.index {
     display: table-cell;
     vertical-align: middle;
     background-color: #333333;
-    color: #cecece;
+    color: #e4e4e4;
 }
 
 

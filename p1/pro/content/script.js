@@ -19,7 +19,7 @@ function colorToHex(color) {
 
 function selectionMarker(id) {
     var elementWithID = document.getElementById(id)
-    var curCol = colorToHex(document.getElementById(id).style.backgroundColor);
+    var curCol = colorToHex(elementWithID.style.backgroundColor);
 
     if(curCol == stdCol){
         idList.push(id);
@@ -31,15 +31,12 @@ function selectionMarker(id) {
         if(selNum == 1) {
             document.getElementById("edtBut").style.display = "";
             document.getElementById("orgBut").style.display = "";
-
         }
         else {
             document.getElementById("edtBut").style.display = "none";
             document.getElementById("orgBut").style.display = "none";
-
         }
     }
-
     else {
         idList.pop(id);
         document.getElementById("inputID").value = [idList];
@@ -49,10 +46,12 @@ function selectionMarker(id) {
         if(selNum == 0){
             document.getElementById("delBut").style.display = "none";
         }
+
         if(selNum == 1) {
             document.getElementById("edtBut").style.display = "";
             document.getElementById("orgBut").style.display = "";
         }
+        
         else {
             document.getElementById("edtBut").style.display = "none";
             document.getElementById("orgBut").style.display = "none";

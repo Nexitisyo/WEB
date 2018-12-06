@@ -68,7 +68,6 @@ def deleteValueById(dbfile, key):
                     del result[index2]
         write(dbfile, result)           
 
-
 def append(dbfile, values): 
     if dbfile == "orga.json":
         counter = read("data.json")
@@ -79,7 +78,7 @@ def append(dbfile, values):
         write(dbfile, tmp)
     else:
         counter = read("data.json")
-        counter["counter"] += 1 # Set id to lowest possible id
+        counter["counter"] += 1
         values["id"] = counter["counter"]
         write("data.json", counter)
         tmp = read(dbfile)
