@@ -18,14 +18,15 @@ function colorToHex(color) {
 };
 
 function selectionMarker(id) {
-
-    var curCol =(colorToHex(document.getElementById(id).style.backgroundColor));
+    var elementWithID = document.getElementById(id)
+    var curCol = colorToHex(document.getElementById(id).style.backgroundColor);
 
     if(curCol == stdCol){
-        document.getElementById(id).classList.add("selected");
+        elementWithID.classList.add("selected")
         idList.push(id);
-        document.getElementById("inputID").value = [idList];
-        document.getElementById(id).style.backgroundColor = mrkCol;
+        document.getElementById("inputID").value = idList; //[idList]
+
+        elementWithID.style.backgroundColor = mrkCol;
         selNum++;
         document.getElementById("delBut").style.display = "";
         if(selNum == 1) {
@@ -37,16 +38,15 @@ function selectionMarker(id) {
     }
 
     else {
-        document.getElementById(id).classList.remove("selected");
         idList.pop(id);
         document.getElementById("inputID").value = [idList];
-        document.getElementById(id).style.backgroundColor = stdCol;
+        elementWithID.style.backgroundColor = stdCol;
         selNum--;
 
         if(selNum == 0){
             document.getElementById("delBut").style.display = "none";
         }
-        if(selNum == 1) {
+        else if(selNum == 1) {
             document.getElementById("edtBut").style.display ="";
         }
         else {

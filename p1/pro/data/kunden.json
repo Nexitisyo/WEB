@@ -7,17 +7,38 @@
         "id": 32
     },
     {
-        "kundennummer": "4772",
-        "bezeichnung": "Justus",
-        "ansprechpartner": "Viktor",
-        "ort": "Krefeld",
-        "id": 33
-    },
-    {
         "kundennummer": "3124123",
         "bezeichnung": "Google",
         "ansprechpartner": "Steffen",
         "ort": "Essen",
         "id": 73
+    },
+    {
+        "kundennummer": "3",
+        "bezeichnung": "3",
+        "ansprechpartner": "3",
+        "ort": "3",
+        "id": 201
+    },
+    {
+        "kundennummer": "4",
+        "bezeichnung": "4",
+        "ansprechpartner": "4",
+        "ort": "4",
+        "id": 203
+    },
+    {
+        "kundennummer": "4",
+        "bezeichnung": "4",
+        "ansprechpartner": "4",
+        "ort": "4",
+        "id": 205
+    },
+    {
+        "kundennummer": "4",
+        "bezeichnung": "4",
+        "ansprechpartner": "4",
+        "ort": "4",
+        "id": 207
     }
 ]

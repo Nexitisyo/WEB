@@ -1,5 +1,4 @@
 ## coding: utf-8
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,12 +29,12 @@
             </table>
             <input type="hidden" id="inputID" name="key" value=""/>
             <ul class="buttons">
-                <li><button type="button" onclick="window.location.href='add'"></button>Kunden hinzufügen</li>
-                <li><button type="button" onclick="window.location.href='/../'"></button>Zurück zur Startseite</li>
+                <li><button type="button" onclick="window.location.href='add'">Kunden hinzufügen</button></li>
+                <li><button type="button" onclick="window.location.href='/../'">Zurück zur Startseite</button></li>
             </ul>
             <ul class="editButtons">
-                <li><button type="submit" id="delBut" style="display: none" value="delete"></button>Löschen</li>
-                <li><button type="button" id="edtBut" style="display: none" onclick="editHref()"></button>  Bearbeiten</li>
+                <li><button type="submit" id="delBut" style="display: none" value="delete">Löschen</button></li>
+                <li><button type="button" id="edtBut" style="display: none" onclick="editHref()">Bearbeiten</button></li>
             </ul>
         </form>
     </body>
