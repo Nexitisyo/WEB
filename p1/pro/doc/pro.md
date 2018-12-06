@@ -3,9 +3,8 @@
 
 #### EINLEITUNG ####
 
-Gruppe:             E
-Aufbau des Teams:   Mark Borgmann
-                    Viktor Kuznecov
+Gruppe:				E
+Aufbau des Teams:   Mark Borgmann, Viktor Kuznecov
 Gueltigkeitsdatum:  30.11.2018
 
 
@@ -54,151 +53,208 @@ Das Projektdatenblatt enthaelt folgende Funktionen:
 
 #### SERVERSEITIGE FUNKTIONEN ####
 
-Auf der Serverseite wurde eine weitgehende "Distribution-of-concern"-Idee verfolgt. 
+Auf der Serverseite wurde eine weitgehende Distribution-of-Concerns-Idee verfolgt.
 Es stehen folgende Dateien zur Verfuegung:
 
- - server.py    (Startet den Server)
+ -  server.py    (Startet den Server)
 
 /app:
  - orga.py:
-        - Zweck: 
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
+      Dient zur Einteilung des Aufwands fuer Mitarbeiter
+
+       index(self)
+              returned orga-form.mako, initialisiert JSON-Dateien
+
+       save(self, aufwandGeteilt, bezeichnung, mitarbeiter, key=None)
+              aktualisiert einen Eintrag
+              ruft Uebersicht auf
+
+       edit(self, key)
+              initialisiert JSON-Dateien
+              returned orga-form.mako
+
+       default(self, *arglist, **kwargs)
+              Fehlerbehandlung bei ungueltigem Seitenaufruf
+
+       Zusammenwirken: database.py
+
 
  - view.py:
-        - Zweck: Laedt Templates, zeigt Templates an,speichert Paths
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
+      Erstellt Dictionaries, zeigt Template an
+        
+        create(self, template_spl, data_opl=None, data2=None, data2=None, data3=None, data4=None)
+              Erstellt oder uebergibt Dictionaries
+              Zeigt Template an
+
+       Zusammenwirken: Mit jeder Seite
+        
 
  - index.py:
-        - Zweck: Laedt das index.mako Template
-        - Aufbau:
-        - Zusammenwirken:
-        - API: 
+      Startseite
+
+        index(self)
+              zeigt index.mako an
+
+        default(self, *arglist, **kwargs)
+              Fehlerbehandlung bei ungueltigem Seitenaufruf
+
+       Zusammenwirken: /
 
  - kunden.py: 
-        - Zweck: ruft alle Funktionen der Kunden (add, delete, save, edit, default und index) auf
-        - Aufbau:
-        - Zusammenwirken: database.py
-        - API:
+      ruft alle Funktionen der Kunden (add, delete, save, edit, default und index) auf
+       
+        index(self)
+              zeigt kunden.mako an
+        save(self, kundennummer, bezeichnung, ansprechpartner, ort, key=None)
+              erstellt oder aktualisiert neuen Eintrag
+        add(self)
+              zeigt kunden-form.mako an
+        delete(self, key)
+              entfernt einen Eintrag mithilfe des Keys
+        edit(self, key)
+              ruft kunden-form.mako mit bestimmten Eintrag auf
+
+        default(self, *arglist, **kwargs)
+              Fehlerbehandlung bei ungueltigem Seitenaufruf
+
+       Zusammenwirken: database.py
 
  - projekte.py
-        - Zweck: ruft alle Funktionen der Projekte (add, delete, save, edit, default und index) auf
-        - Aufbau:
+      ruft alle Funktionen der Projekte (add, delete, save, edit, default und index) auf
+
+        index(self)
+              zeigt projekte.mako an
+        save(self, projektnummer, bezeichnung, bearbeitungszeitraumA, bearbeitungszeitraumB, budget, kundenverweis, mitarbeiterverweis, key=None)
+              erstellt oder aktualisiert neuen Eintrag, und kopiert diesen in orga.json
+        add(self)
+              zeigt projekte-form.mako an
+        delete(self, key)
+              entfernt einen Eintrag aus Projekte.json und orga.json mithilfe des Keys
+        edit(self, key)
+              ruft projekte-form.mako mit bestimmten Eintrag auf
+        default(self, *arglist, **kwargs)
+              Fehlerbehandlung bei ungueltigem Seitenaufruf
+
         - Zusammenwirken: database.py
-        - API:
+       
 
  - database.py:
-        - Zweck: Beinhaltet alle Datenbank-Funktionen, welche sich von anderen .py-Dateien aufrufen lassen 
-        - Aufbau:
-        - Zusammenwirken: mitarbeiter.py, projekte.py, kunden.py
-        - API:
+      Beinhaltet alle Datenbank-Funktionen, welche sich von anderen .py-Dateien aufrufen lassen 
+
+        read(dbfile)
+              laedt .json-File in eine Variable
+              returned den Pfad der .json
+        calc(start, end)
+              kalkuliert Differenz zwischen zwei Bearbeitungszeitraeumen in Tagen
+        readValueById(dbfile, key)
+              sucht nach Eintrag mit entsprechendem Key
+              returned diesen Eintrag
+        write(dbfile, newData)
+              schreibt in .json-File
+        writeValueById(dbfile, key, newData)
+              sucht nach Eintrag mit entsprechendem Key
+              falls gefunden, Eintrag updaten
+              falls nicht, Eintrag neu schreiben
+              updated .json-File
+        deleteValueById(dbfile, key)
+              sucht nach Eintrag mit entsprechendem Key
+              loescht diesen Eintrag
+              updated .json-File
+        append(dbfile, values)
+              erhoeht Counter fuer ID
+       
+        - Zusammenwirken: /
          
  - auswertung.py:
-        - Zweck: Stellt eine Uebersicht aller Projekte anhand von Projektbezeichnung, Mitarbeiter und Aufwand zusammen
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
+      Stellt eine Uebersicht aller Projekte anhand von Projektbezeichnung, Mitarbeiter und Aufwand zusammen
+        
+        index(self)
+              zeigt Auswertung.mako an
+        default(self, *arglist, **kwargs)
+              Fehlerbehandlung bei ungueltigem Seitenaufruf
+       
          
  - mitarbeiter.py:
-        - Zweck: ruft alle Funktionen der Mitarbeiter (add, delete, save, edit, default und index) auf
-        - Aufbau:
-        - Zusammenwirken: database.py
-        - API:
+      ruft alle Funktionen der Mitarbeiter (add, delete, save, edit, default und index) auf
+
+        index(self)
+              zeigt mitarbeiter.mako an
+        save(self, funktion, name, vorname, key=None)
+              erstellt oder aktualisiert neuen Eintrag
+        add(self)
+              zeigt mitarbeiter-form.mako an
+        delete(self, key)
+              entfernt einen Eintrag aus mitarbeiter.json mithilfe des Keys
+        edit(self, key)
+              ruft mitarbeiter-form.mako mit bestimmten Eintrag auf
+        default(self, *arglist, **kwargs)
+              Fehlerbehandlung bei ungueltigem Seitenaufruf
+       
+       - Zusammenwirken: database.py
+
 
  /content:
  - script.js:
-        - Zweck: Enthaelt Funktionen fuer den MouseOver-Effekt (Zeile markieren)
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
-         
+      Enthaelt Funktionen fuer Mouse-Events
+
+        selectionMarker(id)
+            markiert ein Element und fuegt deren ID zu einer Liste hinzu
+            
+       falls nicht markiert -> 
+            selektiere das Element und fuege ID zur Liste hinzu
+            zeige Button zum Bearbeiten an, falls nur 1 Element markiert
+            zeige Button zum loeschen an.
+            
+       falls markiert -> 
+            deselektiert das Element und loescht deren ID aus der Liste
+            Falls 1 oder mehr noch markiert, zeige Button zum Loeschen an
+            Ansonsten verstecke Button zum bearbeiten
+
+       colorToHex(color)
+     	   konvertiert RGB(A) zu Hex-Farbschema
+
+       editHref()
+       	 Weiterleitung zur Bearbeitungsform
+
+
+
  - style.css:
-        - Zweck: Legt massgebliche Regeln zum Erscheinungsbild der Webseite fest
-        - Aufbau: gekapselte Informationen zu html-Befehlen (wie z.B.)
-        - Zusammenwirken: wird von allen Seiten verwendet
-        - API:
-         
+       Legt massgebliche Regeln zum Erscheinungsbild der Webseite fest
+       Beinhaltet gekapselte Informationen zu html-Befehlen (wie z.B.)
+       Wird von allen Seiten verwendet
+
  - LOVES.ttf        (Schriftart)
  - Capsuula.tff     (Schriftart)
 
  /data:
- - data.json
- - orga.json
- - kunden.json
- - projekte.json
- - mitarbeiter.json
+
+ 	Beinhaltet alle Datenbanken mit Eintraegen
+ 	  data.json
+ 	  orga.json
+ 	  kunden.json
+ 	  projekte.json
+ 	  mitarbeiter.json
 
  /doc:
- - pro.md (Diese Dokumentation)
+ 	  pro.md (Diese Dokumentation)
 
  /template:
- - index.mako:
-        - Zweck: Template fuer die Startseite      
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
-         
- - liste.mako:
-        - Zweck: 
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
-         
- - kunden.mako:
-        - Zweck: Template fuer das Kundendatenblatt
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
-         
- - projekte.mako:
-        - Zweck: Template fuer das Projektdatenblatt
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
-         
- - orga-form.mako:
-        - Zweck: 
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
-         
- - auswertung.mako:
-        - Zweck: 
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
-         
- - kunden-form.mako:
-        - Zweck: Template fuer die Bearbeitungsflaeche der Kunden
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
-         
- - mitarbeiter.mako:
-        - Zweck:  Template fuer das Mitarbeiterdatenblatt
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
-         
- - projekte-form.mako:
-        - Zweck: Template fuer die Bearbeitungsflaeche der Projekte
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
-         
- - mitarbeiter-form.mako:
-        - Zweck: Template fuer die Bearbeitungsflaeche der Mitarbeiter
-        - Aufbau:
-        - Zusammenwirken:
-        - API:
-         
+ 	  index.mako
+ 	  liste.mako
+ 	  kunden.mako
+ 	  projekte.mako
+ 	  orga-form.mako
+ 	  auswertung.mako
+       mitarbeiter.mako
+ 	  kunden-form.mako
+ 	  projekte-form.mako
+ 	  mitarbeiter-form.mako
 
 #### DATENABLAGE ####
 
 Zur Ablage saemtlicher Datenbestaende wurde das .JSON (JavaScript Object Notation)-Format genutzt.
+Datenbankfunktionen selbst werden durch die database.py realisiert, welche verschiedene Schnittstellen zum
+erstellen, speichern, bearbeiten und loeschen bereitstellt.
 
 #### PRUEFUNGSPROTOKOLL W3C-VALIDATOR ####
 

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>pro_doc.html</title>
+  <title>pro.html</title>
   <meta name="generator" content="Haroopad 0.13.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -223,31 +223,41 @@ Zusammenwirken: database.py
 </code></pre></li></ul><p> /content:</p><ul>
 <li><p>script.js:<br>   Enthaelt Funktionen fuer Mouse-Events</p>
 <pre><code data-origin="<pre><code> selectionMarker(id)
-       markiert ein Element und fuegt deren ID zu einer Liste hinzu
-       falls nicht markiert -> 
-            selektier das Element und füge ID zur Liste hinzu
-            zeige button zum bearbeiten an falls nur 1 Element markiert
-            zeige button zum löschen an.
-       falls markiert -> 
-            deselektiert das Element und löscht deren ID aus der Liste
-            falls 1 oder mehr noch markiert -> zeige button zum löschen an
-                  sonst nicht
-            verstecke button zum bearbeiten
-       
-      colorToHex(color)
-      konvertiert RGB(A) zu Hex-Farbschema
-      
-      editHref()
-       Weiterleitung zur Bearbeitungsform
-</code></pre>">selectionMarker(id)
-      selektiert/deselektioert ein Element und fuegt/loescht deren ID in einer ID-Liste
-      versteckt/zeigt buttons an
+     markiert ein Element und fuegt deren ID zu einer Liste hinzu
+
+falls nicht markiert -&amp;gt; 
+     selektier das Element und füge ID zur Liste hinzu
+     zeige button zum bearbeiten an falls nur 1 Element markiert
+     zeige button zum löschen an.
+
+falls markiert -&amp;gt; 
+     deselektiert das Element und löscht deren ID aus der Liste
+     Falls 1 oder mehr noch markiert, zeige Button zum Loeschen an
+     Ansonsten verstecke button zum bearbeiten
 
 colorToHex(color)
-      konvertiert RGB(A) zu Hex-Farbschema
+     konvertiert RGB(A) zu Hex-Farbschema
 
 editHref()
-      Weiterleitung zur Bearbeitungsform
+     Weiterleitung zur Bearbeitungsform
+</code></pre>"> selectionMarker(id)
+     markiert ein Element und fuegt deren ID zu einer Liste hinzu
+
+falls nicht markiert -&gt; 
+     selektier das Element und füge ID zur Liste hinzu
+     zeige button zum bearbeiten an falls nur 1 Element markiert
+     zeige button zum löschen an.
+
+falls markiert -&gt; 
+     deselektiert das Element und löscht deren ID aus der Liste
+     Falls 1 oder mehr noch markiert, zeige Button zum Loeschen an
+     Ansonsten verstecke button zum bearbeiten
+
+colorToHex(color)
+     konvertiert RGB(A) zu Hex-Farbschema
+
+editHref()
+     Weiterleitung zur Bearbeitungsform
 </code></pre></li></ul><ul>
 <li><p>style.css:</p>
 <pre><code data-origin="<pre><code>Legt massgebliche Regeln zum Erscheinungsbild der Webseite fest
@@ -259,7 +269,7 @@ Wird von allen Seiten verwendet
 </code></pre></li><li><p>LOVES.ttf        (Schriftart)</p>
 </li><li><p>Capsuula.tff     (Schriftart)</p>
 <p>/data:</p>
-<p>  Datenbanken mit Eintraegen</p>
+<p>  Beinhaltet alle Datenbanken mit Eintraegen</p>
 <pre><code data-origin="<pre><code>data.json
 orga.json
 kunden.json

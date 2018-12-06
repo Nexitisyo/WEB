@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>pro.md</title>
+  <title>Documentation</title>
   <style type="text/css">
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -16,183 +16,209 @@
   <![endif]-->
 </head>
 <body>
-<p><strong>## DOKUMENTATION ZUM WEB PRAKTIKUM ##</strong></p>
-<p><strong>#### EINLEITUNG ####</strong></p>
+<h2 id="dokumentation-zum-web-praktikum">DOKUMENTATION ZUM WEB PRAKTIKUM</h2>
+<h4 id="einleitung">EINLEITUNG</h4>
 <p>Gruppe: E</p>
-<p>Aufbau des Teams: Mark Borgmann</p>
-<p>Viktor Kuznecov</p>
+<p>Aufbau des Teams: </p>
+<p>Mark Borgmann, </p>
+<p>Viktor Kuznecov </p>
 <p>Gueltigkeitsdatum: 30.11.2018</p>
-<p><strong>#### BESCHREIBUNG ####</strong></p>
-<p>Aufgabe der Anwendung:</p>
-<p>Ber der vorliegenden Webanwendung handelt es sich um ein Projektinformationssystem.</p>
-<p>Der Anwender soll in der Lage sein, Kunden, Mitarbeiter und Projekte anzuzeigen, anzulegen und bei Bedarf zu bearbeiten sowie zu loeschen.</p>
+<h4 id="beschreibung">BESCHREIBUNG</h4>
+<p>Aufgabe der Anwendung: Ber der vorliegenden Webanwendung handelt es sich um ein Projektinformationssystem. Der Anwender soll in der Lage sein, Kunden, Mitarbeiter und Projekte anzuzeigen, anzulegen und bei Bedarf zu bearbeiten sowie zu loeschen.</p>
 <p>Kunden haben folgende Schluessel:</p>
-<p>Kunden-ID, Kundennummer, Bezeichnung, Ansprechpartner, Ort</p>
-<p>Das Kundendatenblatt enthaelt folgende Funktionen:</p>
-<p>- (jew.) Bearbeiten</p>
-<p>- (jew.) Loeschen</p>
-<p>- Kunden hinzufuegen</p>
+<p> Kunden-ID, </p>
+<p>Kundennummer, </p>
+<p>Bezeichnung, </p>
+<p>Ansprechpartner,</p>
+<p> Ort</p>
+<p>Das Kundendatenblatt enthaelt folgende Funktionen: 
+<p>- (jew.) Bearbeiten </p>
+<p>- (jew.) Loeschen </p>
+<p>- Kunden hinzufuegen </p>
 <p>- Zurueck zur Startseite</p>
-<p>Mitarbeiter haben folgende Schluessel:</p>
-<p>Mitarbeiter-ID, Name, Vorname, Funktion</p>
-<p>Das Mitarbeiterdatenblatt enthaelt folgende Funktionen:</p>
+<p>Mitarbeiter haben folgende Schluessel: </p>
+<p>Mitarbeiter-ID, </p>
+<p>Name, </p>
+<p>Vorname, </p>
+<p>Funktion</p>
+<p>Das Mitarbeiterdatenblatt enthaelt folgende Funktionen: 
 <p>- (jew.) Bearbeiten</p>
-<p>- (jew.) Loeschen</p>
-<p>- Mitarbeiter hinzufuegen</p>
+<p> - (jew.) Loeschen </p>
+<p>- Mitarbeiter hinzufuegen </p>
 <p>- Zurueck zur Startseite</p>
 <p>Projekte haben folgende Schluessel:</p>
-<p>Projekt-ID, Projektnummer, Bezeichnung, Beschreibung, Zeitraum, Budget, Kundenverweis, Mitarbeiterverweis, Aufwand</p>
-<p>Das Projektdatenblatt enthaelt folgende Funktionen:</p>
+<p> Projekt-ID, </p>
+<p>Projektnummer, </p>
+<p>Bezeichnung, </p>
+<p>Beschreibung, </p>
+<p>Zeitraum, </p>
+<p>Budget, </p>
+<p>Kundenverweis, </p>
+<p>Mitarbeiterverweis, </p>
+<p>Aufwand</p>
+<p>Das Projektdatenblatt enthaelt folgende Funktionen: </p>
 <p>- (jew.) Bearbeiten</p>
-<p>- (jew.) Loeschen</p>
-<p>- (jew.) Organisieren</p>
-<p>- Projekt hinzufuegen</p>
+<p> - (jew.) Loeschen </p>
+<p>- (jew.) Organisieren </p>
+<p>- Projekt hinzufuegen </p>
 <p>- Zurueck zur Startseite</p>
-<p><strong>#### SERVERSEITIGE FUNKTIONEN ####</strong></p>
-<p>Auf der Serverseite wurde eine weitgehende "Distribution-of-concern"-Idee verfolgt.</p>
-<p>Es stehen folgende Dateien zur Verfuegung:</p>
-<p>- server.py (Startet den Server)</p>
-<p><strong>/app:</strong></p>
-<p><strong>- orga.py:</strong></p>
-<p>Dient zur Einteilung des Aufwands fuer Mitarbeiter</p>
-<p><em>index(self)</em></p>
-<p>returned orga-form.mako, initialisiert JSON-Dateien</p>
-<p><em>save(self, aufwandGeteilt, bezeichnung, mitarbeiter, key=None)</em></p>
-<p>aktualisiert einen Eintrag</p>
-<p>ruft Uebersicht auf</p>
-<p><em>edit(self, key)</em></p>
-<p>initialisiert JSON-Dateien</p>
-<p>returned orga-form.mako</p>
-<p><em>default(self, *arglist, **kwargs)</em></p>
-<p>Fehlerbehandlung bei ungueltigem Seitenaufruf</p>
-<p>Zusammenwirken: database.py</p>
-<p><strong>- view.py:</strong></p>
-<p>Erstellt Dictionaries, zeigt Template an</p>
-<p><em>create(self, template_spl, data_opl=None, data2=None, data2=None, data3=None, data4=None)</em></p>
-<p>Erstellt oder uebergibt Dictionaries</p>
-<p>Zeigt Template an</p>
-<p>Zusammenwirken: Mit jeder Seite</p>
-<p><strong>- index.py:</strong></p>
-<p>Startseite</p>
-<p><em>index(self)</em></p>
-<p>zeigt index.mako an</p>
-<p><em>default(self, *arglist, **kwargs)</em></p>
-<p>Fehlerbehandlung bei ungueltigem Seitenaufruf</p>
-<p>Zusammenwirken: /</p>
-<p><strong>- kunden.py: </strong></p>
-<p>ruft alle Funktionen der Kunden (add, delete, save, edit, default und index) auf</p>
-<p><em>index(self)</em></p>
-<p>zeigt kunden.mako an</p>
-<p><em>save(self, kundennummer, bezeichnung, ansprechpartner, ort, key=None)</em></p>
-<p>erstellt oder aktualisiert neuen Eintrag</p>
-<p><em>add(self)</em></p>
-<p>zeigt kunden-form.mako an</p>
-<p><em>delete(self, key)</em></p>
-<p>entfernt einen Eintrag mithilfe des Keys</p>
-<p><em>edit(self, key)</em></p>
-<p>ruft kunden-form.mako mit bestimmten Eintrag auf</p>
-<p><em>default(self, *arglist, **kwargs)</em></p>
-<p>Fehlerbehandlung bei ungueltigem Seitenaufruf</p>
-<p>Zusammenwirken: database.py</p>
-<p><strong>- projekte.py</strong></p>
-<p>ruft alle Funktionen der Projekte (add, delete, save, edit, default und index) auf</p>
-<p><em>index(self)</em></p>
-<p>zeigt projekte.mako an</p>
-<p><em>save(self, projektnummer, bezeichnung, bearbeitungszeitraumA, bearbeitungszeitraumB, budget,</em> <em>kundenverweis, mitarbeiterverweis, key=None)</em></p>
-<p>erstellt oder aktualisiert neuen Eintrag, und kopiert diesen in orga.json</p>
-<p><em>add(self)</em></p>
-<p>zeigt projekte-form.mako an</p>
-<p><em>delete(self, key)</em></p>
-<p>entfernt einen Eintrag aus Projekte.json und orga.json mithilfe des Keys</p>
-<p><em>edit(self, key)</em></p>
-<p>ruft projekte-form.mako mit bestimmten Eintrag auf</p>
-<p><em>default(self, *arglist, **kwargs)</em></p>
-<p><em>Fehlerbehandlung bei ungueltigem Seitenaufruf</em></p>
-<p>- Zusammenwirken: database.py</p>
-<p><strong>- database.py:</strong></p>
-<p>Beinhaltet alle Datenbank-Funktionen, welche sich von anderen .py-Dateien aufrufen lassen</p>
-<p><em>read(dbfile)</em></p>
-<p>laedt .json-File in eine Variable</p>
-<p>returned den Pfad der .json</p>
-<p><em>calc(start, end)</em></p>
-<p>kalkuliert Differenz zwischen zwei Bearbeitungszeitraeumen in Tagen</p>
-<p><em>readValueById(dbfile, key)</em></p>
-<p>sucht nach Eintrag mit entsprechendem Key</p>
-<p>returned diesen Eintrag</p>
-<p><em>write(dbfile, newData)</em></p>
-<p>schreibt in .json-File</p>
-<p><em>writeValueById(dbfile, key, newData)</em></p>
-<p>sucht nach Eintrag mit entsprechendem Key</p>
-<p>falls gefunden, Eintrag updaten</p>
-<p>falls nicht, Eintrag neu schreiben</p>
-<p>updated .json-File</p>
-<p><em>deleteValueById(dbfile, key)</em></p>
-<p>sucht nach Eintrag mit entsprechendem Key</p>
-<p>loescht diesen Eintrag</p>
-<p>updated .json-File</p>
-<p><em>append(dbfile, values)</em></p>
-<p>erhoeht Counter fuer ID</p>
-<p>- Zusammenwirken: /</p>
-<p><strong>- auswertung.py:</strong></p>
-<p>Stellt eine Uebersicht aller Projekte anhand von Projektbezeichnung, Mitarbeiter und Aufwand zusammen</p>
-<p><em>index(self)</em></p>
-<p>zeigt Auswertung.mako an</p>
-<p><em>default(self, *arglist, **kwargs)</em></p>
-<p>Fehlerbehandlung bei ungueltigem Seitenaufruf</p>
-<p><strong>- mitarbeiter.py:</strong></p>
-<p>ruft alle Funktionen der Mitarbeiter (add, delete, save, edit, default und index) auf</p>
-<p><em>index(self)</em></p>
-<p>zeigt mitarbeiter.mako an</p>
-<p><em>save(self, funktion, name, vorname, key=None)</em></p>
-<p>erstellt oder aktualisiert neuen Eintrag</p>
-<p><em>add(self)</em></p>
-<p>zeigt mitarbeiter-form.mako an</p>
-<p><em>delete(self, key)</em></p>
-<p>entfernt einen Eintrag aus mitarbeiter.json mithilfe des Keys</p>
-<p><em>edit(self, key)</em></p>
-<p>ruft mitarbeiter-form.mako mit bestimmten Eintrag auf</p>
-<p><em>default(self, *arglist, **kwargs)</em></p>
-<p>Fehlerbehandlung bei ungueltigem Seitenaufruf</p>
-<p>- Zusammenwirken: database.py</p>
-<p><strong>/content:</strong></p>
-<p><strong>- script.js:</strong></p>
-<p>Enthaelt Funktionen fuer Mouse-Events</p>
-<p><em>selectionMarker(id)</em></p>
-<p>aendert Hintergrund eines Elements mit entsprechender ID auf rot</p>
-<p><em>deselectionMarker(id)</em></p>
-<p>aendert Hintergrund eines Elements mit entsprechender ID auf grau</p>
-<p><em>editPy(id)</em></p>
-<p>Weiterleitung zur Bearbeitungsform</p>
-<p><strong>- style.css:</strong></p>
-<p>Legt massgebliche Regeln zum Erscheinungsbild der Webseite fest</p>
-<p>Beinhaltet gekapselte Informationen zu html-Befehlen (wie z.B.)</p>
-<p>Wird von allen Seiten verwendet</p>
-<p><strong>- LOVES.ttf (Schriftart)</strong></p>
-<p><strong>- Capsuula.tff (Schriftart)</strong></p>
-<p><strong>/data:</strong></p>
-<p>Datenbanken mit Eintraegen</p>
-<p>- data.json</p>
-<p>- orga.json</p>
-<p>- kunden.json</p>
-<p>- projekte.json</p>
-<p>- mitarbeiter.json</p>
-<p><strong>/doc:</strong></p>
-<p>- pro.md (Diese Dokumentation)</p>
-<p><strong>/template:</strong></p>
-<p>- index.mako</p>
-<p>- liste.mako</p>
-<p>- kunden.mako</p>
-<p>- projekte.mako</p>
-<p>- orga-form.mako</p>
-<p>- auswertung.mako</p>
-<p>- kunden-form.mako</p>
-<p>- mitarbeiter.mako</p>
-<p>- projekte-form.mako</p>
-<p>- mitarbeiter-form.mako</p>
-<p><strong>#### DATENABLAGE ####</strong></p>
-<p>Zur Ablage saemtlicher Datenbestaende wurde das .JSON (JavaScript Object Notation)-Format genutzt.</p>
-<p>Datenbankfunktionen selbst werden durch die database.py realisiert, welche verschiedene Schnittstellen zum</p>
-<p>erstellen, speichern, bearbeiten und loeschen bereitstellt.</p>
-<p><strong>#### PRUEFUNGSPROTOKOLL W3C-VALIDATOR ####</strong></p>
+<h4 id="serverseitige-funktionen">SERVERSEITIGE FUNKTIONEN</h4>
+<p>Auf der Serverseite wurde eine weitgehende Distribution-of-Concerns-Idee verfolgt. Es stehen folgende Dateien zur Verfuegung:</p>
+<ul>
+<li>server.py (Startet den Server)</li>
+</ul>
+<p>/app: - orga.py: Dient zur Einteilung des Aufwands fuer Mitarbeiter</p>
+<pre><code>   index(self)
+          returned orga-form.mako, initialisiert JSON-Dateien
+
+   save(self, aufwandGeteilt, bezeichnung, mitarbeiter, key=None)
+          aktualisiert einen Eintrag
+          ruft Uebersicht auf
+
+   edit(self, key)
+          initialisiert JSON-Dateien
+          returned orga-form.mako
+
+   default(self, *arglist, **kwargs)
+          Fehlerbehandlung bei ungueltigem Seitenaufruf
+
+   Zusammenwirken: database.py</code></pre>
+<ul>
+<li><p>view.py: Erstellt Dictionaries, zeigt Template an</p>
+<pre><code> create(self, template_spl, data_opl=None, data2=None, data2=None, data3=None, data4=None)
+       Erstellt oder uebergibt Dictionaries
+       Zeigt Template an
+
+Zusammenwirken: Mit jeder Seite</code></pre></li>
+<li><p>index.py: Startseite</p>
+<pre><code> index(self)
+       zeigt index.mako an
+
+ default(self, *arglist, **kwargs)
+       Fehlerbehandlung bei ungueltigem Seitenaufruf
+
+Zusammenwirken: /</code></pre></li>
+<li><p>kunden.py: ruft alle Funktionen der Kunden (add, delete, save, edit, default und index) auf</p>
+<pre><code> index(self)
+       zeigt kunden.mako an
+ save(self, kundennummer, bezeichnung, ansprechpartner, ort, key=None)
+       erstellt oder aktualisiert neuen Eintrag
+ add(self)
+       zeigt kunden-form.mako an
+ delete(self, key)
+       entfernt einen Eintrag mithilfe des Keys
+ edit(self, key)
+       ruft kunden-form.mako mit bestimmten Eintrag auf
+
+ default(self, *arglist, **kwargs)
+       Fehlerbehandlung bei ungueltigem Seitenaufruf
+
+Zusammenwirken: database.py</code></pre></li>
+<li><p>projekte.py ruft alle Funktionen der Projekte (add, delete, save, edit, default und index) auf</p>
+<pre><code> index(self)
+       zeigt projekte.mako an
+ save(self, projektnummer, bezeichnung, bearbeitungszeitraumA, bearbeitungszeitraumB, budget, kundenverweis, mitarbeiterverweis, key=None)
+       erstellt oder aktualisiert neuen Eintrag, und kopiert diesen in orga.json
+ add(self)
+       zeigt projekte-form.mako an
+ delete(self, key)
+       entfernt einen Eintrag aus Projekte.json und orga.json mithilfe des Keys
+ edit(self, key)
+       ruft projekte-form.mako mit bestimmten Eintrag auf
+ default(self, *arglist, **kwargs)
+       Fehlerbehandlung bei ungueltigem Seitenaufruf
+
+ Zusammenwirken: database.py</code></pre></li>
+<li><p>database.py: Beinhaltet alle Datenbank-Funktionen, welche sich von anderen .py-Dateien aufrufen lassen</p>
+<pre><code> read(dbfile)
+       laedt .json-File in eine Variable
+       returned den Pfad der .json
+ calc(start, end)
+       kalkuliert Differenz zwischen zwei Bearbeitungszeitraeumen in Tagen
+ readValueById(dbfile, key)
+       sucht nach Eintrag mit entsprechendem Key
+       returned diesen Eintrag
+ write(dbfile, newData)
+       schreibt in .json-File
+ writeValueById(dbfile, key, newData)
+       sucht nach Eintrag mit entsprechendem Key
+       falls gefunden, Eintrag updaten
+       falls nicht, Eintrag neu schreiben
+       updated .json-File
+ deleteValueById(dbfile, key)
+       sucht nach Eintrag mit entsprechendem Key
+       loescht diesen Eintrag
+       updated .json-File
+ append(dbfile, values)
+       erhoeht Counter fuer ID
+
+ Zusammenwirken: /</code></pre></li>
+<li><p>auswertung.py: Stellt eine Uebersicht aller Projekte anhand von Projektbezeichnung, Mitarbeiter und Aufwand zusammen</p>
+<pre><code> index(self)
+       zeigt Auswertung.mako an
+ default(self, *arglist, **kwargs)
+       Fehlerbehandlung bei ungueltigem Seitenaufruf</code></pre></li>
+<li><p>mitarbeiter.py: ruft alle Funktionen der Mitarbeiter (add, delete, save, edit, default und index) auf</p>
+<pre><code> index(self)
+       zeigt mitarbeiter.mako an
+ save(self, funktion, name, vorname, key=None)
+       erstellt oder aktualisiert neuen Eintrag
+ add(self)
+       zeigt mitarbeiter-form.mako an
+ delete(self, key)
+       entfernt einen Eintrag aus mitarbeiter.json mithilfe des Keys
+ edit(self, key)
+       ruft mitarbeiter-form.mako mit bestimmten Eintrag auf
+ default(self, *arglist, **kwargs)
+       Fehlerbehandlung bei ungueltigem Seitenaufruf
+
+Zusammenwirken: database.py</code></pre></li>
+</ul>
+<p>/content: - script.js: Enthaelt Funktionen fuer Mouse-Events</p>
+<pre><code>    selectionMarker(id)
+        markiert ein Element und fuegt deren ID zu einer Liste hinzu
+        
+   falls nicht markiert -&gt; 
+        selektiere das Element und fuege ID zur Liste hinzu
+        zeige Button zum Bearbeiten an, falls nur 1 Element markiert
+        zeige Button zum loeschen an.
+        
+   falls markiert -&gt; 
+        deselektiert das Element und loescht deren ID aus der Liste
+        Falls 1 oder mehr noch markiert, zeige Button zum Loeschen an
+        Ansonsten verstecke Button zum bearbeiten
+
+   colorToHex(color)
+       konvertiert RGB(A) zu Hex-Farbschema
+
+   editHref()
+     Weiterleitung zur Bearbeitungsform</code></pre>
+<ul>
+<li><p>style.css: Legt massgebliche Regeln zum Erscheinungsbild der Webseite fest Beinhaltet gekapselte Informationen zu html-Befehlen (wie z.B.) Wird von allen Seiten verwendet</p></li>
+<li>LOVES.ttf (Schriftart)</li>
+<li><p>Capsuula.tff (Schriftart)</p></li>
+</ul>
+<p>/data:</p>
+<pre><code>Beinhaltet alle Datenbanken mit Eintraegen
+  data.json
+  orga.json
+  kunden.json
+  projekte.json
+  mitarbeiter.json</code></pre>
+<p>/doc: pro.md (Diese Dokumentation)</p>
+<p>/template: </p>
+<p>index.mako</p>
+<p>liste.mako</p>
+ <p>kunden.mako</p>
+<p> projekte.mako</p>
+<p> orga-form.mako</p>
+<p> mitarbeiter.mako</p>
+<p> auswertung.mako</p>
+<p> kunden-form.mako</p>
+<p> projekte-form.mako</p>
+<p> mitarbeiter-form.mako</p>
+<h4 id="datenablage">DATENABLAGE</h4>
+<p>Zur Ablage saemtlicher Datenbestaende wurde das .JSON (JavaScript Object Notation)-Format genutzt. Datenbankfunktionen selbst werden durch die database.py realisiert, welche verschiedene Schnittstellen zum erstellen, speichern, bearbeiten und loeschen bereitstellt.</p>
+<h4 id="pruefungsprotokoll-w3c-validator">PRUEFUNGSPROTOKOLL W3C-VALIDATOR</h4>
 </body>
 </html>
