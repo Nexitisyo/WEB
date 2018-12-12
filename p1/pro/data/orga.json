@@ -2,7 +2,7 @@
     {
         "bezeichnung": "Cocktail",
         "mitarbeiter": [
-            "Kai Mustermann"
+            "Mustermann Joseph"
         ],
         "aufwandGeteilt": [
             0
@@ -12,36 +12,36 @@
     {
         "bezeichnung": "Statue",
         "mitarbeiter": [
-            "Kai Mustermann",
-            "Mustermann Joseph"
+            "Mustermann Joseph",
+            "Kuznecov Viktor"
         ],
         "aufwandGeteilt": [
-            "12",
-            "2"
+            0,
+            0
         ],
         "id": 59
     },
     {
         "bezeichnung": "Baum",
         "mitarbeiter": [
-            "Kai Mustermann",
             "Mustermann Joseph",
-            "Kuznecov Viktor"
+            "Kuznecov Viktor",
+            "Borgmann Mark"
         ],
         "aufwandGeteilt": [
-            4,
-            5,
-            6
+            0,
+            0,
+            0
         ],
         "id": 70
     },
     {
         "bezeichnung": "G\u00fcnther GmbH & Co. Kg.",
         "mitarbeiter": [
-            "Kai Mustermann",
             "Mustermann Joseph",
             "Kuznecov Viktor",
-            "Borgmann Mark"
+            "Borgmann Mark",
+            "John Doe"
         ],
         "aufwandGeteilt": [
             0,

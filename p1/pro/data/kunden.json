@@ -12,5 +12,12 @@
         "ansprechpartner": "Steffen",
         "ort": "Essen",
         "id": 73
+    },
+    {
+        "kundennummer": "16378",
+        "bezeichnung": "Amazon",
+        "ansprechpartner": "Abteilungsleiter",
+        "ort": "Bonn",
+        "id": 278
     }
 ]
