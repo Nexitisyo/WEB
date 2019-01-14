@@ -1,0 +1,14 @@
+<!--Template-Navigation-->
+<ul class="nav">
+    @var index@
+    @var entry@
+    
+    <br>
+    @for index = 0; index < context.length; index++@
+    @entry = context[index]@
+    
+    <li class="nav-items" data-action="#entry.action#" data-target="#entry.target#">#entry['name']#</li><br>
+    @endfor@
+    <li class="nav-items" data-action="logout">Abmelden</li>
+</ul>
+<!--EOF-->

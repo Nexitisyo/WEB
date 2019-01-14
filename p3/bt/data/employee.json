@@ -1,0 +1,58 @@
+{
+   "employees": [
+      {
+         "id": 1,
+         "roleId": 1,
+         "username": "markiboy",
+         "firstname": "Mark",
+         "lastname": "Borgmann",
+         "email": "test@test.com",
+         "phone": "016261620",
+         "address": "Reinarzstraße"
+      },
+      {
+         "id": 12,
+         "roleId": 2,
+         "username": "1",
+         "firstname": "Viktor",
+         "lastname": "Kuznecov",
+         "email": "viktorboy69@pornhub.com",
+         "phone": "016364646z467",
+         "address": "Mustergasse 12"
+      },
+      {
+         "id": 13,
+         "roleId": 1,
+         "username": "homogay12",
+         "firstname": "Niklas",
+         "lastname": "Günther",
+         "email": "analpenetrator@pornhub.com",
+         "phone": "0123 456789",
+         "address": "Pornhuberstraße 12"
+      },
+      {
+         "id": 14,
+         "roleId": 2,
+         "username": "gutkick",
+         "firstname": "Kicktor",
+         "lastname": "Wuznecov",
+         "email": "gutkick@jokoundklaas.de",
+         "phone": "0192834",
+         "address": "2145 lampkin lane"
+      }
+   ],
+   "roles": [
+      {
+         "id": 1,
+         "name": "qs",
+         "desc": "QS-Mitarbeiter"
+      },
+      {
+         "id": 2,
+         "name": "se",
+         "desc": "SE-Mitarbeiter"
+      }
+   ],
+   "maxId": 14,
+   "maxRoleId": 2
+}

@@ -1,0 +1,60 @@
+{
+   "projects": [
+      {
+         "id": 3,
+         "name": "Aquarium",
+         "desc": "Dieses Projekt handelt um die Aufstellung eines Aquariums im Chefbüro",
+         "component": [
+            4
+         ]
+      },
+      {
+         "id": 4,
+         "name": "Terrarium",
+         "desc": "Dieses Projekt handelt um den Mitarbeiteraufenthaltsraum",
+         "component": [
+            5
+         ]
+      },
+      {
+         "id": 5,
+         "name": "Vogelkäfig",
+         "desc": "Zum Vögeln",
+         "component": [
+            6
+         ]
+      }
+   ],
+   "components": [
+      {
+         "id": 4,
+         "name": "Glaswand",
+         "desc": "4 Glaswände für das Aquarium",
+         "project": 3,
+         "errors": [
+            9,
+            8
+         ]
+      },
+      {
+         "id": 5,
+         "name": "Streu",
+         "desc": "Streu für die Eidechse",
+         "project": 4,
+         "errors": [
+            7
+         ]
+      },
+      {
+         "id": 6,
+         "name": "Metallstäbe",
+         "desc": "Für die Tür des Käfigs",
+         "project": 5,
+         "errors": [
+            10
+         ]
+      }
+   ],
+   "maxCompId": 6,
+   "maxId": 5
+}
