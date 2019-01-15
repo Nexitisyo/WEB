@@ -3,35 +3,6 @@ import cherrypy
 
 from .database import Database_cl
 
-"""
-
-Anforderung       GET          PUT          POST          DELETE
-----------------------------------------------------------------
-swentwickler/     Alle         -           Ein neuen       -
-                  SW-Ent                   SW-Ent       
-                  liefern                  anlegen       
-
-----------------------------------------------------------------
-swentwickler/id   Ein         Ein            -           Ein
-swentwickler/?id  SW-Ent      SW-Ent                     SW-Ent 
-                  liefern     updaten                    loeschen
-                  
-----------------------------------------------------------------
-qsmitarbeiter/    Alle         -           Ein neuen       -
-                  QS-Mit                   QS-Mit       
-                  liefern                  anlegen       
-
-----------------------------------------------------------------
-qsmitarbeiter/id  Ein         Ein            -           Ein
-qsmitarbeiter/?id QS-Mit      QS-Mit                     QS-Mit
-                  liefern     updaten                    loeschen
-----------------------------------------------------------------
-employee/         Alle         -           -             Mitarbeiter
-                  Mitarbeiter                            loeschen
-                  liefern                       
-"""
-
-
 class SoftwareDeveloper_Cl(object):
     exposed = True
 

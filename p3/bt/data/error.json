@@ -1,131 +1,14 @@
 {
    "errors": [
-      {
-         "id": 7,
-         "desc": "Instructions unclear. Dick got stuck in Eidechse",
-         "date": "14.01.2019 - 21:58",
-         "employee": 13,
-         "type": "erkannt",
-         "component": 5,
-         "categories": [
-            2
-         ],
-         "result": -1
-      },
-      {
-         "id": 8,
-         "desc": "srfzjth",
-         "date": "14.01.2019 - 22:10",
-         "employee": 13,
-         "type": "erkannt",
-         "component": 4,
-         "categories": [
-            2
-         ],
-         "result": -1
-      },
-      {
-         "id": 9,
-         "desc": "Wir haben 4 Glaswände aber kein Boden",
-         "date": "14.01.2019 - 22:11",
-         "employee": 1,
-         "type": "erkannt",
-         "component": 4,
-         "categories": [
-            2
-         ],
-         "result": -1
-      },
-      {
-         "id": 10,
-         "desc": "Die Eidechse hat die Metallstäbe verbogen und den Vogel gegessen.",
-         "date": "14.01.2019 - 22:12",
-         "employee": 1,
-         "type": "erkannt",
-         "component": 6,
-         "categories": [
-            2
-         ],
-         "result": -1
-      }
    ],
    "results": [
-      {
-         "id": 1,
-         "desc": "AUSGET AUSCHT",
-         "date": "14.01.2019 - 19:09",
-         "employee": 12,
-         "type": 2,
-         "categories": [],
-         "error": 1
-      },
-      {
-         "id": 2,
-         "desc": "sdrfgj",
-         "date": "14.01.2019 - 21:01",
-         "employee": 4,
-         "type": 2,
-         "categories": [],
-         "error": 2
-      },
-      {
-         "id": 3,
-         "desc": "ghzio",
-         "date": "14.01.2019 - 21:02",
-         "employee": 4,
-         "type": 2,
-         "categories": [],
-         "error": 3
-      },
-      {
-         "id": 4,
-         "desc": "jipü",
-         "date": "14.01.2019 - 21:02",
-         "employee": 4,
-         "type": 1,
-         "categories": [],
-         "error": 4
-      },
-      {
-         "id": 5,
-         "desc": "jikpo",
-         "date": "14.01.2019 - 21:02",
-         "employee": 4,
-         "type": 1,
-         "categories": [],
-         "error": 6
-      },
-      {
-         "id": 6,
-         "desc": "BRETT GEKAUFT.... hat aber ein Loch oben",
-         "date": "14.01.2019 - 21:03",
-         "employee": 4,
-         "type": 1,
-         "categories": [],
-         "error": 5
-      }
    ],
    "errorCat": [
-      {
-         "id": 2,
-         "name": "Schäden",
-         "error": [
-            7,
-            10,
-            9,
-            8
-         ]
-      }
    ],
    "resultCat": [
-      {
-         "id": 3,
-         "name": "Dummheit",
-         "result": []
-      }
    ],
-   "errMaxId": 10,
-   "resMaxId": 6,
-   "errCatMaxId": 6,
-   "resCatMaxId": 3
+   "errMaxId": 0,
+   "resMaxId": 0,
+   "errCatMaxId": 0,
+   "resCatMaxId": 0
 }

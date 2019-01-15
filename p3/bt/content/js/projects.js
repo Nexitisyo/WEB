@@ -34,8 +34,6 @@ class Projects_cl {
         let selected = document.querySelectorAll("table tbody tr.active");
         let selectedCount = selected.length;
 
-        console.log(selectedCount, selected);
-
         switch (event.target.dataset.action) {
             case "add":
                 APPUTIL.es_o.publish_px("app.cmd", ["add-item", "projekt"]);
@@ -176,7 +174,6 @@ class ProjectView_cl {
             }
         }
 
-        console.log(data_o);
         //Render the thing
         APPUTIL.view_o.render_px("projekt", data_o, null);
     }
@@ -190,7 +187,6 @@ class ProjectEdit_cl {
         requester_o.get_px("/projekt/?id=" + id,
             function (responseText_spl) {
                 let data_o = JSON.parse(responseText_spl);
-                console.log(data_o);
                 APPUTIL.edit_o.render_px("projekt", data_o, null);
             }, function (responseText_spl) {
                 let data_o = JSON.parse(responseText_spl);

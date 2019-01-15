@@ -111,7 +111,6 @@ class Categories_cl {
                             if (idsError.length < 1) {
                                 resolve();
                             } else {
-                                console.log("Error:", idsError);
                                 requester_o.delete_px(path_s, idsError,
                                     function (responseText_spl) {
                                         let data_o = JSON.parse(responseText_spl);
@@ -131,7 +130,6 @@ class Categories_cl {
                                 if (idsResult.length < 1) {
                                     resolve();
                                 } else {
-                                    console.log("Lösung:", idsResult);
                                     requester_o.delete_px(path_s, idsResult,
                                         function (responseText_spl) {
                                             let data_o = JSON.parse(responseText_spl);
@@ -181,7 +179,6 @@ class CategoryView_cl {
                     let data_o = JSON.parse(responseText_spl);
                     data_o.type = typeName;
                     data_o.roleid = type;
-                    console.log(data_o);
                     APPUTIL.view_o.render_px("category", data_o, path_s);
                 }.bind(this), function (responseText_spl) {
                     let data_o = JSON.parse(responseText_spl);
@@ -208,7 +205,6 @@ class CategoryEdit_cl {
             requester_o.get_px("/" + path_s + "/?id=" + id,
                 function (responseText_spl) {
                     let data_o = JSON.parse(responseText_spl);
-                    console.log(data_o);
                     APPUTIL.edit_o.render_px("category", data_o, path_s);
                 }, function (responseText_spl) {
                     let data_o = JSON.parse(responseText_spl);

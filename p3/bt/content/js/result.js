@@ -39,9 +39,7 @@ class ResultAdd_cl {
             //value[0] -> Alle Lösungs Kategorien
             //value[1] -> Alle Mitarbeiter SE
 
-            console.log(value);
             let data_o = value.concat(errorID);
-            console.log(data_o);
             this.doRender(data_o)
         });
     }

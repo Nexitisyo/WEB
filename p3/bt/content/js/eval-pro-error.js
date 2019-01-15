@@ -75,7 +75,6 @@ class evalProError_cl {
 
             let data_o = value;
             data_o.pop();
-            console.log(data_o);
             APPUTIL.view_o.render_px("eval-pro-error", data_o);
         });
     }

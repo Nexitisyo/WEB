@@ -4,31 +4,6 @@ import json
 
 from .database import Database_cl
 
-"""
-
-Anforderung              GET          PUT          POST          DELETE
------------------------------------------------------------------------------
-projekt/                  Alle         -           Ein neues       -
-                          Projekte                 Projekt       
-                          liefern                  anlegen       
------------------------------------------------------------------------------
-projekt/id                Ein         Ein           -            Ein
-projekt/?id=id            Projekt     Projekt                    Projekt
-                          liefern     updaten                    loeschen
-------------------------------------------------------------------------------
-projektkomponenten/id     Komponenten   -           -             -
-projektkomponenten/?id=id gemäß Projekt    
-                          ID liefern     
------------------------------------------------------------------------------
-komponente/               Alle         -           Ein neue       -
-                          Komponenten              Komponenten       
-                          liefern                  anlegen       
------------------------------------------------------------------------------
-komponente/id             Ein         Ein            -           Ein
-komponente/?id=id         Komponente  Komponente                 Komponente
-                          liefern     updaten                    loeschen
-"""
-
 class Project_cl(object):
     exposed = True
 

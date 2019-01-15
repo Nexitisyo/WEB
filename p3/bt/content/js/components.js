@@ -125,7 +125,6 @@ class Components_cl {
                             ids.push(parseInt(selected[index].dataset.id, 10))
                         }
 
-                        console.log(ids);
                         let path_s = "/komponente/";
                         let requester_o = new APPUTIL.Requester_cl();
                         requester_o.delete_px(path_s, ids,
@@ -179,7 +178,6 @@ class ComponentView_cl {
         });
 
         Promise.all([firstPromise, secondPromise]).then(value => {
-            console.log(value);
             let component = value[0];
             let projects = value[1];
             for (let index = 0; index < projects.length; index++) {
@@ -190,7 +188,6 @@ class ComponentView_cl {
                     };
                 }
             }
-            console.log(component);
             APPUTIL.view_o.render_px("komponente", component);
         });
     }
@@ -244,7 +241,6 @@ class ComponentAdd_cl {
             function (responseText_spl) {
                 let data_o = JSON.parse(responseText_spl);
                 data_o = [data_o, {"type": true, "project": []}];
-                console.log(data_o);
                 this.doRender(data_o);
             }.bind(this), function (responseText_spl) {
                 let data_o = JSON.parse(responseText_spl);

@@ -81,7 +81,6 @@ class Application_cl {
                 break;
 
             case "app.cmd":
-                console.log(data_opl);
                 //Skip the test if data_opl[10] is true
                 if (data_opl[10] !== true) {
                     // hier müsste man überprüfen, ob der Inhalt gewechselt werden darf
@@ -101,7 +100,6 @@ class Application_cl {
                                 for (let optionIndex = 0; optionIndex < element.length; optionIndex++) {
                                     if (element[optionIndex].hasAttribute("selected")) {
                                         if (element[optionIndex].value !== element.value) {
-                                            console.log("Rolle hat sich geändert");
                                             doConfirm = true;
                                         }
                                         break;
@@ -110,7 +108,6 @@ class Application_cl {
                             } else {
                                 if (element.defaultValue !== element.value) {
                                     doConfirm = true;
-                                    console.log("Daten haben sich geändert");
                                 }
                             }
                         }

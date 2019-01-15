@@ -12,11 +12,6 @@ class Navigation_cl(object):
     @cherrypy.tools.json_out()
     def GET(self, roleId):
         commonNav = [{
-        # {
-        #     "target": "home",
-        #     "action": "home",
-        #     "name": "Home"
-        # }, {
             "target": "fehler",
             "action": "list-view",
             "name": "Übersicht Fehler"
