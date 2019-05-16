@@ -1,0 +1,64 @@
+{
+   "errors": [
+      {
+         "id": 1,
+         "desc": "testerrdesc",
+         "date": "16.01.2019 - 12:34",
+         "employee": 13,
+         "type": "behoben",
+         "component": 1,
+         "categories": [
+            1
+         ],
+         "result": 1
+      },
+      {
+         "id": 2,
+         "desc": "testerrdesc2",
+         "date": "16.01.2019 - 12:34",
+         "employee": 13,
+         "type": "erkannt",
+         "component": 1,
+         "categories": [
+            1
+         ],
+         "result": -1
+      }
+   ],
+   "results": [
+      {
+         "id": 1,
+         "desc": "testresdesc",
+         "date": "16.01.2019 - 12:35",
+         "employee": 12,
+         "type": 1,
+         "categories": [
+            1
+         ],
+         "error": 1
+      }
+   ],
+   "errorCat": [
+      {
+         "id": 1,
+         "name": "testcaterr",
+         "error": [
+            1,
+            2
+         ]
+      }
+   ],
+   "resultCat": [
+      {
+         "id": 1,
+         "name": "testcatres",
+         "result": [
+            1
+         ]
+      }
+   ],
+   "errMaxId": 2,
+   "resMaxId": 1,
+   "errCatMaxId": 1,
+   "resCatMaxId": 1
+}

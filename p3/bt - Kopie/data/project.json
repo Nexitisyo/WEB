@@ -1,0 +1,26 @@
+{
+   "projects": [
+      {
+         "id": 1,
+         "name": "testprj",
+         "desc": "testprjdesc",
+         "component": [
+            1
+         ]
+      }
+   ],
+   "components": [
+      {
+         "id": 1,
+         "name": "testcomp",
+         "desc": "testcompdesc",
+         "project": 1,
+         "errors": [
+            1,
+            2
+         ]
+      }
+   ],
+   "maxCompId": 1,
+   "maxId": 1
+}

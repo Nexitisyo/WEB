@@ -1,0 +1,38 @@
+{
+   "employees": [
+      {
+         "id": 12,
+         "roleId": 2,
+         "username": "usr1",
+         "firstname": "Viktor",
+         "lastname": "Kuznecov",
+         "email": "chef@google.de",
+         "phone": "016364646z467",
+         "address": "Mustergasse 12"
+      },
+      {
+         "id": 13,
+         "roleId": 1,
+         "username": "usr2",
+         "firstname": "Niklas",
+         "lastname": "Günther",
+         "email": "apentraitor@gmail.com",
+         "phone": "0123 456789",
+         "address": "Ritterstraße"
+      }
+   ],
+   "roles": [
+      {
+         "id": 1,
+         "name": "qs",
+         "desc": "QS-Mitarbeiter"
+      },
+      {
+         "id": 2,
+         "name": "se",
+         "desc": "SE-Mitarbeiter"
+      }
+   ],
+   "maxId": 1,
+   "maxRoleId": 0
+}
